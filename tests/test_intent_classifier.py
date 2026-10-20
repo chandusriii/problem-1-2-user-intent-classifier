@@ -1,4 +1,5 @@
 import unittest
+
 from src.intent_classifier import classify_query, engineer_features
 
 class IntentClassifierTests(unittest.TestCase):
