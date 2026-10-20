@@ -40,10 +40,10 @@ def classify_query(query: str) -> dict[str, Any]:
     lower = q.lower()
 
     # Required primary classes are FRAME, CLIP, and WHOLE_VIDEO.
-    if f["timestamp_count"] or f["frame_cue"]:
-        scope = "FRAME"
-    elif f["whole_video_cue"] or f["global_cue"] or f["count_cue"]:
+    if f["whole_video_cue"] or f["global_cue"]:
         scope = "WHOLE_VIDEO"
+    elif f["timestamp_count"] or f["frame_cue"] or (f["ocr_cue"] and re.search(r"\\bat\\s+\\d", lower)):
+        scope = "FRAME"
     elif f["clip_cue"] or f["speech_cue"] or f["ocr_cue"]:
         scope = "CLIP"
     else:
