@@ -1,19 +1,12 @@
-# Fill this in before you submit -- our evaluator runs these commands
-# EXACTLY as written, in this order, from a fresh checkout of your fork.
-# Keep every command non-interactive (no prompts) and idempotent.
-
 setup_commands:
-  - "pip install -r requirements.txt"
-  # - add every other setup step here, in order (env vars, downloads, etc.)
+  - "python -m pip install -r requirements.txt"
 
 run_commands:
   - "python src/main.py --help"
-  # - the real command(s) that actually run your solution
+  - "python src/main.py --query \"What color is the car at 00:15?\""
+  - "python src/benchmark.py --labels data/intent_eval.jsonl --output results/benchmark.json"
 
-test_commands: []
-  # optional -- commands that run your own tests/checks, if you have any
+test_commands:
+  - "python -m unittest discover -s tests -v"
 
-notes: ""
-  # anything we should know before running this (e.g. "needs a GPU",
-  # "takes about 10 minutes", "expects a sample dataset already present
-  # under data/, see docs/ for where to get it")
+notes: "CPU-only; no model-weight downloads. The bundled JSONL is a smoke set, not official VideoMME benchmark results. See docs/INTENT_CLASSIFIER_DESIGN.md for the required VideoMME scope-annotation/evaluation plan."
