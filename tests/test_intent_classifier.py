@@ -12,6 +12,10 @@ class IntentClassifierTests(unittest.TestCase):
         result = classify_query("When does the presenter explain neural networks?")
         self.assertEqual(result["scope"], "CLIP")
 
+    def test_timestamped_transcript_is_clip_not_frame(self):
+        result = classify_query("What does the speaker say at 02:30?")
+        self.assertEqual(result["scope"], "CLIP")
+
     def test_whole_video_scope(self):
         result = classify_query("Summarize the entire video.")
         self.assertEqual(result["scope"], "WHOLE_VIDEO")
