@@ -1,0 +1,12 @@
+{"query":"What color is the car at 00:15?","scope":"FRAME"}
+{"query":"Who is visible in this frame?","scope":"FRAME"}
+{"query":"What is written on the slide at 00:42?","scope":"FRAME"}
+{"query":"Read the sign at 01:10.","scope":"FRAME"}
+{"query":"What does the speaker say at 02:30?","scope":"FRAME"}
+{"query":"When does the presenter explain neural networks?","scope":"CLIP"}
+{"query":"Find the moment where the red car enters the scene.","scope":"CLIP"}
+{"query":"What happens before the alarm sounds?","scope":"CLIP"}
+{"query":"Summarize the entire video.","scope":"WHOLE_VIDEO"}
+{"query":"Give an overview of the video as a whole.","scope":"WHOLE_VIDEO"}
+{"query":"List all main events throughout the video.","scope":"WHOLE_VIDEO"}
+{"query":"How many times does the player score throughout the video?","scope":"WHOLE_VIDEO"}
