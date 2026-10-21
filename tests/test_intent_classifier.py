@@ -14,6 +14,12 @@ class IntentClassifierTests(unittest.TestCase):
     def test_timestamped_transcript_is_clip_not_frame(self):
         self.assertEqual(classify_query("What does the speaker say at 02:30?")["scope"], "CLIP")
 
+    def test_visual_temporal_compound_is_clip(self):
+        self.assertEqual(
+            classify_query("What color is the car after the presenter stops speaking?")["scope"],
+            "CLIP",
+        )
+
     def test_whole_video_scope(self):
         self.assertEqual(classify_query("Summarize the entire video.")["scope"], "WHOLE_VIDEO")
 
