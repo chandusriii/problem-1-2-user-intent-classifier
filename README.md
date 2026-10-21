@@ -1,39 +1,32 @@
 # Problem 1.2 — User Intent Classifier
 
-A lightweight, CPU-only baseline for routing video-related questions.
+A CPU-oriented multi-head query-routing baseline. It predicts retrieval scope and reasoning tier independently using TF-IDF features, four dense structural signals, and two Logistic Regression heads.
 
-## Independent outputs
+## Outputs
+- Retrieval scopes: `FRAME`, `CLIP`, `WHOLE_VIDEO`
+- Reasoning tiers: `L1_DIRECT`, `L2_RETRIEVAL`, `L3_GRAPH`
 
-**Retrieval scope**
-- `FRAME`: evidence from a still frame or specific timestamp.
-- `CLIP`: a temporal segment, event, sequence, or spoken passage.
-- `WHOLE_VIDEO`: a summary, theme, or event inventory requiring broad coverage.
-
-**Reasoning tier**
-- `L1_DIRECT`: direct or targeted context.
-- `L2_RETRIEVAL`: retrieval of relevant clips, captions, transcript, or OCR.
-- `L3_GRAPH`: cross-section reasoning across video events.
-
-The default inference uses interpretable rules and does not load a trained model binary. Retrieval scope and reasoning tier are separate outputs.
+When the top two scope probabilities are close (margin below 0.15), inference returns both candidates. An untrained model uses an explicit rules fallback rather than a fabricated confidence score.
 
 ## Run locally (Python 3.11 recommended)
-
 ```bash
 python -m pip install -r requirements.txt
-python src/main.py --query "What color is the car at 00:15?"
-python src/main.py --query "What does the speaker say at 02:30?"
-python src/main.py --query "Summarize the entire video."
+python src/train.py
+python src/main.py --query "What color was the car at 00:15?"
 python -m unittest discover -s tests -v
 ```
 
 ## API
-
 ```bash
 uvicorn src.app:app --host 127.0.0.1 --port 8000
 ```
+Open `http://127.0.0.1:8000/docs`. The service offers `GET /health` and `POST /route`.
 
-Open `http://127.0.0.1:8000/docs`. Endpoints are `GET /health` and `POST /route`.
+## Docker
+```bash
+docker build -t user-intent-classifier:latest .
+docker run --rm -p 8000:8000 user-intent-classifier:latest
+```
 
-## Validation boundary
-
-The included checks exercise representative inputs and are smoke tests, not official VideoMME accuracy. The supplied VideoMME data does not directly provide the target retrieval-scope labels; official scope metrics require consistent annotation of the questions as FRAME, CLIP, or WHOLE_VIDEO. Rules may misroute unseen paraphrases and compound queries, so ambiguous production inputs should use broader or multiple retrieval routes.
+## Evaluation honesty
+The bundled development corpus is small and manually constructed to exercise the pipeline. It is not official Video-MME ground truth. The provided Video-MME questions do not automatically label retrieval scope, so real accuracy claims require reviewed FRAME/CLIP/WHOLE_VIDEO annotations and a held-out evaluation. Sub-5 ms latency is a target, not a measured guarantee; benchmark latency on the actual environment before claiming it.
