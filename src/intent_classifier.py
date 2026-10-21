@@ -14,43 +14,55 @@ def normalize_query(query: str) -> str:
     return query
 
 def engineer_features(query: str) -> dict[str, Any]:
-    """Extract numeric and boolean cues without video decoding or model downloads."""
+    """Extract normalized lexical and structural cues from a query."""
     q = normalize_query(query)
     lower = q.lower()
     return {
         "token_count": len(re.findall(r"\b[\w']+\b", lower)),
         "char_count": len(q),
         "timestamp_count": len(_TIMESTAMP.findall(q)),
-        "frame_cue": bool(re.search(r"\b(frame|image|picture|at this moment|in this shot)\b", lower)),
-        "clip_cue": bool(re.search(r"\b(clip|scene|segment|moment|during|before|after|when|while)\b", lower)),
-        "whole_video_cue": bool(re.search(r"\b(entire video|whole video|throughout the video|overall video|video as a whole|summari[sz]e|overview|all events|main events)\b", lower)),
-        "temporal_relation": bool(re.search(r"\b(before|after|then|earlier|later|until|while|following)\b", lower)),
+        "frame_cue": bool(re.search(r"\b(frame|image|picture|at this moment|in this shot|what color|what colour|hue|visible|wearing|which object)\b", lower)),
+        "clip_cue": bool(re.search(r"\b(clip|scene|segment|moment|during|before|after|when|while|happens?|doing|action|sequence|enters?|leaves?|stops?|starts?|explains?)\b", lower)),
+        "whole_video_cue": bool(re.search(r"\b(entire video|whole video|throughout the video|overall video|video as a whole|summari[sz]e|overview|all events|main events|main message|main topic|what is this video about)\b", lower)),
+        "temporal_relation": bool(re.search(r"\b(before|after|then|earlier|later|until|while|following|at the beginning|at the start|at the end|in the beginning|first half|second half|middle of the video)\b", lower)),
         "count_cue": bool(re.search(r"\b(how many|how often|count|number of times|every time|all occurrences)\b", lower)),
         "causal_cue": bool(re.search(r"\b(why|cause|caused|reason for|result in|lead to)\b", lower)),
         "comparison_cue": bool(re.search(r"\b(compare|difference|different|similar|versus|vs\.?|change from .* to|relationship between)\b", lower)),
-        "global_cue": bool(re.search(r"\b(throughout|from beginning to end|from start to finish|across the video|overall)\b", lower)),
-        "speech_cue": bool(re.search(r"\b(say|said|says|speaker|speech|transcript|mention|mentions|spoken|talking)\b", lower)),
-        "ocr_cue": bool(re.search(r"\b(read|text on|written on|sign|subtitle|on-screen text)\b", lower)),
+        "global_cue": bool(re.search(r"\b(throughout|from beginning to end|from start to finish|across the video|overall|over the course of the video)\b", lower)),
+        "speech_cue": bool(re.search(r"\b(say|said|says|speaker|speech|transcript|mention|mentions|spoken|talking|explain|explains|explained|speaking)\b", lower)),
+        "ocr_cue": bool(re.search(r"\b(read|text on|written on|sign|subtitle|on-screen text|written|displayed)\b", lower)),
     }
 
 def classify_query(query: str) -> dict[str, Any]:
-    """Predict requested scope and reasoning tier and map them to a route."""
+    """Predict retrieval scope and reasoning tier, and map them to a route."""
     q = normalize_query(query)
     f = engineer_features(q)
     lower = q.lower()
 
-    # Required primary classes are FRAME, CLIP, and WHOLE_VIDEO.
+    # Global summaries and aggregate questions require video-wide coverage.
     if f["whole_video_cue"] or f["global_cue"]:
         scope = "WHOLE_VIDEO"
-    elif f["timestamp_count"] or f["frame_cue"] or (f["ocr_cue"] and re.search(r"\\bat\\s+\\d", lower)):
-        scope = "FRAME"
-    elif f["clip_cue"] or f["speech_cue"] or f["ocr_cue"]:
+    # Transcript/audio questions require a temporal passage even if timestamped.
+    elif f["speech_cue"]:
         scope = "CLIP"
+    # Explicit temporal relations or event/change questions are clip-scoped
+    # unless the wording identifies a static visual fact at one instant.
+    elif f["timestamp_count"] or f["frame_cue"] or (
+        f["ocr_cue"] and re.search(r"\bat\s+\d", lower)
+    ):
+        scope = "FRAME"
+    elif f["clip_cue"] or f["ocr_cue"] or f["temporal_relation"]:
+        scope = "CLIP"
+    elif f["count_cue"]:
+        scope = "WHOLE_VIDEO"
     else:
         scope = "CLIP"
 
-    # Keep reasoning level separate from retrieval scope.
-    if (f["comparison_cue"] or f["causal_cue"]) and f["global_cue"]:
+    global_change = bool(
+        re.search(r"\b(change|changes|changed|evolve|evolves|evolved|develop|develops|developed|progress|progresses|shift|shifts|transforms?)\b", lower)
+        and (f["global_cue"] or f["whole_video_cue"])
+    )
+    if global_change or (f["comparison_cue"] and f["global_cue"]) or (f["causal_cue"] and f["global_cue"]):
         level = "L3_GRAPH"
     elif f["count_cue"] or f["temporal_relation"] or f["causal_cue"] or f["comparison_cue"] or scope == "WHOLE_VIDEO":
         level = "L2_RETRIEVAL"
