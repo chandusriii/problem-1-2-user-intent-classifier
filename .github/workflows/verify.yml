@@ -50,14 +50,18 @@ jobs:
           docker logs rag_router_service
           exit 1
 
-      - name: Run live API integration smoke test
+      - name: Run live API integration smoke tests
         run: |
-          response=$(curl --fail --silent --show-error \
-            -X POST http://localhost:8000/route \
-            -H 'Content-Type: application/json' \
-            -d '{"query":"What color was the car at 00:15?"}')
-          echo "$response"
-          RESPONSE_JSON="$response" python -c 'import json, os; payload=json.loads(os.environ["RESPONSE_JSON"]); assert payload.get("assigned_scopes"), "assigned_scopes missing or empty"; assert payload.get("reasoning_tier"), "reasoning_tier missing"; assert "confidence_distribution" in payload; print("API response schema validated.")'
+          set -euo pipefail
+          for endpoint in route classify; do
+            echo "Checking /$endpoint ..."
+            response=$(curl --fail --silent --show-error \
+              -X POST "http://localhost:8000/$endpoint" \
+              -H 'Content-Type: application/json' \
+              -d '{"query":"What color was the car at 00:15?"}')
+            echo "$response"
+            RESPONSE_JSON="$response" python -c 'import json, os; payload=json.loads(os.environ["RESPONSE_JSON"]); assert payload.get("assigned_scopes"), "assigned_scopes missing or empty"; assert payload.get("reasoning_tier"), "reasoning_tier missing"; assert "confidence_distribution" in payload; print("API response schema validated.")'
+          done
 
       - name: Capture container logs on failure
         if: failure()
