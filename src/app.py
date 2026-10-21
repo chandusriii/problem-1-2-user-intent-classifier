@@ -74,6 +74,7 @@ def health_check() -> dict[str, str]:
 
 
 @app.post("/route", response_model=RoutingResponse, status_code=status.HTTP_200_OK)
+@app.post("/classify", response_model=RoutingResponse, status_code=status.HTTP_200_OK)
 def route_query(payload: RoutingRequest) -> RoutingResponse:
     """Predict retrieval scope and reasoning tier for one query."""
     query = payload.query.strip()
