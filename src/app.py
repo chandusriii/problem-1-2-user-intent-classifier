@@ -1,16 +1,11 @@
 """FastAPI gateway around the same stateless classifier as the CLI."""
 from __future__ import annotations
-
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 from src.intent_classifier import classify_query
 
-app = FastAPI(
-    title="Video RAG User Intent Routing Service",
-    description="Routes video questions by retrieval scope and reasoning difficulty.",
-    version="1.0.0",
-)
+app = FastAPI(title="Video RAG User Intent Routing Service", version="1.0.0")
 
 class RouteRequest(BaseModel):
     query: str = Field(min_length=1, max_length=5000)
