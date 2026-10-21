@@ -8,22 +8,61 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code repository
         uses: actions/checkout@v4
-      - name: Set up Python 3.11
+
+      - name: Initialize Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install pinned dependencies
+
+      - name: Install and verify pinned dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
+
       - name: Train model and smoke-test CLI
         run: |
           python -m src.train
-          python -m src.main --query "What color was the car at 00:15?"
-          python src/main.py --query "Summarize the full plot of this video."
-      - name: Run unit and API tests
+          python src/main.py --query "What color was the jacket worn at 02:40?"
+          python -m src.main --query "Summarize the full plot of this video."
+
+      - name: Run Python unit and API tests
         run: python -m unittest discover -s tests -v
+
+      - name: Build production multi-stage Docker image
+        run: docker build --pull -t user-intent-classifier:ci .
+
+      - name: Run containerized API service
+        run: |
+          docker run -d --name rag_router_service -p 8000:8000 user-intent-classifier:ci
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:8000/health; then
+              echo "Container health endpoint is ready."
+              exit 0
+            fi
+            echo "Waiting for API startup (attempt ${attempt}/30)..."
+            sleep 2
+          done
+          echo "Container failed to become healthy. Logs:"
+          docker logs rag_router_service
+          exit 1
+
+      - name: Run live API integration smoke test
+        run: |
+          response=$(curl --fail --silent --show-error \
+            -X POST http://localhost:8000/route \
+            -H 'Content-Type: application/json' \
+            -d '{"query":"What color was the car at 00:15?"}')
+          echo "$response"
+          RESPONSE_JSON="$response" python -c 'import json, os; payload=json.loads(os.environ["RESPONSE_JSON"]); assert payload.get("assigned_scopes"), "assigned_scopes missing or empty"; assert payload.get("reasoning_tier"), "reasoning_tier missing"; assert "confidence_distribution" in payload; print("API response schema validated.")'
+
+      - name: Capture container logs on failure
+        if: failure()
+        run: docker logs rag_router_service || true
+
+      - name: Stop container
+        if: always()
+        run: docker rm -f rag_router_service || true
