@@ -2,32 +2,45 @@ import unittest
 from fastapi.testclient import TestClient
 from src.app import app
 
-client = TestClient(app)
 
 class ApiTests(unittest.TestCase):
+    def setUp(self):
+        self.client_context = TestClient(app)
+        self.client = self.client_context.__enter__()
+
+    def tearDown(self):
+        self.client_context.__exit__(None, None, None)
+
     def test_health(self):
-        response = client.get("/health")
+        response = self.client.get("/health")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()["status"], "ok")
+        self.assertEqual(response.json()["status"], "healthy")
+        self.assertEqual(response.json()["engine_state"], "online")
 
     def test_frame_route(self):
-        response = client.post("/route", json={"query":"What color is the car at 00:15?"})
+        response = self.client.post("/route", json={"query": "What color is the car at 00:15?"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["assigned_scopes"][0], "FRAME")
+        self.assertIn("classifier", response.json())
 
     def test_timestamped_speech_route(self):
-        response = client.post("/route", json={"query":"What does the speaker say at 02:30?"})
+        response = self.client.post("/route", json={"query": "What does the speaker say at 02:30?"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["assigned_scopes"][0], "CLIP")
 
     def test_whole_video_route(self):
-        response = client.post("/route", json={"query":"Summarize the entire video."})
+        response = self.client.post("/route", json={"query": "Summarize the entire video."})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["assigned_scopes"][0], "WHOLE_VIDEO")
 
     def test_blank_query(self):
-        response = client.post("/route", json={"query":"   "})
+        response = self.client.post("/route", json={"query": "   "})
         self.assertEqual(response.status_code, 422)
+
+    def test_query_length_limit(self):
+        response = self.client.post("/route", json={"query": "x" * 5001})
+        self.assertEqual(response.status_code, 422)
+
 
 if __name__ == "__main__":
     unittest.main()
