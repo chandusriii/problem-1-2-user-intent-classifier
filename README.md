@@ -22,6 +22,9 @@ uvicorn src.app:app --host 127.0.0.1 --port 8000
 ```
 Open `http://127.0.0.1:8000/docs`. Endpoints: `GET /health`, `POST /route`, and `POST /classify` (an alias of `/route`).
 
+## Architecture presentation
+Download the three-slide technical summary: [problem_1_2_architecture_summary_with_reference_image.pptx](./problem_1_2_architecture_summary_with_reference_image.pptx). It includes the supplied architecture diagram on slide 2.
+
 ## Docker
 ```bash
 docker build -t user-intent-classifier:latest .
