@@ -1,0 +1,29 @@
+name: Video RAG Router Grader Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+      - name: Initialize Python Environment (3.11)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Pinned Project Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Run Python Automated Smoke Unit Tests
+        run: python -m unittest discover -s tests -v
+      - name: Run CLI routing smoke checks
+        run: |
+          python src/main.py --query "What color is the car at 00:15?"
+          python src/main.py --query "What does the speaker say at 02:30?"
+          python src/main.py --query "Summarize the entire video."
