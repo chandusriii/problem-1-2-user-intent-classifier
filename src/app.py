@@ -48,4 +48,10 @@ def process_retrieval_route(payload: RouteRequest) -> RouteResponse:
     result = get_classifier().predict_route(payload.query)
     if "assigned_scopes" not in result:
         raise HTTPException(status_code=500, detail="Classifier returned an invalid payload.")
-    return RouteResponse(**result)
+    return RouteResponse(
+        query=result["query"],
+        assigned_scopes=result["assigned_scopes"],
+        reasoning_tier=result["reasoning_tier"],
+        confidence_distribution=result["confidence_distribution"],
+        classifier=result["classifier"],
+    )
