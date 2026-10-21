@@ -4,10 +4,10 @@ setup_commands:
 run_commands:
   - "python src/main.py --help"
   - "python src/main.py --query \"What color is the car at 00:15?\""
+  - "python src/main.py --query \"What does the speaker say at 02:30?\""
   - "python src/main.py --query \"Summarize the entire video.\""
-  - "python src/benchmark.py --labels data/intent_eval.jsonl --output results/benchmark.json"
 
 test_commands:
   - "python -m unittest discover -s tests -v"
 
-notes: "CPU-only; no model weights needed. The included scope-labelled JSONL is a smoke evaluation set, not the official VideoMME 10% benchmark. Do not claim VideoMME results until its query records are scope-labelled and evaluated. Details: docs/INTENT_CLASSIFIER_DESIGN.md."
+notes: "CPU-only rules baseline. Scope (FRAME/CLIP/WHOLE_VIDEO) is independent of reasoning tier (L1_DIRECT/L2_RETRIEVAL/L3_GRAPH). Empty queries are rejected; bundled checks are smoke tests, not official VideoMME accuracy."
