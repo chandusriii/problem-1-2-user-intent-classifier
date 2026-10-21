@@ -28,6 +28,21 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["assigned_scopes"][0], "CLIP")
 
+    def test_classify_alias_matches_route(self):
+        query = {"query": "What color is the car at 00:15?"}
+        route_response = self.client.post("/route", json=query)
+        classify_response = self.client.post("/classify", json=query)
+        self.assertEqual(route_response.status_code, 200)
+        self.assertEqual(classify_response.status_code, 200)
+        self.assertEqual(
+            classify_response.json()["assigned_scopes"],
+            route_response.json()["assigned_scopes"],
+        )
+        self.assertEqual(
+            classify_response.json()["reasoning_tier"],
+            route_response.json()["reasoning_tier"],
+        )
+
     def test_whole_video_route(self):
         response = self.client.post("/route", json={"query": "Summarize the entire video."})
         self.assertEqual(response.status_code, 200)
