@@ -2,8 +2,8 @@ setup_commands:
   - "python -m pip install -r requirements.txt"
 
 run_commands:
-  - "python src/train.py"
-  - "python src/main.py --query \"What color was the car at 00:15?\""
+  - "python -m src.train"
+  - "python -m src.main --query \"What color was the car at 00:15?\""
   - "python src/main.py --query \"Summarize the full plot of this video.\""
 
 test_commands:
