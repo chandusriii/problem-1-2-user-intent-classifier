@@ -81,13 +81,21 @@ class VideoRAGIntentClassifier:
         if not 0.0 <= multi_route_margin <= 1.0:
             raise ValueError("multi_route_margin must be between 0 and 1")
         if not self.is_trained:
-            # Never pretend a trained prediction exists; use the deterministic fallback.
-            from src.intent_classifier import classify_query
-            result = classify_query(clean_query)
+            # Do not import a nonexistent rules head from this ML module.
+            # Use a conservative fallback without fabricating model probabilities.
+            lower = clean_query.lower()
+            if re.search(r"\\b(summarize|summary|overall|entire video|whole video|main theme|main topic)\\b", lower):
+                fallback_scope, fallback_tier = "WHOLE_VIDEO", "L2_RETRIEVAL"
+            elif re.search(r"\\b(say|said|speaker|speech|transcript|mention|talking|explain)\\b", lower):
+                fallback_scope, fallback_tier = "CLIP", "L2_RETRIEVAL"
+            elif _TIMESTAMP.search(clean_query) or re.search(r"\\b(color|colour|hue|frame|image|visible|wearing|sign)\\b", lower):
+                fallback_scope, fallback_tier = "FRAME", "L1_DIRECT"
+            else:
+                fallback_scope, fallback_tier = "CLIP", "L2_RETRIEVAL"
             return {
                 "query": clean_query,
-                "assigned_scopes": [result["scope"]],
-                "reasoning_tier": result["level"],
+                "assigned_scopes": [fallback_scope],
+                "reasoning_tier": fallback_tier,
                 "confidence_distribution": {},
                 "classifier": "rules_fallback_untrained",
             }
