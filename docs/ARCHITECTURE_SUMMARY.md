@@ -1,6 +1,6 @@
 # Problem 1.2 — Three-Slide Architecture Summary
 
-This repository's companion slide deck is available as a downloadable artifact from the project conversation: `problem_1_2_architecture_summary.pptx`.
+Download the companion three-slide PowerPoint from the repository: [problem_1_2_architecture_summary_with_reference_image.pptx](./problem_1_2_architecture_summary_with_reference_image.pptx). The supplied architecture diagram is embedded on slide 2.
 
 ## Slide 1 — Architectural intent
 The router separates **retrieval scope** (`FRAME`, `CLIP`, `WHOLE_VIDEO`) from **reasoning tier** (`L1_DIRECT`, `L2_RETRIEVAL`, `L3_GRAPH`). A small CPU-oriented classifier routes queries before downstream retrieval.
