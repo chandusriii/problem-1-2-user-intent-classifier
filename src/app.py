@@ -5,7 +5,12 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from src.intent_classifier import VideoRAGIntentClassifier, classify_query
+import sys
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from src.intent_classifier import VideoRAGIntentClassifier
 from src.train import run_training_pipeline
 
 MODEL_PATH = Path("models/pipeline.pkl")
