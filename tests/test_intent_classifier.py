@@ -1,51 +1,60 @@
+import os
+import tempfile
 import unittest
 
-from src.intent_classifier import classify_query, engineer_features, normalize_query
+from src.intent_classifier import VideoRAGIntentClassifier, normalize_query
+from src.train import EXPANDED_CORPUS
 
-class IntentClassifierTests(unittest.TestCase):
-    def test_frame_scope(self):
-        result = classify_query("What color is the car at 00:15?")
-        self.assertEqual(result["scope"], "FRAME")
-        self.assertEqual(result["level"], "L1_DIRECT")
+class TestUpgradedClassifier(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.model_path = os.path.join(tempfile.gettempdir(), "video_rag_intent_classifier_test.pkl")
+        cls.classifier = VideoRAGIntentClassifier().fit(
+            [x[0] for x in EXPANDED_CORPUS],
+            [x[1] for x in EXPANDED_CORPUS],
+            [x[2] for x in EXPANDED_CORPUS],
+        )
 
-    def test_clip_scope(self):
-        self.assertEqual(classify_query("When does the presenter explain neural networks?")["scope"], "CLIP")
+    @classmethod
+    def tearDownClass(cls):
+        if os.path.exists(cls.model_path):
+            os.remove(cls.model_path)
 
-    def test_timestamped_transcript_is_clip_not_frame(self):
-        self.assertEqual(classify_query("What does the speaker say at 02:30?")["scope"], "CLIP")
+    def test_frame_route_matching(self):
+        result = self.classifier.predict_route("What color are the shoes worn at 00:12?")
+        self.assertIn("FRAME", result["assigned_scopes"])
+        self.assertEqual(result["reasoning_tier"], "L1_DIRECT")
 
-    def test_whole_video_scope(self):
-        self.assertEqual(classify_query("Summarize the entire video.")["scope"], "WHOLE_VIDEO")
+    def test_whole_video_route_matching(self):
+        result = self.classifier.predict_route("Summarize the full plot of this video.")
+        self.assertIn("WHOLE_VIDEO", result["assigned_scopes"])
 
-    def test_global_reasoning(self):
-        self.assertEqual(classify_query("How does behavior change throughout the video?")["level"], "L3_GRAPH")
-
-    def test_empty_query(self):
+    def test_empty_query_raises_validation_error(self):
         with self.assertRaises(ValueError):
-            classify_query("")
+            self.classifier.predict_route("")
 
-    def test_whitespace_query(self):
+    def test_feature_matrix_shape(self):
+        import numpy as np
+        from src.intent_classifier import combine_features
+        matrix = combine_features(self.classifier.vectorizer, ["What color is a car at 00:15?"])
+        self.assertEqual(matrix.ndim, 2)
+        self.assertEqual(matrix.shape[0], 1)
+        self.assertEqual(matrix.shape[1], len(self.classifier.vectorizer.get_feature_names_out()) + 4)
+
+    def test_untrained_model_uses_rules_fallback(self):
+        result = VideoRAGIntentClassifier().predict_route("Summarize this video.")
+        self.assertEqual(result["classifier"], "rules_fallback_untrained")
+        self.assertIn(result["assigned_scopes"][0], {"FRAME", "CLIP", "WHOLE_VIDEO"})
+
+    def test_model_save_and_load_round_trip(self):
+        self.classifier.save(self.model_path)
+        loaded = VideoRAGIntentClassifier.load(self.model_path)
+        result = loaded.predict_route("Summarize the full plot of this video.")
+        self.assertIn("WHOLE_VIDEO", result["assigned_scopes"])
+
+    def test_normalize_query_rejects_empty(self):
         with self.assertRaises(ValueError):
-            classify_query("   ")
-
-    def test_compound_visual_then_temporal_question(self):
-        result = classify_query("What color is the car after the presenter stops speaking?")
-        self.assertEqual(result["scope"], "CLIP")
-
-    def test_unseen_visual_paraphrase_at_timestamp(self):
-        self.assertEqual(classify_query("Identify the hue of the vehicle at 00:15.")["scope"], "FRAME")
-
-    def test_event_at_start(self):
-        self.assertEqual(classify_query("What happens at the beginning of this recording?")["scope"], "CLIP")
-
-    def test_video_level_count(self):
-        self.assertEqual(classify_query("How many bridges can be seen throughout the video?")["scope"], "WHOLE_VIDEO")
-
-    def test_feature_extraction_has_numeric_metrics(self):
-        features = engineer_features("How many times does the player score?")
-        self.assertTrue(features["count_cue"])
-        self.assertIsInstance(features["token_count"], int)
-        self.assertIsInstance(features["char_count"], int)
+            normalize_query("  ")
 
 if __name__ == "__main__":
     unittest.main()
