@@ -1,4 +1,5 @@
 import unittest
+
 from src.intent_classifier import classify_query, engineer_features, normalize_query
 
 class IntentClassifierTests(unittest.TestCase):
@@ -28,10 +29,8 @@ class IntentClassifierTests(unittest.TestCase):
             classify_query("   ")
 
     def test_compound_visual_then_temporal_question(self):
-        self.assertEqual(
-            classify_query("What color is the car after the presenter stops speaking?")["scope"],
-            "CLIP",
-        )
+        result = classify_query("What color is the car after the presenter stops speaking?")
+        self.assertEqual(result["scope"], "CLIP")
 
     def test_unseen_visual_paraphrase_at_timestamp(self):
         self.assertEqual(classify_query("Identify the hue of the vehicle at 00:15.")["scope"], "FRAME")
@@ -42,7 +41,7 @@ class IntentClassifierTests(unittest.TestCase):
     def test_video_level_count(self):
         self.assertEqual(classify_query("How many bridges can be seen throughout the video?")["scope"], "WHOLE_VIDEO")
 
-    def test_feature_extraction_dimensions_are_scalar_metrics(self):
+    def test_feature_extraction_has_numeric_metrics(self):
         features = engineer_features("How many times does the player score?")
         self.assertTrue(features["count_cue"])
         self.assertIsInstance(features["token_count"], int)
