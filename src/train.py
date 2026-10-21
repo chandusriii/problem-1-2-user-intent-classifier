@@ -1,6 +1,13 @@
 """Train and persist the TF-IDF multi-head baseline on a small development corpus."""
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from src.intent_classifier import VideoRAGIntentClassifier
 
 # Development examples only. A real quality claim requires a larger, reviewed,
