@@ -62,13 +62,13 @@ class VideoRAGIntentClassifier:
 
     def __init__(self) -> None:
         self.vectorizer = TfidfVectorizer(
-            ngram_range=(1, 3),
+            ngram_range=(1, 2),
             analyzer="word",
-            max_features=2000,
+            max_features=1500,
             sublinear_tf=True,
         )
-        self.scope_model = LogisticRegression(C=2.0, max_iter=400, class_weight="balanced")
-        self.tier_model = LogisticRegression(C=1.5, max_iter=400, class_weight="balanced")
+        self.scope_model = LogisticRegression(C=2.0, max_iter=300, class_weight="balanced")
+        self.tier_model = LogisticRegression(C=1.5, max_iter=300, class_weight="balanced")
         self.is_trained = False
 
     def fit(self, queries: list[str], scopes: list[str], tiers: list[str]) -> "VideoRAGIntentClassifier":
@@ -112,7 +112,7 @@ class VideoRAGIntentClassifier:
                 "confidence_distribution": {},
                 "classifier": "rules_fallback_untrained",
             }
-        features = combine_features(self.vectorizer, [clean_query])
+        features = extract_and_align_features(clean_query, self.vectorizer)
         probabilities = self.scope_model.predict_proba(features)[0]
         learned_classes = list(self.scope_model.classes_)
         ordered = sorted(
