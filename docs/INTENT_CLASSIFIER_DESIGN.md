@@ -1,13 +1,13 @@
-# Intent Classifier Design
+# Multi-Head Intent Classifier Design
 
-## Objective
-Predict one retrieval scope—FRAME, CLIP, or WHOLE_VIDEO—and independently predict a reasoning tier: L1_DIRECT, L2_RETRIEVAL, or L3_GRAPH.
+## Feature processing
+The vectorizer creates word-level unigram through trigram TF-IDF features capped at 2,000 terms. Four dense values represent timestamp presence, a temporal-relation flag, character count, and word count. Dense signals use a stable two-dimensional row shape (1, 4), and combined matrices use `numpy.hstack` after validating matching row counts.
 
-## Baseline features
-The query-only baseline normalizes whitespace and uses readable lexical features for timestamps, visible properties, event language, speech/transcripts, on-screen text, counting, causal cues, comparisons, and broad-video context. Global-summary requests take priority. Speech content is clip-based even if the question includes a timestamp. Static visual details at an instant are frame-based; temporal actions and sequences are clip-based.
+## Independent model heads
+A shared feature matrix feeds separate Logistic Regression models: one predicts retrieval scope (`FRAME`, `CLIP`, `WHOLE_VIDEO`), while the second predicts reasoning tier (`L1_DIRECT`, `L2_RETRIEVAL`, `L3_GRAPH`). Multi-route inference returns a second scope only when the top two probability values are within a configurable margin.
 
-## API
-`src/app.py` exposes `GET /health` and `POST /route`. It validates query content and returns `assigned_scope`, `reasoning_tier`, and `retrieval_strategy`. The API delegates to the same classifier as the CLI and requires no saved model assets.
+## Inference safety
+Queries are normalized and empty strings are rejected before feature extraction. Labels are validated at fit time. The CLI trains a local model when the requested artifact does not exist. An untrained model instance delegates to the explicit rules baseline rather than making up confidence scores.
 
-## Tests and limitations
-Run `python -m unittest discover -s tests -v`. Unit tests are smoke checks rather than a full held-out benchmark. The provided VideoMME questions do not inherently include retrieval-scope labels; official accuracy, macro-F1, and per-class metrics require reviewed, human-labelled FRAME/CLIP/WHOLE_VIDEO targets. Simple lexical rules can miss paraphrases or compound intents; consider multiple routes or a broader-retrieval fallback when confidence is low.
+## Evaluation boundary
+The bundled corpus is a small, manually constructed development/smoke corpus, not official Video-MME ground truth. It does not demonstrate generalization accuracy. No sub-5 ms latency guarantee is made. Measure latency and evaluate on a separate, reviewed labelled set before making performance claims.
