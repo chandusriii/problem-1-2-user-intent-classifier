@@ -1,89 +1,132 @@
-"""Lightweight, interpretable classifier for video-query retrieval scope."""
+"""Multi-head CPU classifier for video-query retrieval scope and reasoning tier."""
 from __future__ import annotations
 
 import re
 from typing import Any
+
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+
+SCOPES = ("FRAME", "CLIP", "WHOLE_VIDEO")
+TIERS = ("L1_DIRECT", "L2_RETRIEVAL", "L3_GRAPH")
 
 _TIMESTAMP = re.compile(r"(?<!\d)(?:\d{1,2}:)?\d{1,2}:\d{2}(?:\.\d+)?(?!\d)")
 
 def normalize_query(query: str) -> str:
     if not isinstance(query, str):
         raise TypeError("query must be a string")
-    query = re.sub(r"\s+", " ", query).strip()
-    if not query:
+    normalized = re.sub(r"\s+", " ", query).strip()
+    if not normalized:
         raise ValueError("query cannot be empty")
-    return query
+    return normalized
 
-def engineer_features(query: str) -> dict[str, Any]:
-    """Extract stable lexical and structural cues from query text."""
-    q = normalize_query(query)
+def extract_dense_signals(text: str) -> np.ndarray:
+    """Return four numeric features in a stable 2-D row shape (1, 4)."""
+    q = normalize_query(text)
     lower = q.lower()
-    return {
-        "token_count": len(re.findall(r"\b[\w']+\b", lower)),
-        "char_count": len(q),
-        "timestamp_count": len(_TIMESTAMP.findall(q)),
-        "frame_cue": bool(re.search(r"\b(frame|image|picture|at this moment|in this shot|what color|what colour|hue|visible|wearing|which object)\b", lower)),
-        "clip_cue": bool(re.search(r"\b(clip|scene|segment|moment|during|before|after|when|while|happens?|doing|action|sequence|enters?|leaves?|stops?|starts?|explains?)\b", lower)),
-        "whole_video_cue": bool(re.search(r"\b(entire video|whole video|throughout the video|overall video|video as a whole|summari[sz]e|overview|all events|main events|main message|main topic|what is this video about)\b", lower)),
-        "temporal_relation": bool(re.search(r"\b(before|after|then|earlier|later|until|while|following|at the beginning|at the start|at the end|in the beginning|first half|second half|middle of the video)\b", lower)),
-        "count_cue": bool(re.search(r"\b(how many|how often|count|number of times|every time|all occurrences)\b", lower)),
-        "causal_cue": bool(re.search(r"\b(why|cause|caused|reason for|result in|lead to)\b", lower)),
-        "comparison_cue": bool(re.search(r"\b(compare|difference|different|similar|versus|vs\.?|change from .* to|relationship between)\b", lower)),
-        "global_cue": bool(re.search(r"\b(throughout|from beginning to end|from start to finish|across the video|overall|over the course of the video)\b", lower)),
-        "speech_cue": bool(re.search(r"\b(say|said|says|speaker|speech|transcript|mention|mentions|spoken|talking|explain|explains|explained|speaking|stops speaking)\b", lower)),
-        "ocr_cue": bool(re.search(r"\b(read|text on|written on|sign|subtitle|on-screen text|written|displayed)\b", lower)),
-    }
+    has_timestamp = bool(_TIMESTAMP.search(q))
+    temporal = bool(re.search(r"\b(after|before|then|sequence|during|while|when|at the beginning|at the end)\b", lower))
+    return np.asarray([[
+        float(has_timestamp),
+        float(temporal),
+        float(len(q)),
+        float(len(q.split())),
+    ]], dtype=np.float64)
 
-def classify_query(query: str) -> dict[str, Any]:
-    """Predict retrieval scope and reasoning tier, and map them to a route."""
-    q = normalize_query(query)
-    f = engineer_features(q)
-    lower = q.lower()
+def combine_features(vectorizer: TfidfVectorizer, queries: list[str]) -> np.ndarray:
+    """Horizontal TF-IDF + dense stacking with shape checks."""
+    if not queries:
+        raise ValueError("queries must not be empty")
+    sparse_features = vectorizer.transform(queries).toarray()
+    dense_features = np.vstack([extract_dense_signals(q) for q in queries])
+    if sparse_features.ndim != 2 or dense_features.ndim != 2 or sparse_features.shape[0] != dense_features.shape[0]:
+        raise ValueError("TF-IDF and dense feature matrices must have matching row counts")
+    return np.hstack((sparse_features, dense_features))
 
-    # Broad summaries and questions about coverage across the video need global evidence.
-    if f["whole_video_cue"] or f["global_cue"]:
-        scope = "WHOLE_VIDEO"
-    # Questions about words or speech need a transcript/temporal segment, even with a timestamp.
-    elif f["speech_cue"]:
-        scope = "CLIP"
-    # A specific static visual fact at a timestamp is frame-scoped.
-    elif f["timestamp_count"] or f["frame_cue"] or (
-        f["ocr_cue"] and re.search(r"\bat\s+\d", lower)
-    ):
-        scope = "FRAME"
-    # Temporal relationships and actions require an interval/sequence, not a single frame.
-    elif f["clip_cue"] or f["temporal_relation"] or f["ocr_cue"]:
-        scope = "CLIP"
-    elif f["count_cue"]:
-        scope = "WHOLE_VIDEO"
-    else:
-        scope = "CLIP"
+class VideoRAGIntentClassifier:
+    """Two independent Logistic Regression heads over shared text/structure features."""
 
-    global_change = bool(
-        re.search(r"\b(change|changes|changed|evolve|evolves|evolved|develop|develops|developed|progress|progresses|shift|shifts|transforms?)\b", lower)
-        and (f["global_cue"] or f["whole_video_cue"])
-    )
-    if global_change or (f["comparison_cue"] and f["global_cue"]) or (f["causal_cue"] and f["global_cue"]):
-        level = "L3_GRAPH"
-    elif f["count_cue"] or f["temporal_relation"] or f["causal_cue"] or f["comparison_cue"] or scope == "WHOLE_VIDEO":
-        level = "L2_RETRIEVAL"
-    else:
-        level = "L1_DIRECT"
+    def __init__(self) -> None:
+        self.vectorizer = TfidfVectorizer(
+            ngram_range=(1, 3),
+            analyzer="word",
+            max_features=2000,
+            sublinear_tf=True,
+        )
+        self.scope_model = LogisticRegression(C=2.0, max_iter=400, class_weight="balanced")
+        self.tier_model = LogisticRegression(C=1.5, max_iter=400, class_weight="balanced")
+        self.is_trained = False
 
-    route = {
-        "L1_DIRECT": "DIRECT_OR_TARGETED_CONTEXT",
-        "L2_RETRIEVAL": "RETRIEVE_RELEVANT_CLIPS",
-        "L3_GRAPH": "CROSS_SECTION_GRAPH_RETRIEVAL",
-    }[level]
-    return {
-        "query": q,
-        "scope": scope,
-        "level": level,
-        "retrieval_strategy": route,
-        "features": f,
-        "classifier": "interpretable_rules_baseline",
-    }
+    def fit(self, queries: list[str], scopes: list[str], tiers: list[str]) -> "VideoRAGIntentClassifier":
+        if not queries or len(queries) != len(scopes) or len(queries) != len(tiers):
+            raise ValueError("queries, scopes, and tiers must be non-empty and have equal lengths")
+        clean_queries = [normalize_query(q) for q in queries]
+        invalid_scopes = set(scopes) - set(SCOPES)
+        invalid_tiers = set(tiers) - set(TIERS)
+        if invalid_scopes or invalid_tiers:
+            raise ValueError(f"invalid labels: scopes={sorted(invalid_scopes)}, tiers={sorted(invalid_tiers)}")
+        if len(set(scopes)) < 2 or len(set(tiers)) < 2:
+            raise ValueError("training requires at least two distinct scope labels and two tier labels")
+        sparse_features = self.vectorizer.fit_transform(clean_queries).toarray()
+        dense_features = np.vstack([extract_dense_signals(q) for q in clean_queries])
+        combined = np.hstack((sparse_features, dense_features))
+        self.scope_model.fit(combined, np.asarray(scopes))
+        self.tier_model.fit(combined, np.asarray(tiers))
+        self.is_trained = True
+        return self
 
-def classify_batch(queries: list[str]) -> list[dict[str, Any]]:
-    """Batch queries while keeping classification stateless."""
-    return [classify_query(query) for query in queries]
+    def predict_route(self, query: str, multi_route_margin: float = 0.15) -> dict[str, Any]:
+        clean_query = normalize_query(query)
+        if not 0.0 <= multi_route_margin <= 1.0:
+            raise ValueError("multi_route_margin must be between 0 and 1")
+        if not self.is_trained:
+            # Never pretend a trained prediction exists; use the deterministic fallback.
+            from src.intent_classifier import classify_query
+            result = classify_query(clean_query)
+            return {
+                "query": clean_query,
+                "assigned_scopes": [result["scope"]],
+                "reasoning_tier": result["level"],
+                "confidence_distribution": {},
+                "classifier": "rules_fallback_untrained",
+            }
+        features = combine_features(self.vectorizer, [clean_query])
+        probabilities = self.scope_model.predict_proba(features)[0]
+        learned_classes = list(self.scope_model.classes_)
+        ordered = sorted(
+            ((label, float(probabilities[i])) for i, label in enumerate(learned_classes)),
+            key=lambda item: item[1],
+            reverse=True,
+        )
+        top_scope, top_probability = ordered[0]
+        final_scopes = [top_scope]
+        if len(ordered) > 1 and top_probability - ordered[1][1] < multi_route_margin:
+            final_scopes.append(ordered[1][0])
+        tier = str(self.tier_model.predict(features)[0])
+        return {
+            "query": clean_query,
+            "assigned_scopes": final_scopes,
+            "reasoning_tier": tier,
+            "confidence_distribution": {label: float(prob) for label, prob in ordered},
+            "classifier": "tfidf_logistic_regression_multi_head",
+        }
+
+    def save(self, file_path: str = "models/pipeline.pkl") -> None:
+        from pathlib import Path
+        import pickle
+        path = Path(file_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("wb") as handle:
+            pickle.dump(self, handle)
+
+    @classmethod
+    def load(cls, file_path: str = "models/pipeline.pkl") -> "VideoRAGIntentClassifier":
+        import pickle
+        from pathlib import Path
+        path = Path(file_path)
+        with path.open("rb") as handle:
+            instance = pickle.load(handle)
+        if not isinstance(instance, cls):
+            raise TypeError(f"saved object at {path} is not a {cls.__name__}")
+        return instance
