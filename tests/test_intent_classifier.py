@@ -33,6 +33,20 @@ class TestUpgradedClassifier(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.classifier.predict_route("")
 
+    def test_single_query_feature_alignment(self):
+        from src.intent_classifier import extract_and_align_features
+
+        matrix = extract_and_align_features(
+            "What color is the car at 00:15?",
+            self.classifier.vectorizer,
+        )
+        self.assertEqual(matrix.ndim, 2)
+        self.assertEqual(matrix.shape[0], 1)
+        self.assertEqual(
+            matrix.shape[1],
+            len(self.classifier.vectorizer.get_feature_names_out()) + 4,
+        )
+
     def test_feature_matrix_shape(self):
         import numpy as np
         from src.intent_classifier import combine_features
