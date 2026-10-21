@@ -34,6 +34,19 @@ def extract_dense_signals(text: str) -> np.ndarray:
         float(len(q.split())),
     ]], dtype=np.float64)
 
+
+def extract_and_align_features(query_text: str, vectorizer: TfidfVectorizer) -> np.ndarray:
+    """Combine one query's TF-IDF vector and dense structural signals safely."""
+    query = normalize_query(query_text)
+    sparse_features = vectorizer.transform([query]).toarray()
+    dense_features = extract_dense_signals(query)
+    if sparse_features.ndim != 2 or dense_features.ndim != 2:
+        raise ValueError("TF-IDF and dense features must both be 2-D matrices")
+    if sparse_features.shape[0] != dense_features.shape[0]:
+        raise ValueError("TF-IDF and dense features must have matching row counts")
+    return np.hstack((sparse_features, dense_features))
+
+
 def combine_features(vectorizer: TfidfVectorizer, queries: list[str]) -> np.ndarray:
     """Horizontal TF-IDF + dense stacking with shape checks."""
     if not queries:
