@@ -19,10 +19,10 @@ def main() -> None:
     parser.add_argument("--model-path", default="models/pipeline.pkl")
     args = parser.parse_args()
 
-    path = Path(args.model_path)
-    if not path.exists():
-        run_training_pipeline(str(path))
-    classifier = VideoRAGIntentClassifier.load(str(path))
+    model_path = Path(args.model_path)
+    if not model_path.exists():
+        run_training_pipeline(str(model_path))
+    classifier = VideoRAGIntentClassifier.load(str(model_path))
     print(json.dumps(classifier.predict_route(args.query), indent=2))
 
 if __name__ == "__main__":
