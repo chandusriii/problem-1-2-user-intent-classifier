@@ -45,14 +45,14 @@ def classify_query(query: str) -> dict[str, Any]:
     # Transcript/audio questions require a temporal passage even if timestamped.
     elif f["speech_cue"]:
         scope = "CLIP"
-    # Explicit temporal relations or event/change questions are clip-scoped
-    # unless the wording identifies a static visual fact at one instant.
+    # Explicit temporal/audio content requires a segment, even when timestamped.
+    elif f["speech_cue"] or f["clip_cue"] or f["temporal_relation"]:
+        scope = "CLIP"
+    # Timestamped static visual details and on-screen text are frame-scoped.
     elif f["timestamp_count"] or f["frame_cue"] or (
         f["ocr_cue"] and re.search(r"\bat\s+\d", lower)
-    ):
+    ) or f["ocr_cue"]:
         scope = "FRAME"
-    elif f["clip_cue"] or f["ocr_cue"] or f["temporal_relation"]:
-        scope = "CLIP"
     elif f["count_cue"]:
         scope = "WHOLE_VIDEO"
     else:
