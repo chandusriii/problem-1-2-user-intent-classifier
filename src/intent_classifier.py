@@ -1,5 +1,6 @@
 """Lightweight, interpretable classifier for video-query retrieval scope."""
 from __future__ import annotations
+
 import re
 from typing import Any
 
@@ -14,7 +15,7 @@ def normalize_query(query: str) -> str:
     return query
 
 def engineer_features(query: str) -> dict[str, Any]:
-    """Extract normalized lexical and structural cues from a query."""
+    """Extract stable lexical and structural cues from query text."""
     q = normalize_query(query)
     lower = q.lower()
     return {
@@ -29,7 +30,7 @@ def engineer_features(query: str) -> dict[str, Any]:
         "causal_cue": bool(re.search(r"\b(why|cause|caused|reason for|result in|lead to)\b", lower)),
         "comparison_cue": bool(re.search(r"\b(compare|difference|different|similar|versus|vs\.?|change from .* to|relationship between)\b", lower)),
         "global_cue": bool(re.search(r"\b(throughout|from beginning to end|from start to finish|across the video|overall|over the course of the video)\b", lower)),
-        "speech_cue": bool(re.search(r"\b(say|said|says|speaker|speech|transcript|mention|mentions|spoken|talking|explain|explains|explained|speaking)\b", lower)),
+        "speech_cue": bool(re.search(r"\b(say|said|says|speaker|speech|transcript|mention|mentions|spoken|talking|explain|explains|explained|speaking|stops speaking)\b", lower)),
         "ocr_cue": bool(re.search(r"\b(read|text on|written on|sign|subtitle|on-screen text|written|displayed)\b", lower)),
     }
 
@@ -39,20 +40,20 @@ def classify_query(query: str) -> dict[str, Any]:
     f = engineer_features(q)
     lower = q.lower()
 
-    # Global summaries and aggregate questions require video-wide coverage.
+    # Broad summaries and questions about coverage across the video need global evidence.
     if f["whole_video_cue"] or f["global_cue"]:
         scope = "WHOLE_VIDEO"
-    # Transcript/audio questions require a temporal passage even if timestamped.
+    # Questions about words or speech need a transcript/temporal segment, even with a timestamp.
     elif f["speech_cue"]:
         scope = "CLIP"
-    # Explicit temporal/audio content requires a segment, even when timestamped.
-    elif f["speech_cue"] or f["clip_cue"] or f["temporal_relation"]:
-        scope = "CLIP"
-    # Timestamped static visual details and on-screen text are frame-scoped.
+    # A specific static visual fact at a timestamp is frame-scoped.
     elif f["timestamp_count"] or f["frame_cue"] or (
         f["ocr_cue"] and re.search(r"\bat\s+\d", lower)
-    ) or f["ocr_cue"]:
+    ):
         scope = "FRAME"
+    # Temporal relationships and actions require an interval/sequence, not a single frame.
+    elif f["clip_cue"] or f["temporal_relation"] or f["ocr_cue"]:
+        scope = "CLIP"
     elif f["count_cue"]:
         scope = "WHOLE_VIDEO"
     else:
