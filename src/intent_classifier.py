@@ -10,35 +10,35 @@ import numpy as np
 from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import MaxAbsScaler
 
 SCOPES = ("FRAME", "CLIP", "WHOLE_VIDEO")
 TIERS = ("L1_DIRECT", "L2_RETRIEVAL", "L3_GRAPH")
+MODEL_FORMAT_VERSION = 2
 
-_TIMESTAMP = re.compile(r"(?<!\d)(?:\d{1,2}:)?\d{1,2}:\d{2}(?:\.\d+)?(?!\d)")
-_TEMPORAL_CUE = re.compile(r"\b(after|before|then|sequence|during|while|when|beginning|end)\b", re.I)
-_WHOLE_VIDEO_CUE = re.compile(r"\b(summarize|summary|overall|entire video|whole video|main theme|main topic|full video)\b", re.I)
-_CLIP_CUE = re.compile(r"\b(say|said|speaker|speech|transcript|mention|talking|explain|happens|action|sequence)\b", re.I)
-_FRAME_CUE = re.compile(r"\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object)\b", re.I)
+_TIMESTAMP = re.compile(r"(?<!\\d)(?:\\d{1,2}:)?\\d{1,2}:\\d{2}(?:\\.\\d+)?(?!\\d)")
+_TEMPORAL_CUE = re.compile(r"\\b(after|before|then|sequence|during|while|when|beginning|end)\\b", re.I)
+_WHOLE_VIDEO_CUE = re.compile(r"\\b(summarize|summary|overall|entire video|whole video|main theme|main topic|full video)\\b", re.I)
+_CLIP_CUE = re.compile(r"\\b(say|said|speaker|speech|transcript|mention|talking|explain|happens|action|sequence)\\b", re.I)
+_FRAME_CUE = re.compile(r"\\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object)\\b", re.I)
 
 
 def normalize_query(query: str) -> str:
     """Validate and normalize one user query."""
     if not isinstance(query, str):
         raise TypeError("query must be a string")
-    normalized = re.sub(r"\s+", " ", query).strip()
+    normalized = re.sub(r"\\s+", " ", query).strip()
     if not normalized:
         raise ValueError("query cannot be empty")
     return normalized
 
 
 def extract_dense_signals(text: str) -> np.ndarray:
-    """Return timestamp, temporal, character-count and word-count features."""
+    """Return bounded structural features: timestamp and temporal cue indicators."""
     query = normalize_query(text)
     return np.asarray([[
         float(bool(_TIMESTAMP.search(query))),
         float(bool(_TEMPORAL_CUE.search(query))),
-        float(len(query)),
-        float(len(query.split())),
     ]], dtype=np.float64)
 
 
@@ -52,7 +52,7 @@ def _combine_sparse_and_dense(sparse_features, dense_features: np.ndarray) -> cs
 
 
 def extract_and_align_features(query_text: str, vectorizer: TfidfVectorizer) -> csr_matrix:
-    """Transform one query using the fitted vectorizer and dense signals."""
+    """Transform one query using the fitted vectorizer and structural signals."""
     query = normalize_query(query_text)
     return _combine_sparse_and_dense(
         vectorizer.transform([query]), extract_dense_signals(query)
@@ -72,14 +72,16 @@ class VideoRAGIntentClassifier:
     """Two independent Logistic Regression heads over shared query features."""
 
     def __init__(self) -> None:
+        self.format_version = MODEL_FORMAT_VERSION
         self.vectorizer = TfidfVectorizer(
             ngram_range=(1, 2), analyzer="word", max_features=1500, sublinear_tf=True
         )
+        # Binary structural signals are naturally on a comparable scale to TF-IDF.
         self.scope_model = LogisticRegression(
-            C=2.0, max_iter=300, class_weight="balanced", random_state=42
+            C=2.0, max_iter=1000, class_weight="balanced", random_state=42
         )
         self.tier_model = LogisticRegression(
-            C=1.5, max_iter=300, class_weight="balanced", random_state=42
+            C=1.5, max_iter=1000, class_weight="balanced", random_state=42
         )
         self.is_trained = False
 
@@ -115,7 +117,9 @@ class VideoRAGIntentClassifier:
             return "FRAME", "L1_DIRECT"
         return "CLIP", "L2_RETRIEVAL"
 
-    def predict_route(self, query: str, multi_route_margin: float = 0.15) -> dict[str, Any]:
+    def predict_route(
+        self, query: str, multi_route_margin: float = 0.15
+    ) -> dict[str, Any]:
         clean_query = normalize_query(query)
         if not 0.0 <= multi_route_margin <= 1.0:
             raise ValueError("multi_route_margin must be between 0 and 1")
@@ -159,10 +163,17 @@ class VideoRAGIntentClassifier:
 
     @classmethod
     def load(cls, file_path: str | Path = "models/pipeline.pkl") -> "VideoRAGIntentClassifier":
-        """Load a trusted local model artifact."""
+        """Load a trusted local model artifact and validate its format version."""
         path = Path(file_path)
         with path.open("rb") as handle:
             instance = pickle.load(handle)
         if not isinstance(instance, cls):
             raise TypeError(f"saved object at {path} is not a {cls.__name__}")
+        if getattr(instance, "format_version", None) != MODEL_FORMAT_VERSION:
+            raise ValueError(
+                "Unsupported or legacy model artifact format; retrain with "
+                "`python -m src.main train`."
+            )
+        if not instance.is_trained:
+            raise ValueError(f"model artifact at {path} is not trained")
         return instance
