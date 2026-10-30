@@ -22,7 +22,7 @@ The comparison includes word TF-IDF + Logistic Regression, word TF-IDF + Linear 
 
 ## Checked-in sample
 
-A small 750-question sample is included at `data/external/activitynet_qa_questions_sample.jsonl` (500 questions from the official train question list and 250 from validation). The sample intentionally contains question text and source identifiers, not answers or video media. It is a smoke-test sample, not a substitute for full source splits.
+A small 750-question sample is included at `data/external/activitynet_qa_questions_sample.jsonl` (500 questions from the official train question list and 250 from validation). The derived proxy-labelled copy is `data/processed/activitynet_qa_sample_proxy.jsonl`; its label distribution is summarized in `data/processed/activitynet_qa_sample_summary.json`. The sample intentionally contains question text and source identifiers, not answers or video media. It is a smoke-test sample, not a substitute for full source splits.
 
 ## Local run
 
