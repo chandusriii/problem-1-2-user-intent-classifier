@@ -36,6 +36,26 @@ jobs:
           python -m src.main predict --query "Summarize the entire video."
       - name: Run unit and API tests
         run: python -m unittest discover -s tests -v
+      - name: Validate bundled JSONL schema and benchmark metric semantics
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from src.benchmark import load_labelled_rows, evaluate
+          from src.intent_classifier import VideoRAGIntentClassifier
+          from src.train import run_training_pipeline
+          rows = load_labelled_rows(Path("data/intent_eval.jsonl"))
+          assert len(rows) >= 6
+          model = VideoRAGIntentClassifier()
+          model.fit(
+              [row[0] for row in __import__("src.train", fromlist=["EXPANDED_CORPUS"]).EXPANDED_CORPUS],
+              [row[1] for row in __import__("src.train", fromlist=["EXPANDED_CORPUS"]).EXPANDED_CORPUS],
+              [row[2] for row in __import__("src.train", fromlist=["EXPANDED_CORPUS"]).EXPANDED_CORPUS],
+          )
+          report = evaluate(model, rows)
+          assert "scope_top1" in report and "scope_candidate_recall" in report
+          assert "reasoning_tier" in report and "multi_route_coverage" in report
+          print("Evaluation schema and metric contracts are valid.")
+          PY
       - name: Build Docker image
         run: docker build --pull -t video-intent-router:ci .
       - name: Run container and test service
