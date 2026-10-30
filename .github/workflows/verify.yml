@@ -17,10 +17,8 @@ jobs:
   validate:
     runs-on: ubuntu-24.04
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
@@ -40,24 +38,22 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Build Docker image
         run: docker build --pull -t video-intent-router:ci .
-      - name: Run container
+      - name: Run container and test service
         run: |
           docker run -d --name intent-router -p 8000:8000 video-intent-router:ci
           for attempt in $(seq 1 30); do
-            if curl --fail --silent http://localhost:8000/health; then exit 0; fi
+            if curl --fail --silent http://localhost:8000/health; then
+              break
+            fi
             sleep 2
           done
-          docker logs intent-router
-          exit 1
-      - name: Test live API routes
-        run: |
-          set -euo pipefail
+          curl --fail --silent http://localhost:8000/health
           for endpoint in route classify; do
-            response=$(curl --fail --silent --show-error \
+            curl --fail --silent --show-error \
               -X POST "http://localhost:8000/$endpoint" \
               -H 'Content-Type: application/json' \
-              -d '{"query":"What color was the car at 00:15?"}')
-            RESPONSE_JSON="$response" python -c 'import json, os; p=json.loads(os.environ["RESPONSE_JSON"]); assert p["assigned_scopes"]; assert p["reasoning_tier"]; assert "confidence_distribution" in p'
+              -d '{"query":"What color was the car at 00:15?"}' \
+              | python -c 'import json,sys; p=json.load(sys.stdin); assert p["assigned_scopes"]; assert p["reasoning_tier"]; assert "confidence_distribution" in p'
           done
       - name: Collect container logs on failure
         if: failure()
