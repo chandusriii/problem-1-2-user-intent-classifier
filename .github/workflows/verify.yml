@@ -40,14 +40,21 @@ jobs:
         run: docker build --pull -t video-intent-router:ci .
       - name: Run container and test service
         run: |
+          set -euo pipefail
           docker run -d --name intent-router -p 8000:8000 video-intent-router:ci
+          ready=false
           for attempt in $(seq 1 30); do
             if curl --fail --silent http://localhost:8000/health; then
+              ready=true
               break
             fi
             sleep 2
           done
-          curl --fail --silent http://localhost:8000/health
+          if [ "$ready" != true ]; then
+            echo "Container did not become healthy."
+            docker logs intent-router
+            exit 1
+          fi
           for endpoint in route classify; do
             curl --fail --silent --show-error \
               -X POST "http://localhost:8000/$endpoint" \
