@@ -7,7 +7,6 @@
 [![CI](https://github.com/chandusriii/problem-1-2-user-intent-classifier/actions/workflows/verify.yml/badge.svg)](https://github.com/chandusriii/problem-1-2-user-intent-classifier/actions/workflows/verify.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![License](https://img.shields.io/badge/License-see%20LICENSE-lightgrey)](LICENSE)
 
 </div>
 
@@ -47,7 +46,6 @@ Normalization
     |
     v
 Shared features: word TF-IDF (1-2 grams) + timestamp + temporal cue
-                 + character count + word count
     |
     +-----------------------------+
     |                             |
@@ -220,4 +218,4 @@ Next steps: collect a larger reviewed corpus, define annotation guidance, measur
 
 ## License
 
-See [LICENSE](LICENSE).
+No license file is currently included. All rights remain with the copyright holder unless a license is added. Add an explicit open-source license before inviting reuse.
