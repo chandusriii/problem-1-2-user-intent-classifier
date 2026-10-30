@@ -10,43 +10,50 @@ WHOLE = re.compile(r"\\b(summarize|summary|overall|entire|whole video|full video
 CLIP = re.compile(r"\\b(say|said|speaker|speech|transcript|mention|talking|explain|happen|action|sequence|when|how many times|respond|reaction|before|after)\\b", re.I)
 FRAME = re.compile(r"\\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object|shirt|person|people|what is shown|what do you see|number of)\\b", re.I)
 
-def map_labels(q: str):
-    s = " ".join(q.lower().split())
-    if WHOLE.search(s) or any(x in s for x in ("video about","entire recording","whole recording","full recording","throughout the recording","from start to end","from beginning to end")):
+def map_labels(query: str):
+    text = " ".join(query.lower().split())
+    if WHOLE.search(text) or any(term in text for term in ("video about","entire recording","whole recording","full recording","throughout the recording","from start to end","from beginning to end")):
         scope = "WHOLE_VIDEO"
-    elif TEMPORAL.search(s) or CLIP.search(s) or ("between " in s and TIMESTAMP.search(s)):
+    elif TEMPORAL.search(text) or CLIP.search(text) or ("between " in text and TIMESTAMP.search(text)):
         scope = "CLIP"
-    elif TIMESTAMP.search(s) or FRAME.search(s):
+    elif TIMESTAMP.search(text) or FRAME.search(text):
         scope = "FRAME"
     else:
         scope = "CLIP"
-    temporal_count = len(TEMPORAL.findall(s))
-    if scope == "WHOLE_VIDEO" or temporal_count >= 2 or any(x in s for x in ("compare","relationship","why does","how does","evolve","timeline","cause and effect","multiple events")):
+    temporal_count = len(TEMPORAL.findall(text))
+    if scope == "WHOLE_VIDEO" or temporal_count >= 2 or any(term in text for term in ("compare","relationship","why does","how does","evolve","timeline","cause and effect","multiple events")):
         tier = "L3_GRAPH"
-    elif scope == "FRAME" and not TEMPORAL.search(s):
+    elif scope == "FRAME" and not TEMPORAL.search(text):
         tier = "L1_DIRECT"
     else:
         tier = "L2_RETRIEVAL"
     return scope, tier
 
 def main():
-    p=argparse.ArgumentParser()
-    p.add_argument("--train", type=Path, required=True)
-    p.add_argument("--validation", type=Path, required=True)
-    p.add_argument("--out", type=Path, default=Path("data/processed"))
-    args=p.parse_args()
-    args.out.mkdir(parents=True,exist_ok=True)
-    for split,path in (("train",args.train),("validation",args.validation)):
-        entries=json.loads(path.read_text(encoding="utf-8"))
-        rows=[]
-        for item in entries:
-            q=item.get("question")
-            if not isinstance(q,str) or not q.strip(): continue
-            scope,tier=map_labels(q)
-            rows.append({"query":q.strip(),"scope_proxy":scope,"tier_proxy":tier,"source":"ActivityNet-QA","source_id":item.get("question_id"),"video_id":item.get("video_name"),"label_method":"heuristic_v1_requires_human_review"})
-        target=args.out/f"activitynet_qa_{split}_proxy.jsonl"
-        target.write_text("".join(json.dumps(r,ensure_ascii=False)+"\\n" for r in rows),encoding="utf-8")
-        summary={"rows":len(rows),"scope_counts":dict(Counter(r["scope_proxy"] for r in rows)),"tier_counts":dict(Counter(r["tier_proxy"] for r in rows)),"unique_video_ids":len({r["video_id"] for r in rows}),"unique_questions":len({r["query"].lower() for r in rows})}
-        (args.out/f"activitynet_qa_{split}_summary.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
-        print(split,json.dumps(summary))
-if __name__=="__main__": main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--train", type=Path, required=True)
+    parser.add_argument("--validation", type=Path, required=True)
+    parser.add_argument("--out", type=Path, default=Path("data/processed"))
+    args = parser.parse_args()
+    args.out.mkdir(parents=True, exist_ok=True)
+    for split, path in (("train", args.train), ("validation", args.validation)):
+        source_rows = json.loads(path.read_text(encoding="utf-8"))
+        output_rows = []
+        for item in source_rows:
+            query = item.get("question")
+            if not isinstance(query, str) or not query.strip():
+                continue
+            scope, tier = map_labels(query)
+            output_rows.append({"query": query.strip(), "scope_proxy": scope, "tier_proxy": tier,
+                "source": "ActivityNet-QA", "source_id": item.get("question_id"),
+                "video_id": item.get("video_name"), "label_method": "heuristic_v1_requires_human_review"})
+        target = args.out / f"activitynet_qa_{split}_proxy.jsonl"
+        target.write_text("".join(json.dumps(row, ensure_ascii=False) + "\\n" for row in output_rows), encoding="utf-8")
+        summary = {"rows": len(output_rows), "scope_counts": dict(Counter(r["scope_proxy"] for r in output_rows)),
+            "tier_counts": dict(Counter(r["tier_proxy"] for r in output_rows)),
+            "unique_video_ids": len({r["video_id"] for r in output_rows}),
+            "unique_questions": len({r["query"].lower() for r in output_rows})}
+        (args.out / f"activitynet_qa_{split}_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+        print(split, json.dumps(summary))
+if __name__ == "__main__":
+    main()
