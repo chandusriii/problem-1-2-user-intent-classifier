@@ -12,7 +12,7 @@ import argparse
 import json
 import time
 
-import numpy as np
+from math import ceil
 from pathlib import Path
 from typing import Any
 
@@ -82,7 +82,7 @@ def evaluate(model: VideoRAGIntentClassifier, rows: list[dict[str, str]]) -> dic
 
     ordered = sorted(latencies)
     # Nearest-rank p95 (rank = ceil(0.95 * n), converted to zero-based index).
-    p95_index = max(0, min(len(ordered) - 1, int(np.ceil(0.95 * len(ordered))) - 1))
+    p95_index = max(0, min(len(ordered) - 1, ceil(0.95 * len(ordered)) - 1))
     return {
         "examples": len(rows),
         "scope_top1": classification_metrics(true_scopes, top1_scopes),
