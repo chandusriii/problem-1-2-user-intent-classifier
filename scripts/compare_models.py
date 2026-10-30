@@ -95,7 +95,7 @@ def main():
                 "tier_proxy": tiers[idx], "tier_prediction": str(tier_pred[pos])})
     args.output.parent.mkdir(parents=True, exist_ok=True)
     prediction_path = args.output.with_name(args.output.stem + "_predictions.jsonl")
-    prediction_path.write_text("".join(json.dumps(x, ensure_ascii=False) + "\\n" for x in prediction_rows), encoding="utf-8")
+    prediction_path.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in prediction_rows), encoding="utf-8")
     args.output.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps({"summary": str(args.output), "predictions": str(prediction_path),
         "rows": len(rows), "test_rows": len(test_idx),
