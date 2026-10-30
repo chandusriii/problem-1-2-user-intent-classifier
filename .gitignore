@@ -24,3 +24,4 @@ data/external/*_validation_questions.jsonl
 data/processed/
 results/*_predictions.jsonl
 results/*_comparison.json
+data/external/*_train_questions.jsonl\ndata/external/*_validation_questions.jsonl\ndata/processed/\n
