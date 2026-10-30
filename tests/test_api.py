@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 from fastapi.testclient import TestClient
 
-from src.app import app
+from src import app as app_module
 from src.intent_classifier import VideoRAGIntentClassifier
 from src.train import EXPANDED_CORPUS
 
@@ -18,15 +18,14 @@ def build_trained_model():
 
 class ApiTests(unittest.TestCase):
     def setUp(self):
-        patcher = patch(
-            "src.app.VideoRAGIntentClassifier.load",
-            return_value=build_trained_model(),
-        )
-        patcher.start()
-        self.addCleanup(patcher.stop)
-        self.client_context = TestClient(app)
+        self.client_context = TestClient(app_module.app)
         self.client = self.client_context.__enter__()
-        self.addCleanup(self.client_context.__exit__, None, None, None)
+        app_module.classifier = build_trained_model()
+        self.addCleanup(self.cleanup_client)
+
+    def cleanup_client(self):
+        app_module.classifier = None
+        self.client_context.__exit__(None, None, None)
 
     def test_health(self):
         response = self.client.get("/health")
@@ -34,23 +33,17 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(response.json()["status"], "healthy")
 
     def test_frame_route(self):
-        response = self.client.post(
-            "/route", json={"query": "What color is the car at 00:15?"}
-        )
+        response = self.client.post("/route", json={"query": "What color is the car at 00:15?"})
         self.assertEqual(response.status_code, 200)
         self.assertIn("FRAME", response.json()["assigned_scopes"])
 
     def test_clip_route(self):
-        response = self.client.post(
-            "/route", json={"query": "What does the speaker say at 02:30?"}
-        )
+        response = self.client.post("/route", json={"query": "What does the speaker say at 02:30?"})
         self.assertEqual(response.status_code, 200)
         self.assertIn("CLIP", response.json()["assigned_scopes"])
 
     def test_whole_video_route(self):
-        response = self.client.post(
-            "/route", json={"query": "Summarize the entire video."}
-        )
+        response = self.client.post("/route", json={"query": "Summarize the entire video."})
         self.assertEqual(response.status_code, 200)
         self.assertIn("WHOLE_VIDEO", response.json()["assigned_scopes"])
 
