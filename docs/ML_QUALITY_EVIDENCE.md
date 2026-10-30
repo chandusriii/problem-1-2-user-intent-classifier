@@ -20,6 +20,10 @@ Before claiming model quality, replace proxy labels with human-adjudicated label
 
 The comparison includes word TF-IDF + Logistic Regression, word TF-IDF + Linear SVM, word+character TF-IDF + Logistic Regression, Random Forest and Extra Trees. Metrics include accuracy, macro F1, weighted F1, per-class precision/recall/F1/support, confusion matrices, and CPU train/inference time.
 
+## Checked-in sample
+
+A small 750-question sample is included at `data/external/activitynet_qa_questions_sample.jsonl` (500 questions from the official train question list and 250 from validation). The sample intentionally contains question text and source identifiers, not answers or video media. It is a smoke-test sample, not a substitute for full source splits.
+
 ## Local run
 
 Download the upstream `dataset/train_q.json` and `dataset/val_q.json` files from the source repository, then run:
