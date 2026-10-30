@@ -26,7 +26,7 @@ The benchmark reports class-level precision, recall, F1 and support for both pre
 - Keep paraphrases and near-duplicates within one split.
 - Record dataset provenance, licensing, annotation guidance, annotator review and split methodology.
 - Ensure every row has a valid scope and tier label.
-- Do not use the bundled `data/intent_eval.jsonl` as evidence of generalization. It is a small illustrative schema/smoke sample and must be independently reviewed and split before it can support any claim.
+- The bundled `data/intent_eval.jsonl` is illustrative only. It must not be treated as a held-out benchmark or evidence of generalization.
 - The bundled development corpus is not official Video-MME ground truth.
 
 ## Reproducibility
