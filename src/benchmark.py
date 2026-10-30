@@ -1,9 +1,10 @@
-"""Evaluate both prediction heads on an independently reviewed JSONL dataset.
+"""Evaluate routing with explicit top-1, candidate-recall and reasoning-tier metrics.
 
-Expected schema per line:
+Expected JSONL schema per line:
 {"query": "...", "scope": "FRAME", "tier": "L1_DIRECT"}
 
-Do not reuse development training examples as held-out evaluation data.
+Only use an independently reviewed, held-out dataset. The bundled development
+corpus must not be presented as benchmark or generalization evidence.
 """
 from __future__ import annotations
 
@@ -15,12 +16,12 @@ from typing import Any
 
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 
-from src.intent_classifier import VideoRAGIntentClassifier
+from src.intent_classifier import SCOPES, TIERS, VideoRAGIntentClassifier
 from src.train import run_training_pipeline
 
 
 def load_labelled_rows(path: Path) -> list[dict[str, str]]:
-    rows = []
+    rows: list[dict[str, str]] = []
     for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
         if not line.strip():
             continue
@@ -36,7 +37,12 @@ def load_labelled_rows(path: Path) -> list[dict[str, str]]:
             raise ValueError(f"Line {line_number} is missing keys: {sorted(missing)}")
         if not all(isinstance(row[key], str) and row[key].strip() for key in required):
             raise ValueError(f"Line {line_number} contains an empty or non-string field")
-        rows.append({key: row[key].strip() for key in required})
+        clean = {key: row[key].strip() for key in required}
+        if clean["scope"] not in SCOPES:
+            raise ValueError(f"Line {line_number} has invalid scope label: {clean['scope']}")
+        if clean["tier"] not in TIERS:
+            raise ValueError(f"Line {line_number} has invalid tier label: {clean['tier']}")
+        rows.append(clean)
     if not rows:
         raise ValueError("No labelled examples found")
     return rows
@@ -56,27 +62,39 @@ def classification_metrics(y_true: list[str], y_pred: list[str]) -> dict[str, An
 def evaluate(model: VideoRAGIntentClassifier, rows: list[dict[str, str]]) -> dict[str, Any]:
     true_scopes = [row["scope"] for row in rows]
     true_tiers = [row["tier"] for row in rows]
-    predicted_scopes, predicted_tiers, latencies = [], [], []
+    top1_scopes: list[str] = []
+    tier_predictions: list[str] = []
+    candidate_hits = 0
+    multiple_candidate_count = 0
+    latencies: list[float] = []
 
     for row in rows:
         start = time.perf_counter()
         result = model.predict_route(row["query"])
         latencies.append((time.perf_counter() - start) * 1000)
-        predicted_scopes.append(
-            row["scope"] if row["scope"] in result["assigned_scopes"] else result["assigned_scopes"][0]
-        )
-        predicted_tiers.append(result["reasoning_tier"])
+        candidates = result["assigned_scopes"]
+        top1_scopes.append(candidates[0])
+        tier_predictions.append(result["reasoning_tier"])
+        candidate_hits += int(row["scope"] in candidates)
+        multiple_candidate_count += int(len(candidates) > 1)
 
     ordered = sorted(latencies)
-    p95_index = min(len(ordered) - 1, max(0, int(0.95 * len(ordered)) - 1))
+    # Nearest-rank p95 (rank = ceil(0.95 * n), converted to zero-based index).
+    p95_index = max(0, min(len(ordered) - 1, int(np.ceil(0.95 * len(ordered))) - 1))
     return {
         "examples": len(rows),
-        "scope": classification_metrics(true_scopes, predicted_scopes),
-        "reasoning_tier": classification_metrics(true_tiers, predicted_tiers),
-        "latency_ms": {"mean": sum(latencies) / len(latencies), "p95": ordered[p95_index]},
+        "scope_top1": classification_metrics(true_scopes, top1_scopes),
+        "scope_candidate_recall": candidate_hits / len(rows),
+        "multi_route_coverage": multiple_candidate_count / len(rows),
+        "reasoning_tier": classification_metrics(true_tiers, tier_predictions),
+        "latency_ms": {
+            "mean": sum(latencies) / len(latencies),
+            "p95": ordered[p95_index],
+        },
         "evaluation_note": (
             "Metrics describe only this labelled dataset and runtime environment. "
-            "They are not Video-MME results unless labels and protocol are independently verified."
+            "Candidate recall is reported separately and is not top-1 accuracy. "
+            "These are not Video-MME results unless labels and protocol are independently verified."
         ),
     }
 
@@ -95,7 +113,9 @@ def main() -> None:
     elif args.train_development_model:
         model = run_training_pipeline(str(args.model))
     else:
-        parser.error(f"Model not found at {args.model}; train it first or opt into development training")
+        parser.error(
+            f"Model not found at {args.model}; train it first or opt into development training"
+        )
 
     report = evaluate(model, rows)
     args.output.parent.mkdir(parents=True, exist_ok=True)
