@@ -9,7 +9,6 @@ Incoming query
        - TF-IDF word unigrams and bigrams
        - timestamp indicator
        - temporal-language indicator
-       - character and word counts
   -> independent prediction heads
        - retrieval scope: FRAME / CLIP / WHOLE_VIDEO
        - reasoning tier: L1_DIRECT / L2_RETRIEVAL / L3_GRAPH
@@ -26,7 +25,7 @@ Incoming query
 | `app.py` | HTTP service and trained model lifecycle |
 | `benchmark.py` | Metrics on a separate labelled dataset |
 
-The same feature transformer is used for fitting and inference. TF-IDF data remains sparse when concatenated with the four dense query features.
+The same feature transformer is used for fitting and inference. TF-IDF data remains sparse when concatenated with the two binary structural indicators.
 
 ## Deployment
 
