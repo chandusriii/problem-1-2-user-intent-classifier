@@ -11,6 +11,8 @@ from __future__ import annotations
 import argparse
 import json
 import time
+
+import numpy as np
 from pathlib import Path
 from typing import Any
 
