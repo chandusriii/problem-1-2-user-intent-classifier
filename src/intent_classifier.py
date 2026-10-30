@@ -16,18 +16,18 @@ SCOPES = ("FRAME", "CLIP", "WHOLE_VIDEO")
 TIERS = ("L1_DIRECT", "L2_RETRIEVAL", "L3_GRAPH")
 MODEL_FORMAT_VERSION = 2
 
-_TIMESTAMP = re.compile(r"(?<!\\d)(?:\\d{1,2}:)?\\d{1,2}:\\d{2}(?:\\.\\d+)?(?!\\d)")
-_TEMPORAL_CUE = re.compile(r"\\b(after|before|then|sequence|during|while|when|beginning|end)\\b", re.I)
-_WHOLE_VIDEO_CUE = re.compile(r"\\b(summarize|summary|overall|entire video|whole video|main theme|main topic|full video)\\b", re.I)
-_CLIP_CUE = re.compile(r"\\b(say|said|speaker|speech|transcript|mention|talking|explain|happens|action|sequence)\\b", re.I)
-_FRAME_CUE = re.compile(r"\\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object)\\b", re.I)
+_TIMESTAMP = re.compile(r"(?<!\d)(?:\d{1,2}:)?\d{1,2}:\d{2}(?:\.\d+)?(?!\d)")
+_TEMPORAL_CUE = re.compile(r"\b(after|before|then|sequence|during|while|when|beginning|end)\b", re.I)
+_WHOLE_VIDEO_CUE = re.compile(r"\b(summarize|summary|overall|entire video|whole video|main theme|main topic|full video)\b", re.I)
+_CLIP_CUE = re.compile(r"\b(say|said|speaker|speech|transcript|mention|talking|explain|happens|action|sequence)\b", re.I)
+_FRAME_CUE = re.compile(r"\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object)\b", re.I)
 
 
 def normalize_query(query: str) -> str:
     """Validate and normalize one user query."""
     if not isinstance(query, str):
         raise TypeError("query must be a string")
-    normalized = re.sub(r"\\s+", " ", query).strip()
+    normalized = re.sub(r"\s+", " ", query).strip()
     if not normalized:
         raise ValueError("query cannot be empty")
     return normalized
