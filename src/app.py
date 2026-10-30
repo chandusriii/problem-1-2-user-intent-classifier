@@ -50,6 +50,7 @@ app = FastAPI(
     title="Multi-Head Video RAG Intent Router",
     description="Routes video-related queries by retrieval scope and reasoning tier.",
     version="3.0.0",
+    lifespan=lifespan,
 )
 
 
