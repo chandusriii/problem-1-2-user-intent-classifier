@@ -5,7 +5,12 @@ dataset:
   citation: "Yu et al., ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering, AAAI 2019."
   license_notice: "Upstream repository says MIT licensed but restricted to non-commercial use. Verify terms and comply with attribution/non-commercial restrictions."
   scope: "Question text and IDs only; no answers or video files required."
-  splits:
+  sample_in_repository:
+    questions: 750
+    source_train_questions: 500
+    source_validation_questions: 250
+    unique_video_ids: 750
+  official_source_split_sizes:
     train: 32000
     validation: 18000
     test: 8000
