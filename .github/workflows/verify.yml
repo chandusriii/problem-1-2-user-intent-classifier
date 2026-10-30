@@ -56,6 +56,21 @@ jobs:
           assert "reasoning_tier" in report and "multi_route_coverage" in report
           print("Evaluation schema and metric contracts are valid.")
           PY
+      - name: Smoke-test ActivityNet-QA preparation and grouped model comparison
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from scripts.prepare_activitynet import map_labels
+          from scripts.compare_models import load, build_models
+          sample = [json.loads(line) for line in Path("data/external/activitynet_qa_questions_sample.jsonl").read_text().splitlines() if line.strip()]
+          assert len(sample) >= 500
+          labels = [map_labels(row["query"]) for row in sample]
+          assert {scope for scope, _ in labels} <= {"FRAME", "CLIP", "WHOLE_VIDEO"}
+          assert {tier for _, tier in labels} <= {"L1_DIRECT", "L2_RETRIEVAL", "L3_GRAPH"}
+          assert len(build_models()) == 5
+          print(f"ActivityNet-QA sample smoke test passed: {len(sample)} questions; five model configurations.")
+          PY
       - name: Build Docker image
         run: docker build --pull -t video-intent-router:ci .
       - name: Run container and test service
