@@ -1,0 +1,15 @@
+{
+  "rows": 750,
+  "unique_videos": 750,
+  "scope_counts": {
+    "FRAME": 490,
+    "CLIP": 260
+  },
+  "tier_counts": {
+    "L1_DIRECT": 479,
+    "L2_RETRIEVAL": 229,
+    "L3_GRAPH": 42
+  },
+  "train_source_rows": 500,
+  "validation_source_rows": 250
+}
