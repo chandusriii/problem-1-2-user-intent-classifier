@@ -1,25 +1,29 @@
-name: Validate User Intent Classifier
+name: Python unit tests
 
 on:
   push:
-    branches: [main]
+    branches: [main, improvement/production-quality]
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
-  test:
+  tests:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
       - name: Install dependencies
-        run: python -m pip install -r requirements.txt
-      - name: Smoke-test CLI
         run: |
-          python src/main.py --query "What color is the car at 00:15?"
-          python src/main.py --query "What does the speaker say at 02:30?"
-          python src/main.py --query "Summarize the entire video."
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Train development model
+        run: python -m src.main train
       - name: Run unit and API tests
         run: python -m unittest discover -s tests -v
