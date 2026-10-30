@@ -10,7 +10,6 @@ import numpy as np
 from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import MaxAbsScaler
 
 SCOPES = ("FRAME", "CLIP", "WHOLE_VIDEO")
 TIERS = ("L1_DIRECT", "L2_RETRIEVAL", "L3_GRAPH")
