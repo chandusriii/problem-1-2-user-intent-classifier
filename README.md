@@ -191,7 +191,7 @@ python -m src.benchmark --labels path/to/reviewed_eval.jsonl \
 
 The evaluator reports scope top-1 accuracy and macro F1 separately from candidate recall and multi-route coverage. Reasoning-tier metrics are evaluated independently. Candidate recall is not conventional top-1 accuracy.
 
-The bundled JSONL file illustrates the required schema; it is not an independently reviewed held-out benchmark. Do not use the training corpus or this illustrative sample as evidence of generalization. Publish dataset provenance, annotation rules, split strategy, package versions, artifact version and runtime environment with any reported result.
+The bundled JSONL file is illustrative only and is not an independently reviewed held-out benchmark. Do not use it or the training corpus as evidence of generalization. Publish dataset provenance, annotation rules, split strategy, package versions, artifact version and runtime environment with any reported result.
 
 ## Engineering safeguards
 
