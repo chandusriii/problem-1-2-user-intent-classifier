@@ -2,7 +2,7 @@ name: Validate Intent Router
 
 on:
   push:
-    branches: [main, improvement/production-quality]
+    branches: [main, improvement/production-quality, experiments/ml-quality-evaluation]
   pull_request:
     branches: [main]
 
