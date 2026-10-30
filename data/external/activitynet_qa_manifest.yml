@@ -1,0 +1,16 @@
+dataset:
+  name: ActivityNet-QA
+  repository: https://github.com/MILVLG/activitynet-qa
+  upstream_commit: 2cf80aeb4e45955e53404e1716d3b9c0b1cbd72f
+  citation: "Yu et al., ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering, AAAI 2019."
+  license_notice: "Upstream repository says MIT licensed but restricted to non-commercial use. Verify terms and comply with attribution/non-commercial restrictions."
+  scope: "Question text and IDs only; no answers or video files required."
+  splits:
+    train: 32000
+    validation: 18000
+    test: 8000
+  proxy_labeling:
+    version: heuristic_v1
+    scope_labels: [FRAME, CLIP, WHOLE_VIDEO]
+    reasoning_tier_labels: [L1_DIRECT, L2_RETRIEVAL, L3_GRAPH]
+    warning: "The source dataset contains no native retrieval-scope or reasoning-tier labels. Derived labels are heuristic proxies, not ground truth."
