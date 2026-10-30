@@ -1,7 +1,8 @@
-"""FastAPI gateway over the multi-head intent classifier."""
+"""FastAPI gateway for multi-head video-query routing."""
 from __future__ import annotations
 
 import logging
+import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
@@ -14,23 +15,29 @@ from src.train import run_training_pipeline
 
 logger = logging.getLogger(__name__)
 ROOT = Path(__file__).resolve().parents[1]
-MODEL_PATH = ROOT / "models" / "pipeline.pkl"
+DEFAULT_MODEL_PATH = ROOT / "models" / "pipeline.pkl"
 classifier: VideoRAGIntentClassifier | None = None
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    """Load model before serving traffic; train only as a deployment fallback."""
+    """Load a model artifact; never silently train during production startup."""
     global classifier
+    model_path = Path(os.getenv("INTENT_MODEL_PATH", str(DEFAULT_MODEL_PATH)))
     try:
-        if MODEL_PATH.exists():
-            classifier = VideoRAGIntentClassifier.load(str(MODEL_PATH))
+        if model_path.exists():
+            classifier = VideoRAGIntentClassifier.load(model_path)
+        elif os.getenv("INTENT_ALLOW_STARTUP_TRAINING", "false").lower() == "true":
+            logger.warning("Missing model; explicit development startup training is enabled.")
+            classifier = run_training_pipeline(str(model_path))
         else:
-            logger.warning("Trained model asset missing; training the development model at startup.")
-            classifier = run_training_pipeline(str(MODEL_PATH))
+            raise RuntimeError(
+                f"Model artifact not found at {model_path}. Train with `python -m src.main train` "
+                "or explicitly enable INTENT_ALLOW_STARTUP_TRAINING for development."
+            )
         if not classifier.is_trained:
-            raise RuntimeError("Loaded classifier is not trained.")
-        logger.info("Intent classifier loaded and ready.")
+            raise RuntimeError("Loaded classifier artifact is not trained.")
+        logger.info("Intent classifier loaded from %s", model_path)
         yield
     except Exception:
         logger.exception("Unable to initialize the intent classifier.")
@@ -40,19 +47,17 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(
-    title="Multi-Head Video RAG Intent Routing Gateway",
+    title="Multi-Head Video RAG Intent Router",
     description="Routes video-related queries by retrieval scope and reasoning tier.",
-    version="2.1.0",
+    version="3.0.0",
     lifespan=lifespan,
 )
 
 
 class RoutingRequest(BaseModel):
     query: str = Field(
-        ...,
-        min_length=1,
-        max_length=5000,
-        description="Raw video-related user query.",
+        ..., min_length=1, max_length=5000,
+        description="Video-related user query.",
         examples=["What color is the car passing by at 00:15?"],
     )
 
@@ -67,41 +72,26 @@ class RoutingResponse(BaseModel):
 
 @app.get("/health", status_code=status.HTTP_200_OK)
 def health_check() -> dict[str, str]:
-    """Report process readiness based on whether a trained model is loaded."""
+    """Report readiness only when an actual trained model is loaded."""
     if classifier is not None and classifier.is_trained:
         return {"status": "healthy", "engine_state": "online"}
     raise HTTPException(status_code=503, detail="Inference engine is not ready.")
 
 
-@app.post("/route", response_model=RoutingResponse, status_code=status.HTTP_200_OK)
-@app.post("/classify", response_model=RoutingResponse, status_code=status.HTTP_200_OK)
+@app.post("/route", response_model=RoutingResponse)
+@app.post("/classify", response_model=RoutingResponse)
 def route_query(payload: RoutingRequest) -> RoutingResponse:
-    """Predict retrieval scope and reasoning tier for one query."""
+    """Predict retrieval scopes and reasoning tier for a query."""
     query = payload.query.strip()
     if not query:
-        raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="Query cannot be blank.",
-        )
+        raise HTTPException(status_code=422, detail="Query cannot be blank.")
     if classifier is None or not classifier.is_trained:
-        raise HTTPException(
-            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail="Inference engine is not ready.",
-        )
+        raise HTTPException(status_code=503, detail="Inference engine is not ready.")
     try:
         result: dict[str, Any] = classifier.predict_route(query)
-        return RoutingResponse(
-            query=result["query"],
-            assigned_scopes=result["assigned_scopes"],
-            reasoning_tier=result["reasoning_tier"],
-            confidence_distribution=result["confidence_distribution"],
-            classifier=result["classifier"],
-        )
+        return RoutingResponse(**result)
     except (TypeError, ValueError) as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     except Exception as exc:
         logger.exception("Inference failed.")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Inference pipeline failed.",
-        ) from exc
+        raise HTTPException(status_code=500, detail="Inference pipeline failed.") from exc

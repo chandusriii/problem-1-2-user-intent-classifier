@@ -1,12 +1,12 @@
-{"query":"What color is the car at 00:15?","scope":"FRAME"}
-{"query":"Who is visible in this frame?","scope":"FRAME"}
-{"query":"What is written on the slide at 00:42?","scope":"FRAME"}
-{"query":"Read the sign at 01:10.","scope":"FRAME"}
-{"query":"What does the speaker say at 02:30?","scope":"FRAME"}
-{"query":"When does the presenter explain neural networks?","scope":"CLIP"}
-{"query":"Find the moment where the red car enters the scene.","scope":"CLIP"}
-{"query":"What happens before the alarm sounds?","scope":"CLIP"}
-{"query":"Summarize the entire video.","scope":"WHOLE_VIDEO"}
-{"query":"Give an overview of the video as a whole.","scope":"WHOLE_VIDEO"}
-{"query":"List all main events throughout the video.","scope":"WHOLE_VIDEO"}
-{"query":"How many times does the player score throughout the video?","scope":"WHOLE_VIDEO"}
+{"query":"What shade is the car at 00:15?","scope":"FRAME","tier":"L1_DIRECT"}
+{"query":"Read the title displayed at 00:42.","scope":"FRAME","tier":"L1_DIRECT"}
+{"query":"Which person is visible in the shot at 01:10?","scope":"FRAME","tier":"L1_DIRECT"}
+{"query":"Identify the logo on the presenter's shirt at 02:40.","scope":"FRAME","tier":"L2_RETRIEVAL"}
+{"query":"What does the presenter say between 02:10 and 02:30?","scope":"CLIP","tier":"L2_RETRIEVAL"}
+{"query":"Describe the sequence after the door opens.","scope":"CLIP","tier":"L3_GRAPH"}
+{"query":"Find when the red vehicle enters the scene.","scope":"CLIP","tier":"L2_RETRIEVAL"}
+{"query":"How does the speaker respond to the question?","scope":"CLIP","tier":"L2_RETRIEVAL"}
+{"query":"Summarize the central topic of the full recording.","scope":"WHOLE_VIDEO","tier":"L2_RETRIEVAL"}
+{"query":"Create a timeline from the start to the end of the video.","scope":"WHOLE_VIDEO","tier":"L3_GRAPH"}
+{"query":"What are the main events across the complete video?","scope":"WHOLE_VIDEO","tier":"L2_RETRIEVAL"}
+{"query":"How does the subject's behaviour change throughout the recording?","scope":"WHOLE_VIDEO","tier":"L3_GRAPH"}

@@ -2,11 +2,11 @@ setup_commands:
   - "python -m pip install -r requirements.txt"
 
 run_commands:
-  - "python -m src.train"
-  - "python -m src.main --query \"What color was the car at 00:15?\""
-  - "python src/main.py --query \"Summarize the full plot of this video.\""
+  - "python -m src.main train"
+  - "python -m src.main predict --query \"What color was the car at 00:15?\""
+  - "python -m src.main predict --query \"Summarize the full plot of this video?\""
 
 test_commands:
   - "python -m unittest discover -s tests -v"
 
-notes: "TF-IDF + dense-feature Logistic Regression with separate scope and reasoning heads. The packaged corpus is a small synthetic development set for smoke tests, not an official Video-MME evaluation dataset. No claim of <5ms latency or benchmark accuracy is made without independent measurement."
+notes: "The bundled, manually authored examples are a development smoke-test corpus. They are not official Video-MME labels or a held-out benchmark. Do not claim generalization accuracy or target latency without independent evaluation."

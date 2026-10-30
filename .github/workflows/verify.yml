@@ -1,72 +1,90 @@
-name: Verify Multi-Head Video RAG Router
+name: Validate Intent Router
 
 on:
   push:
-    branches: [main]
+    branches: [main, improvement/production-quality]
   pull_request:
     branches: [main]
 
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code repository
-        uses: actions/checkout@v4
+permissions:
+  contents: read
 
-      - name: Initialize Python 3.11
-        uses: actions/setup-python@v5
+concurrency:
+  group: intent-router-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Install and verify pinned dependencies
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-
-      - name: Train model and smoke-test CLI
+      - name: Train deterministic development artifact
+        run: python -m src.main train
+      - name: Smoke-test CLI
         run: |
-          python -m src.train
-          python src/main.py --query "What color was the jacket worn at 02:40?"
-          python -m src.main --query "Summarize the full plot of this video."
-
-      - name: Run Python unit and API tests
+          python -m src.main predict --query "What color is the car at 00:15?"
+          python -m src.main predict --query "What does the speaker say at 02:30?"
+          python -m src.main predict --query "Summarize the entire video."
+      - name: Run unit and API tests
         run: python -m unittest discover -s tests -v
-
-      - name: Build production multi-stage Docker image
-        run: docker build --pull -t user-intent-classifier:ci .
-
-      - name: Run containerized API service
+      - name: Validate bundled JSONL schema and benchmark metric semantics
         run: |
-          docker run -d --name rag_router_service -p 8000:8000 user-intent-classifier:ci
-          for attempt in $(seq 1 30); do
-            if curl --fail --silent http://localhost:8000/health; then
-              echo "Container health endpoint is ready."
-              exit 0
-            fi
-            echo "Waiting for API startup (attempt ${attempt}/30)..."
-            sleep 2
-          done
-          echo "Container failed to become healthy. Logs:"
-          docker logs rag_router_service
-          exit 1
-
-      - name: Run live API integration smoke tests
+          python - <<'PY'
+          from pathlib import Path
+          from src.benchmark import load_labelled_rows, evaluate
+          from src.intent_classifier import VideoRAGIntentClassifier
+          from src.train import EXPANDED_CORPUS
+          rows = load_labelled_rows(Path("data/intent_eval.jsonl"))
+          assert len(rows) >= 6
+          model = VideoRAGIntentClassifier()
+          model.fit(
+              [row[0] for row in EXPANDED_CORPUS],
+              [row[1] for row in EXPANDED_CORPUS],
+              [row[2] for row in EXPANDED_CORPUS],
+          )
+          report = evaluate(model, rows)
+          assert "scope_top1" in report and "scope_candidate_recall" in report
+          assert "reasoning_tier" in report and "multi_route_coverage" in report
+          print("Evaluation schema and metric contracts are valid.")
+          PY
+      - name: Build Docker image
+        run: docker build --pull -t video-intent-router:ci .
+      - name: Run container and test service
         run: |
           set -euo pipefail
+          docker run -d --name intent-router -p 8000:8000 video-intent-router:ci
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:8000/health; then
+              ready=true
+              break
+            fi
+            sleep 2
+          done
+          if [ "$ready" != true ]; then
+            echo "Container did not become healthy."
+            docker logs intent-router
+            exit 1
+          fi
           for endpoint in route classify; do
-            echo "Checking /$endpoint ..."
-            response=$(curl --fail --silent --show-error \
+            curl --fail --silent --show-error \
               -X POST "http://localhost:8000/$endpoint" \
               -H 'Content-Type: application/json' \
-              -d '{"query":"What color was the car at 00:15?"}')
-            echo "$response"
-            RESPONSE_JSON="$response" python -c 'import json, os; payload=json.loads(os.environ["RESPONSE_JSON"]); assert payload.get("assigned_scopes"), "assigned_scopes missing or empty"; assert payload.get("reasoning_tier"), "reasoning_tier missing"; assert "confidence_distribution" in payload; print("API response schema validated.")'
+              -d '{"query":"What color was the car at 00:15?"}' \
+              | python -c 'import json,sys; p=json.load(sys.stdin); assert p["assigned_scopes"]; assert p["reasoning_tier"]; assert "confidence_distribution" in p'
           done
-
-      - name: Capture container logs on failure
+      - name: Collect container logs on failure
         if: failure()
-        run: docker logs rag_router_service || true
-
+        run: docker logs intent-router || true
       - name: Stop container
         if: always()
-        run: docker rm -f rag_router_service || true
+        run: docker rm -f intent-router || true

@@ -1,29 +1,37 @@
-"""CLI for the trained multi-head classifier with a safe rules fallback."""
+"""Command-line interface for training and querying the intent classifier."""
 from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
 
 from src.intent_classifier import VideoRAGIntentClassifier
 from src.train import run_training_pipeline
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--query", required=True, help="Video-related user query")
-    parser.add_argument("--model-path", default="models/pipeline.pkl")
-    args = parser.parse_args()
 
-    model_path = Path(args.model_path)
-    if not model_path.exists():
-        run_training_pipeline(str(model_path))
-    classifier = VideoRAGIntentClassifier.load(str(model_path))
-    print(json.dumps(classifier.predict_route(args.query), indent=2))
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    train_parser = subparsers.add_parser("train", help="Train the development classifier")
+    train_parser.add_argument("--model-path", type=Path, default=Path("models/pipeline.pkl"))
+    predict_parser = subparsers.add_parser("predict", help="Route a single query")
+    predict_parser.add_argument("--query", required=True)
+    predict_parser.add_argument("--model-path", type=Path, default=Path("models/pipeline.pkl"))
+    return parser
+
+
+def main() -> None:
+    args = build_parser().parse_args()
+    if args.command == "train":
+        run_training_pipeline(str(args.model_path))
+        return
+    if not args.model_path.exists():
+        raise SystemExit(
+            f"Model not found at {args.model_path}. Run `python -m src.main train` first."
+        )
+    model = VideoRAGIntentClassifier.load(args.model_path)
+    print(json.dumps(model.predict_route(args.query), indent=2))
+
 
 if __name__ == "__main__":
     main()
