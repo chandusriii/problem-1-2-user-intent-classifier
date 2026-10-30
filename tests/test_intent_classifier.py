@@ -1,10 +1,11 @@
+import json
+import pickle
 import tempfile
 import unittest
 from pathlib import Path
 
-from src.intent_classifier import MODEL_FORMAT_VERSION, VideoRAGIntentClassifier
 from src.benchmark import evaluate, load_labelled_rows
-import json
+from src.intent_classifier import MODEL_FORMAT_VERSION, VideoRAGIntentClassifier
 from src.train import EXPANDED_CORPUS
 
 
