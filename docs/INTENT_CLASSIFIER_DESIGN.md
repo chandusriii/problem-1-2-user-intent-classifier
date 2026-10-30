@@ -1,16 +1,27 @@
 # Multi-Head Intent Classifier Design
 
 ## Feature processing
-The vectorizer creates word-level unigram and bigram TF-IDF features capped at 1,500 terms. Four dense values represent timestamp presence, a temporal-relation flag, character count, and word count. Dense signals use a stable two-dimensional row shape (1, 4), and feature matrices use `numpy.hstack` after validating matching row counts. The single-query prediction path uses the same explicit alignment helper to avoid duplicated transformation code.
+
+The model uses word-level unigram and bigram TF-IDF features capped at 1,500 terms, plus two binary structural indicators: timestamp presence and temporal-language presence. Character and token counts were removed because their unscaled magnitudes could dominate the normalized TF-IDF feature space. The TF-IDF matrix remains sparse when structural signals are appended.
+
+The exact same normalization, vectorizer and structural-feature path is used for both training and inference.
 
 ## Independent model heads
-A shared feature matrix feeds separate Logistic Regression models: one predicts retrieval scope (`FRAME`, `CLIP`, `WHOLE_VIDEO`), while the second predicts reasoning tier (`L1_DIRECT`, `L2_RETRIEVAL`, `L3_GRAPH`). Multi-route inference returns a second scope only when the top two probability values are within a configurable margin.
+
+A shared feature matrix feeds separate Logistic Regression models. The scope head predicts `FRAME`, `CLIP` or `WHOLE_VIDEO`; the reasoning head predicts `L1_DIRECT`, `L2_RETRIEVAL` or `L3_GRAPH`. The scope head may return a second candidate when the two highest class probabilities are within a configurable margin. Candidate recall is reported separately from top-1 accuracy.
+
+## Model artifact
+
+Artifacts are Python pickle files and must only be loaded from trusted sources. The model stores an explicit format version and rejects older or incompatible artifacts. Retrain after changing model code or dependencies; pin the Python and scikit-learn runtime used to train and serve the artifact.
 
 ## API and container validation
-The FastAPI service exposes `GET /health`, `POST /route`, and `POST /classify`; the latter two share the same request and response contract. GitHub Actions runs the unit/API tests, builds the multi-stage Docker image, starts the container, checks health, and sends live smoke-test requests to both inference endpoints.
+
+The FastAPI service loads its trained model through its lifespan handler. It exposes `GET /health`, `POST /route` and `POST /classify`; the two POST routes share a response contract. Startup fails when the model artifact is absent unless the explicit development-only training switch is enabled. CI exercises API startup, both inference endpoints and the Docker runtime.
 
 ## Inference safety
-Queries are normalized and empty strings are rejected before feature extraction. Labels are validated at fit time. The CLI trains a local model when the requested artifact does not exist. An untrained model instance uses the explicit rules fallback rather than fabricating confidence scores.
+
+Queries are normalized and empty strings are rejected before feature extraction. Training rejects invalid labels, mismatched arrays and single-class heads. The untrained in-memory classifier has a rules fallback that reports an empty probability distribution rather than fabricated confidence scores.
 
 ## Evaluation boundary
-The bundled corpus is a small, manually constructed development/smoke corpus, not official Video-MME ground truth. It does not demonstrate generalization accuracy. Small feature size and low latency are design goals, not measured guarantees. Measure serialized model size and request latency in the target environment and evaluate on a separate, reviewed labelled set before making performance claims.
+
+The included training corpus is small and manually authored. The bundled JSONL evaluation example is a schema/smoke sample, not an independently reviewed held-out benchmark. Neither should be used to make Video-MME accuracy claims or claims of generalization.
