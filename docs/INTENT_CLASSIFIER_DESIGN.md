@@ -4,7 +4,7 @@
 
 The model uses word-level unigram and bigram TF-IDF features capped at 1,500 terms, plus two binary structural indicators: timestamp presence and temporal-language presence. Character and token counts were removed because their unscaled magnitudes could dominate the normalized TF-IDF feature space. The TF-IDF matrix remains sparse when structural signals are appended.
 
-The exact same normalization, vectorizer and structural-feature path is used for both training and inference.
+The exact same normalization, vectorizer and structural-feature path is used for both training and inference. Structural features are binary indicators, avoiding the raw length scales of character and word counts.
 
 ## Independent model heads
 
