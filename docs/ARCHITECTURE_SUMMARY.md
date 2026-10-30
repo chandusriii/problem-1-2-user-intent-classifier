@@ -1,15 +1,19 @@
-# Problem 1.2 — Three-Slide Architecture Summary
+# Problem 1.2 — Architecture Summary
 
-Download the companion three-slide PowerPoint from the repository: [problem_1_2_architecture_summary_with_reference_image.pptx](./problem_1_2_architecture_summary_with_reference_image.pptx). The supplied architecture diagram is embedded on slide 2.
+This document summarizes the current implementation. The companion slide deck, if retained in the repository, is a presentation artifact and is not a source of benchmark evidence.
 
-## Slide 1 — Architectural intent
-The router separates **retrieval scope** (`FRAME`, `CLIP`, `WHOLE_VIDEO`) from **reasoning tier** (`L1_DIRECT`, `L2_RETRIEVAL`, `L3_GRAPH`). A small CPU-oriented classifier routes queries before downstream retrieval.
+## 1. Routing dimensions
 
-## Slide 2 — Feature engineering
-The pipeline combines word-level TF-IDF unigram/bigram features (up to 1,500 terms) with four dense signals: timestamp presence, temporal cue, character count, and word count. Two independent Logistic Regression heads predict scope and reasoning tier. When the top-two scope probabilities are close (margin below 0.15), a second scope may be returned.
+The classifier independently predicts retrieval scope (`FRAME`, `CLIP`, `WHOLE_VIDEO`) and reasoning tier (`L1_DIRECT`, `L2_RETRIEVAL`, `L3_GRAPH`). It is a text-based routing baseline and does not itself inspect video frames or decode audio.
 
-## Slide 3 — Production guardrails
-GitHub Actions runs Python tests, builds the multi-stage Docker image, starts the container, checks `/health`, and sends live requests to `POST /route` and `POST /classify`.
+## 2. Feature engineering
 
-## Evidence and limitations
-The automated validation workflow has passed its code-test, Docker-build, container health, and API smoke-test stages on the checked run. The packaged training examples are a small development corpus, not official Video-MME labels. The presentation intentionally does not claim sub-1 ms latency, sub-5 ms latency, or a <5 MB memory footprint as measured facts; those require separate measurements.
+The model combines word-level TF-IDF unigrams/bigrams (maximum 1,500 terms) with two bounded binary structural signals: timestamp presence and temporal-language presence. Two Logistic Regression heads share the sparse feature representation. A second candidate scope may be emitted when the top-two class probabilities are within the configured margin.
+
+## 3. Runtime and guardrails
+
+The FastAPI application loads a trained, versioned model artifact during startup and fails startup when the artifact is missing unless explicit development-only startup training is enabled. The Docker image uses a multi-stage build and a non-root runtime user. The unified GitHub Actions workflow trains the development artifact, exercises the CLI, runs tests, builds the image, checks container health, and exercises both inference endpoints.
+
+## Evaluation boundary
+
+The bundled training corpus and `data/intent_eval.jsonl` smoke sample are illustrative engineering data, not a held-out evaluation set or official Video-MME ground truth. The benchmark now reports top-1 scope accuracy separately from candidate recall, multi-route coverage, and reasoning-tier metrics. No generalization or latency claim should be made without a larger independently reviewed dataset and reproducible measurements.
