@@ -1,0 +1,17 @@
+{
+  "rows": 750,
+  "unique_videos": 750,
+  "source_split_counts": {
+    "train": 500,
+    "validation": 250
+  },
+  "scope_proxy_counts": {
+    "FRAME": 490,
+    "CLIP": 260
+  },
+  "tier_proxy_counts": {
+    "L1_DIRECT": 479,
+    "L2_RETRIEVAL": 229,
+    "L3_GRAPH": 42
+  }
+}

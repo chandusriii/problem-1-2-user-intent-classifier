@@ -208,6 +208,10 @@ This is a baseline router, not a complete video understanding system. Lexical qu
 
 Next steps: collect a larger reviewed corpus, define annotation guidance, measure per-class performance on held-out data, calibrate confidence and compare compact sentence-embedding models under the same evaluation protocol.
 
+## ML quality experiment
+
+An exploratory model-comparison experiment using an ActivityNet-QA question sample is documented in [ML Quality Evidence](docs/ML_QUALITY_EVIDENCE.md). It compares Logistic Regression, Linear SVM, word+character TF-IDF Logistic Regression, Random Forest and Extra Trees. The derived routing targets are heuristic proxy labels, not human annotations; do not report these scores as validated routing accuracy.
+
 ## Documentation
 
 - [Evaluation protocol](docs/EVALUATION.md)

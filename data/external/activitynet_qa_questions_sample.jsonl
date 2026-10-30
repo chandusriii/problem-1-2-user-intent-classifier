@@ -1,0 +1,750 @@
+{"query":"what is the person sitting in the video doing","source":"ActivityNet-QA","source_id":"v___c8enCfzqw_1","video_id":"__c8enCfzqw","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the first person who appears","source":"ActivityNet-QA","source_id":"v__6TamBiyYWA_4","video_id":"_6TamBiyYWA","source_answer_type":1,"split_origin":"train"}
+{"query":"where is the child in the video","source":"ActivityNet-QA","source_id":"v__akwfjIbsUA_8","video_id":"_akwfjIbsUA","source_answer_type":6,"split_origin":"train"}
+{"query":"is the person in a black suit a referee","source":"ActivityNet-QA","source_id":"v__eanWnL3FtM_2","video_id":"_eanWnL3FtM","source_answer_type":3,"split_origin":"train"}
+{"query":"what does the plaid shirt person beat with a hammer","source":"ActivityNet-QA","source_id":"v__JE5T2RKZvo_6","video_id":"_JE5T2RKZvo","source_answer_type":5,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v__NwkwvaC7Bg_1","video_id":"_NwkwvaC7Bg","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in the video","source":"ActivityNet-QA","source_id":"v__uPVFvEQocU_4","video_id":"_uPVFvEQocU","source_answer_type":1,"split_origin":"train"}
+{"query":"does swimmerwear glasses","source":"ActivityNet-QA","source_id":"v__zkcTAj5Z8Q_8","video_id":"_zkcTAj5Z8Q","source_answer_type":3,"split_origin":"train"}
+{"query":"do they all wear shorts in the video","source":"ActivityNet-QA","source_id":"v_-9B2XtqICFw_2","video_id":"-9B2XtqICFw","source_answer_type":3,"split_origin":"train"}
+{"query":"is a boy wearing a watch or bracelet","source":"ActivityNet-QA","source_id":"v_-ceM4HHukhE_6","video_id":"-ceM4HHukhE","source_answer_type":5,"split_origin":"train"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_-HaFSqzE4Nc_1","video_id":"-HaFSqzE4Nc","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_-lV2zo5XsCg_4","video_id":"-lV2zo5XsCg","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in black clothes","source":"ActivityNet-QA","source_id":"v_-ROljbRVlos_8","video_id":"-ROljbRVlos","source_answer_type":8,"split_origin":"train"}
+{"query":"is the athlete indoors","source":"ActivityNet-QA","source_id":"v_-ux1hQSR1AM_2","video_id":"-ux1hQSR1AM","source_answer_type":3,"split_origin":"train"}
+{"query":"why do they cover your eyes","source":"ActivityNet-QA","source_id":"v_-YVhOi8vt_Q_6","video_id":"-YVhOi8vt_Q","source_answer_type":8,"split_origin":"train"}
+{"query":"what are the two women doing in the video","source":"ActivityNet-QA","source_id":"v_0-ReTddxkhg_1","video_id":"0-ReTddxkhg","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the feet of the person in green clothes","source":"ActivityNet-QA","source_id":"v_09MaNbzc2TA_4","video_id":"09MaNbzc2TA","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_0EbXjHsMBmM_8","video_id":"0EbXjHsMBmM","source_answer_type":7,"split_origin":"train"}
+{"query":"is the car changed the tire white","source":"ActivityNet-QA","source_id":"v_0kfJ7Lu4tvo_2","video_id":"0kfJ7Lu4tvo","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man who do push ups want to jump into the water","source":"ActivityNet-QA","source_id":"v_0PyY_iHBZHk_6","video_id":"0PyY_iHBZHk","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the black doing in the video","source":"ActivityNet-QA","source_id":"v_0wpStx2JuS4_1","video_id":"0wpStx2JuS4","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the right of the person in green clothes","source":"ActivityNet-QA","source_id":"v_0zXTrkgUj0U_4","video_id":"0zXTrkgUj0U","source_answer_type":1,"split_origin":"train"}
+{"query":"what shape is the tie of a person wearing glasses","source":"ActivityNet-QA","source_id":"v_19fGZFUE7yE_8","video_id":"19fGZFUE7yE","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person standing indoors","source":"ActivityNet-QA","source_id":"v_1JEQbXJC85w_2","video_id":"1JEQbXJC85w","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in purple wear shoe polish","source":"ActivityNet-QA","source_id":"v_1OJa2iiFxfk_6","video_id":"1OJa2iiFxfk","source_answer_type":8,"split_origin":"train"}
+{"query":"what are the contestants doing","source":"ActivityNet-QA","source_id":"v_1SdH6HFnOZA_1","video_id":"1SdH6HFnOZA","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_1xQTlp0hscs_4","video_id":"1xQTlp0hscs","source_answer_type":1,"split_origin":"train"}
+{"query":"how safe is this game in the video","source":"ActivityNet-QA","source_id":"v_28GYivx4lyk_8","video_id":"28GYivx4lyk","source_answer_type":8,"split_origin":"train"}
+{"query":"does the contestant play polo outside","source":"ActivityNet-QA","source_id":"v_2DCeEAz8iO8_2","video_id":"2DCeEAz8iO8","source_answer_type":3,"split_origin":"train"}
+{"query":"how is the weather in the video","source":"ActivityNet-QA","source_id":"v_2gV2apTrRHs_6","video_id":"2gV2apTrRHs","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the athlete doing","source":"ActivityNet-QA","source_id":"v_2NAbdlHXcTI_1","video_id":"2NAbdlHXcTI","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in the video","source":"ActivityNet-QA","source_id":"v_2qcdjyT7nDY_4","video_id":"2qcdjyT7nDY","source_answer_type":1,"split_origin":"train"}
+{"query":"how many cats are there in the video","source":"ActivityNet-QA","source_id":"v_2syOa4jpZDU_8","video_id":"2syOa4jpZDU","source_answer_type":7,"split_origin":"train"}
+{"query":"is the sitting woman playing with sand outside","source":"ActivityNet-QA","source_id":"v_2WvbAEMG5DU_2","video_id":"2WvbAEMG5DU","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man wearing red lifejackets want to beckon","source":"ActivityNet-QA","source_id":"v_3_hJrb_aDWU_6","video_id":"3_hJrb_aDWU","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_3CImIarFM30_1","video_id":"3CImIarFM30","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the right side of the children","source":"ActivityNet-QA","source_id":"v_3fg_CB3rBSk_4","video_id":"3fg_CB3rBSk","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the hairstyle of a woman in white","source":"ActivityNet-QA","source_id":"v_3JNNjd9fv7U_8","video_id":"3JNNjd9fv7U","source_answer_type":8,"split_origin":"train"}
+{"query":"does the braided person playing the piano indoors","source":"ActivityNet-QA","source_id":"v_3nvVkcxxaJ4_2","video_id":"3nvVkcxxaJ4","source_answer_type":3,"split_origin":"train"}
+{"query":"what does the workers wear on their heads","source":"ActivityNet-QA","source_id":"v_3UgGvKnelfY_6","video_id":"3UgGvKnelfY","source_answer_type":5,"split_origin":"train"}
+{"query":"what is the chef doing","source":"ActivityNet-QA","source_id":"v_3xUAyMuqBrQ_1","video_id":"3xUAyMuqBrQ","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the audience","source":"ActivityNet-QA","source_id":"v_4_CcDjbCXBQ_4","video_id":"4_CcDjbCXBQ","source_answer_type":1,"split_origin":"train"}
+{"query":"is the man in the green wearing a hat","source":"ActivityNet-QA","source_id":"v_42i3phJnY4M_8","video_id":"42i3phJnY4M","source_answer_type":3,"split_origin":"train"}
+{"query":"is the person in the video trailing the floor","source":"ActivityNet-QA","source_id":"v_4CRacVTadPQ_2","video_id":"4CRacVTadPQ","source_answer_type":3,"split_origin":"train"}
+{"query":"why do the blacks jump","source":"ActivityNet-QA","source_id":"v_4kNx9rVwmAg_6","video_id":"4kNx9rVwmAg","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the woman doing in the video","source":"ActivityNet-QA","source_id":"v_4P0zJEfqCoM_1","video_id":"4P0zJEfqCoM","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the right of the cat","source":"ActivityNet-QA","source_id":"v_4U13LEMIdi4_4","video_id":"4U13LEMIdi4","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the kid in the video","source":"ActivityNet-QA","source_id":"v_5_UEjPqtnE0_8","video_id":"5_UEjPqtnE0","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in yellow clothes indoors","source":"ActivityNet-QA","source_id":"v_54K2F3zAZ0o_2","video_id":"54K2F3zAZ0o","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the audience applaud","source":"ActivityNet-QA","source_id":"v_5DBzvN5Qe_0_6","video_id":"5DBzvN5Qe_0","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_5gc896my38M_1","video_id":"5gc896my38M","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the athlete's hand wearing a black top","source":"ActivityNet-QA","source_id":"v_5j6j4NJkUXA_4","video_id":"5j6j4NJkUXA","source_answer_type":1,"split_origin":"train"}
+{"query":"why does the person in the video brush the teeth","source":"ActivityNet-QA","source_id":"v_5kIl4TspdR0_8","video_id":"5kIl4TspdR0","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the video indoors","source":"ActivityNet-QA","source_id":"v_5P-4_nS8euM_2","video_id":"5P-4_nS8euM","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_5rO2DwFhdwo_6","video_id":"5rO2DwFhdwo","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_5V47VQHzWHc_1","video_id":"5V47VQHzWHc","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person wearing the chef's suit","source":"ActivityNet-QA","source_id":"v_5Y4YkCkgShc_4","video_id":"5Y4YkCkgShc","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in the video","source":"ActivityNet-QA","source_id":"v_5zPTTiJiXUY_8","video_id":"5zPTTiJiXUY","source_answer_type":8,"split_origin":"train"}
+{"query":"are the people in the video indoors","source":"ActivityNet-QA","source_id":"v_67NwPB79MTo_2","video_id":"67NwPB79MTo","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in black wear oil","source":"ActivityNet-QA","source_id":"v_6d9z33GFEGo_6","video_id":"6d9z33GFEGo","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_6HyNydVIji4_1","video_id":"6HyNydVIji4","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the left side of the adult wearing white clothes","source":"ActivityNet-QA","source_id":"v_6KG4p_pfMQc_4","video_id":"6KG4p_pfMQc","source_answer_type":1,"split_origin":"train"}
+{"query":"why do the boys in black and white stripes wear bowling","source":"ActivityNet-QA","source_id":"v_6O8QXbjvYKs_8","video_id":"6O8QXbjvYKs","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person standing outdoors","source":"ActivityNet-QA","source_id":"v_6sorAV7KJxA_2","video_id":"6sorAV7KJxA","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the frame of the bald man","source":"ActivityNet-QA","source_id":"v_6VNFwlzQiuc_6","video_id":"6VNFwlzQiuc","source_answer_type":4,"split_origin":"train"}
+{"query":"what's the woman in gray pants doing","source":"ActivityNet-QA","source_id":"v_7_xkhnbnI7M_1","video_id":"7_xkhnbnI7M","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in a hat","source":"ActivityNet-QA","source_id":"v_73zt29iKyL4_4","video_id":"73zt29iKyL4","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person riding the video at the beginning","source":"ActivityNet-QA","source_id":"v_7c5vvEn3uLk_8","video_id":"7c5vvEn3uLk","source_answer_type":8,"split_origin":"train"}
+{"query":"is the little girl in the video indoors","source":"ActivityNet-QA","source_id":"v_7hDCO9fJb90_2","video_id":"7hDCO9fJb90","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_7lNAmkaMyyg_6","video_id":"7lNAmkaMyyg","source_answer_type":7,"split_origin":"train"}
+{"query":"what are the men in white clothes doing","source":"ActivityNet-QA","source_id":"v_7pcnWE7jpQY_1","video_id":"7pcnWE7jpQY","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_7TOw39_59xo_4","video_id":"7TOw39_59xo","source_answer_type":1,"split_origin":"train"}
+{"query":"why do four people turn to magic cube at the same time","source":"ActivityNet-QA","source_id":"v_7VbXyfF3kEw_8","video_id":"7VbXyfF3kEw","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in yellow clothes a man","source":"ActivityNet-QA","source_id":"v_80spFFIdnC4_2","video_id":"80spFFIdnC4","source_answer_type":3,"split_origin":"train"}
+{"query":"how many teams are playing","source":"ActivityNet-QA","source_id":"v_89S-sQUWIcg_6","video_id":"89S-sQUWIcg","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the man in a red hat doing","source":"ActivityNet-QA","source_id":"v_8eMjzrhxv2U_1","video_id":"8eMjzrhxv2U","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person with a helmet","source":"ActivityNet-QA","source_id":"v_8H3Wy96BwHM_4","video_id":"8H3Wy96BwHM","source_answer_type":1,"split_origin":"train"}
+{"query":"why does the woman dance gymnastic clubs in yellow clothes","source":"ActivityNet-QA","source_id":"v_8j75QYV-iCg_8","video_id":"8j75QYV-iCg","source_answer_type":8,"split_origin":"train"}
+{"query":"does the skateboard use the strength of the leg","source":"ActivityNet-QA","source_id":"v_8kyg5u6o21k_2","video_id":"8kyg5u6o21k","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_8miqQQJEsO0_6","video_id":"8miqQQJEsO0","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person with a helmet doing","source":"ActivityNet-QA","source_id":"v_8SMXK2uOvk0_1","video_id":"8SMXK2uOvk0","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in a white vest","source":"ActivityNet-QA","source_id":"v_8wDm37sdBCI_4","video_id":"8wDm37sdBCI","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the player","source":"ActivityNet-QA","source_id":"v_8Yfm6gbKRho_8","video_id":"8Yfm6gbKRho","source_answer_type":8,"split_origin":"train"}
+{"query":"does the men in the video explain boxing indoors","source":"ActivityNet-QA","source_id":"v_9-XGzUTSsuI_2","video_id":"9-XGzUTSsuI","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the video taken ","source":"ActivityNet-QA","source_id":"v_96krk6Ka9Vc_6","video_id":"96krk6Ka9Vc","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_9DIDpTlfBWs_1","video_id":"9DIDpTlfBWs","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the left side of the person who started wearing the hat","source":"ActivityNet-QA","source_id":"v_9hR1MHvXGv8_4","video_id":"9hR1MHvXGv8","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the comb used by women in video","source":"ActivityNet-QA","source_id":"v_9lS5qpgrTmI_8","video_id":"9lS5qpgrTmI","source_answer_type":4,"split_origin":"train"}
+{"query":"is the little girl in red is curly hair","source":"ActivityNet-QA","source_id":"v_9Rd8PpfRNmY_2","video_id":"9Rd8PpfRNmY","source_answer_type":3,"split_origin":"train"}
+{"query":"why do the players bend their knees before diving","source":"ActivityNet-QA","source_id":"v_9uitA8tmSfE_6","video_id":"9uitA8tmSfE","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the woman doing","source":"ActivityNet-QA","source_id":"v_9z_ylV5c9HA_1","video_id":"9z_ylV5c9HA","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the sieve of the sieved bread powder","source":"ActivityNet-QA","source_id":"v_a2vaM_aRHv4_4","video_id":"a2vaM_aRHv4","source_answer_type":1,"split_origin":"train"}
+{"query":"what hairstyle is the person wearing sunglasses on the yacht","source":"ActivityNet-QA","source_id":"v_a7oaRcmRZ5k_8","video_id":"a7oaRcmRZ5k","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the video playing indoors","source":"ActivityNet-QA","source_id":"v_ACnOpQNrhqs_2","video_id":"ACnOpQNrhqs","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man wearing yellow hats want to tidy the rope","source":"ActivityNet-QA","source_id":"v_aEWVDbV76_Q_6","video_id":"aEWVDbV76_Q","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_agIcVWDyeH0_1","video_id":"agIcVWDyeH0","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_AHXcJCpvkAQ_4","video_id":"AHXcJCpvkAQ","source_answer_type":1,"split_origin":"train"}
+{"query":"where is the person in black clothes","source":"ActivityNet-QA","source_id":"v_aJsDVKt5Igs_8","video_id":"aJsDVKt5Igs","source_answer_type":6,"split_origin":"train"}
+{"query":"is the person wearing submersible suits in the video","source":"ActivityNet-QA","source_id":"v_ALjodjboELk_2","video_id":"ALjodjboELk","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the relationship between boys and girls in the video","source":"ActivityNet-QA","source_id":"v_anfZnOQGPk0_6","video_id":"anfZnOQGPk0","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_AQSiBbhLBhs_1","video_id":"AQSiBbhLBhs","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person being photographed in the video","source":"ActivityNet-QA","source_id":"v_aS6Qv9N5mG0_4","video_id":"aS6Qv9N5mG0","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the name of the country with the first place on the list","source":"ActivityNet-QA","source_id":"v_aT5S8PcnlXo_8","video_id":"aT5S8PcnlXo","source_answer_type":8,"split_origin":"train"}
+{"query":"is the christmas tree indoors","source":"ActivityNet-QA","source_id":"v_aVHmi3Kjr_Q_2","video_id":"aVHmi3Kjr_Q","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the relationship between people on the court","source":"ActivityNet-QA","source_id":"v_aWz9H0jTv3c_6","video_id":"aWz9H0jTv3c","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the boy with a stick doing","source":"ActivityNet-QA","source_id":"v_aXXes0e-eM0_1","video_id":"aXXes0e-eM0","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the ski","source":"ActivityNet-QA","source_id":"v_azfkn6EsuJA_4","video_id":"azfkn6EsuJA","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in the video","source":"ActivityNet-QA","source_id":"v_b0LY869JBrE_8","video_id":"b0LY869JBrE","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person standing indoors","source":"ActivityNet-QA","source_id":"v_b3bawTEPLtA_2","video_id":"b3bawTEPLtA","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people with hats are there in the video","source":"ActivityNet-QA","source_id":"v_b5GrYqt5tRQ_6","video_id":"b5GrYqt5tRQ","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_BcflqWdlBjI_1","video_id":"BcflqWdlBjI","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the paint bucket","source":"ActivityNet-QA","source_id":"v_Bdpqtvdx2T8_4","video_id":"Bdpqtvdx2T8","source_answer_type":1,"split_origin":"train"}
+{"query":"where is the video taken","source":"ActivityNet-QA","source_id":"v_BFICeyu5oMM_8","video_id":"BFICeyu5oMM","source_answer_type":6,"split_origin":"train"}
+{"query":"is the lady on the video wearing a red skirt","source":"ActivityNet-QA","source_id":"v_biAQgXDFskw_2","video_id":"biAQgXDFskw","source_answer_type":3,"split_origin":"train"}
+{"query":"who is the first person to wear a wrist ornament","source":"ActivityNet-QA","source_id":"v_BJuL-yK-I8g_6","video_id":"BJuL-yK-I8g","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person with helmet doing","source":"ActivityNet-QA","source_id":"v_bM5VpCdPOrw_1","video_id":"bM5VpCdPOrw","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in the video","source":"ActivityNet-QA","source_id":"v_BnkUgUQBED0_4","video_id":"BnkUgUQBED0","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in the video","source":"ActivityNet-QA","source_id":"v_bQa8S4Z-1cE_8","video_id":"bQa8S4Z-1cE","source_answer_type":8,"split_origin":"train"}
+{"query":"does a man with a black beard wear a black hat","source":"ActivityNet-QA","source_id":"v_BsceC-igcTY_2","video_id":"BsceC-igcTY","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in black have to pack","source":"ActivityNet-QA","source_id":"v_BuaWU70q7cE_6","video_id":"BuaWU70q7cE","source_answer_type":8,"split_origin":"train"}
+{"query":"what's the man in gray doing","source":"ActivityNet-QA","source_id":"v_bVMxBXeYMr0_1","video_id":"bVMxBXeYMr0","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in a hat","source":"ActivityNet-QA","source_id":"v_byO53jHoAwI_4","video_id":"byO53jHoAwI","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there in the ballet room","source":"ActivityNet-QA","source_id":"v_c_NlYvL96y0_8","video_id":"c_NlYvL96y0","source_answer_type":7,"split_origin":"train"}
+{"query":"is it a ship on the sea","source":"ActivityNet-QA","source_id":"v_c0qbyRWSptg_2","video_id":"c0qbyRWSptg","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_C6DH4l7fop0_6","video_id":"C6DH4l7fop0","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the kid doing in the video","source":"ActivityNet-QA","source_id":"v_c8LevTVQ5nk_1","video_id":"c8LevTVQ5nk","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the saxophone man","source":"ActivityNet-QA","source_id":"v_cBCi-pOE5NQ_4","video_id":"cBCi-pOE5NQ","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in the video","source":"ActivityNet-QA","source_id":"v_cdEBDjnH9xk_8","video_id":"cdEBDjnH9xk","source_answer_type":8,"split_origin":"train"}
+{"query":"does white clothes the woman interview men","source":"ActivityNet-QA","source_id":"v_cGNkR-JvaJs_2","video_id":"cGNkR-JvaJs","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_cHHVpBYfwdU_6","video_id":"cHHVpBYfwdU","source_answer_type":7,"split_origin":"train"}
+{"query":"what are the girls wearing blue clothes in the video","source":"ActivityNet-QA","source_id":"v_CIJp-SG3sWE_1","video_id":"CIJp-SG3sWE","source_answer_type":0,"split_origin":"train"}
+{"query":"what is above the trampoline","source":"ActivityNet-QA","source_id":"v_cJYtpnf5aOM_4","video_id":"cJYtpnf5aOM","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the athlete","source":"ActivityNet-QA","source_id":"v_cM67XJS7yM8_8","video_id":"cM67XJS7yM8","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the video indoors","source":"ActivityNet-QA","source_id":"v_CpxGRgJgRPA_2","video_id":"CpxGRgJgRPA","source_answer_type":3,"split_origin":"train"}
+{"query":"what season does video occur","source":"ActivityNet-QA","source_id":"v_crfrKqFp0Zg_6","video_id":"crfrKqFp0Zg","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_csxC5H5uDb4_1","video_id":"csxC5H5uDb4","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_cudeag10U7Q_4","video_id":"cudeag10U7Q","source_answer_type":1,"split_origin":"train"}
+{"query":"is the woman who leads the dance long hair","source":"ActivityNet-QA","source_id":"v_CvVqbdk6owc_8","video_id":"CvVqbdk6owc","source_answer_type":3,"split_origin":"train"}
+{"query":"is the person wearing a white dress short hair in the video","source":"ActivityNet-QA","source_id":"v_Cy56IkwsQVs_2","video_id":"Cy56IkwsQVs","source_answer_type":3,"split_origin":"train"}
+{"query":"where are the people in the video performing wrestling","source":"ActivityNet-QA","source_id":"v_D_XMD02v690_6","video_id":"D_XMD02v690","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the person in red clothes doing","source":"ActivityNet-QA","source_id":"v_D707ZMWH7jQ_1","video_id":"D707ZMWH7jQ","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_D9A_9FH7e-A_4","video_id":"D9A_9FH7e-A","source_answer_type":1,"split_origin":"train"}
+{"query":"what weather is it in the video","source":"ActivityNet-QA","source_id":"v_DaDHatB3RbM_8","video_id":"DaDHatB3RbM","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the video playing outdoors","source":"ActivityNet-QA","source_id":"v_dcclQadR-L0_2","video_id":"dcclQadR-L0","source_answer_type":3,"split_origin":"train"}
+{"query":"how many women are there on the boat","source":"ActivityNet-QA","source_id":"v_DEEgoxzTvdk_6","video_id":"DEEgoxzTvdk","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_DfYDYCWkB-o_1","video_id":"DfYDYCWkB-o","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the left side of the bartending table","source":"ActivityNet-QA","source_id":"v_DHfiz3MNbcc_4","video_id":"DHfiz3MNbcc","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the style of the man's clothes that broadcast the news","source":"ActivityNet-QA","source_id":"v_DJNmAoSQu6k_8","video_id":"DJNmAoSQu6k","source_answer_type":5,"split_origin":"train"}
+{"query":"is a man wearing a red sports suit wearing short hair","source":"ActivityNet-QA","source_id":"v_dKwPfFN7DpM_2","video_id":"dKwPfFN7DpM","source_answer_type":3,"split_origin":"train"}
+{"query":"which hand of the man in red is wearing a ring","source":"ActivityNet-QA","source_id":"v_DOONG5zq1Yg_6","video_id":"DOONG5zq1Yg","source_answer_type":8,"split_origin":"train"}
+{"query":"what's the girl in the dance skirt doing","source":"ActivityNet-QA","source_id":"v_dQs2-z3TIes_1","video_id":"dQs2-z3TIes","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the people in the video","source":"ActivityNet-QA","source_id":"v_DsnVkCHbEVM_4","video_id":"DsnVkCHbEVM","source_answer_type":1,"split_origin":"train"}
+{"query":"what color are the pants of the person wearing in the video","source":"ActivityNet-QA","source_id":"v_dufQjqa3v6w_8","video_id":"dufQjqa3v6w","source_answer_type":4,"split_origin":"train"}
+{"query":"does the person in orange change the tiles outdoors","source":"ActivityNet-QA","source_id":"v_Dx9wjBdbZ1M_2","video_id":"Dx9wjBdbZ1M","source_answer_type":3,"split_origin":"train"}
+{"query":"why do the blacks grow up and laugh","source":"ActivityNet-QA","source_id":"v_dygVFom6V5c_6","video_id":"dygVFom6V5c","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in orange clothes doing","source":"ActivityNet-QA","source_id":"v_E-XerA_sOjw_1","video_id":"E-XerA_sOjw","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_E3h0UHRsSQk_4","video_id":"E3h0UHRsSQk","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the color of the shoes","source":"ActivityNet-QA","source_id":"v_e5rZPT7BJas_8","video_id":"e5rZPT7BJas","source_answer_type":4,"split_origin":"train"}
+{"query":"does the braid person dance in the room","source":"ActivityNet-QA","source_id":"v_eAFFf5cSX5c_2","video_id":"eAFFf5cSX5c","source_answer_type":3,"split_origin":"train"}
+{"query":"where are the men in the hat dancing","source":"ActivityNet-QA","source_id":"v_eD2SW7ibzmM_6","video_id":"eD2SW7ibzmM","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the girl doing","source":"ActivityNet-QA","source_id":"v_Eeq-noKrGwY_1","video_id":"Eeq-noKrGwY","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in white clothes","source":"ActivityNet-QA","source_id":"v_eGLD-0b1LV0_4","video_id":"eGLD-0b1LV0","source_answer_type":1,"split_origin":"train"}
+{"query":"what happened when the person in the black shorts picked up the ball with his foot","source":"ActivityNet-QA","source_id":"v_Ej_a4iCd45I_8","video_id":"Ej_a4iCd45I","source_answer_type":8,"split_origin":"train"}
+{"query":"does the person in black wear need to pull cars","source":"ActivityNet-QA","source_id":"v_eMkBTRYwBAU_2","video_id":"eMkBTRYwBAU","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the steering wheel of the bumper car","source":"ActivityNet-QA","source_id":"v_Epl3pExUuNs_6","video_id":"Epl3pExUuNs","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in the apron doing","source":"ActivityNet-QA","source_id":"v_eqm20MDaeRQ_1","video_id":"eqm20MDaeRQ","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the right side of the blond-haired woman","source":"ActivityNet-QA","source_id":"v_ESgcgoYgg0o_4","video_id":"ESgcgoYgg0o","source_answer_type":1,"split_origin":"train"}
+{"query":"are they in an old house","source":"ActivityNet-QA","source_id":"v_eUvvxpAK3_8_8","video_id":"eUvvxpAK3_8","source_answer_type":3,"split_origin":"train"}
+{"query":"does the white coat boy wear a suit","source":"ActivityNet-QA","source_id":"v_Exu0qsz42fQ_2","video_id":"Exu0qsz42fQ","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the person spin","source":"ActivityNet-QA","source_id":"v_EZZzVXqxG6U_6","video_id":"EZZzVXqxG6U","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the woman in blue clothes doing","source":"ActivityNet-QA","source_id":"v_f-uRpjoKGLQ_1","video_id":"f-uRpjoKGLQ","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in hat","source":"ActivityNet-QA","source_id":"v_f119wB0sj0w_4","video_id":"f119wB0sj0w","source_answer_type":1,"split_origin":"train"}
+{"query":"what skin color is the athlete","source":"ActivityNet-QA","source_id":"v_F4FpAZJSV1g_8","video_id":"F4FpAZJSV1g","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person with black hair watching tv in the room","source":"ActivityNet-QA","source_id":"v_f98FHTGx64Q_2","video_id":"f98FHTGx64Q","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the pumpkin","source":"ActivityNet-QA","source_id":"v_FBqtQ3HCk48_6","video_id":"FBqtQ3HCk48","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in red clothes doing","source":"ActivityNet-QA","source_id":"v_FeKEqUxiReA_1","video_id":"FeKEqUxiReA","source_answer_type":0,"split_origin":"train"}
+{"query":"what's behind the court","source":"ActivityNet-QA","source_id":"v_fgkiHZ0nENg_4","video_id":"fgkiHZ0nENg","source_answer_type":1,"split_origin":"train"}
+{"query":"what kind of pants does the person in black clothes wear","source":"ActivityNet-QA","source_id":"v_FjY3eKNvzug_8","video_id":"FjY3eKNvzug","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person in white a man","source":"ActivityNet-QA","source_id":"v_fljxcvQe_Mo_2","video_id":"fljxcvQe_Mo","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the life jacket in the video","source":"ActivityNet-QA","source_id":"v_FmRLElPPWV8_6","video_id":"FmRLElPPWV8","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in shirt doing","source":"ActivityNet-QA","source_id":"v_fpWOf1DR1oA_1","video_id":"fpWOf1DR1oA","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the person in black clothes","source":"ActivityNet-QA","source_id":"v_FrVitupq7sQ_4","video_id":"FrVitupq7sQ","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there in the diving station","source":"ActivityNet-QA","source_id":"v_Ft3SzVtUsKA_8","video_id":"Ft3SzVtUsKA","source_answer_type":7,"split_origin":"train"}
+{"query":"is the girl in a white dress red skirt long hair","source":"ActivityNet-QA","source_id":"v_Fvc0-yNMFyE_2","video_id":"Fvc0-yNMFyE","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the rock climber show rock climbing","source":"ActivityNet-QA","source_id":"v_fY2IeYSxY4U_6","video_id":"fY2IeYSxY4U","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white shoes doing","source":"ActivityNet-QA","source_id":"v_G-EDozcMT_4_1","video_id":"G-EDozcMT_4","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_G12fEYNjIR0_4","video_id":"G12fEYNjIR0","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_g6L-l5sgFEQ_8","video_id":"g6L-l5sgFEQ","source_answer_type":7,"split_origin":"train"}
+{"query":"is the person in the video washing the face in the room","source":"ActivityNet-QA","source_id":"v_G9m5zxl2f08_2","video_id":"G9m5zxl2f08","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in white shorts pick up ice cream","source":"ActivityNet-QA","source_id":"v_gC4B1Az2Mk0_6","video_id":"gC4B1Az2Mk0","source_answer_type":8,"split_origin":"train"}
+{"query":"what's the person in a white vest doing","source":"ActivityNet-QA","source_id":"v_gDNgiybMA1s_1","video_id":"gDNgiybMA1s","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the woman in a black coat","source":"ActivityNet-QA","source_id":"v_gF14lRI0HUM_4","video_id":"gF14lRI0HUM","source_answer_type":1,"split_origin":"train"}
+{"query":"how many rubiks are there in the video","source":"ActivityNet-QA","source_id":"v_gGs1qNxsFTg_8","video_id":"gGs1qNxsFTg","source_answer_type":7,"split_origin":"train"}
+{"query":"is the person in the video outdoors","source":"ActivityNet-QA","source_id":"v_gi0wjdtxaC4_2","video_id":"gi0wjdtxaC4","source_answer_type":3,"split_origin":"train"}
+{"query":"why do the boys in the video take pictures with people who play musical instruments","source":"ActivityNet-QA","source_id":"v_gkhgAlVSKTI_6","video_id":"gkhgAlVSKTI","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_gMwjhe0Njkc_1","video_id":"gMwjhe0Njkc","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in black","source":"ActivityNet-QA","source_id":"v_gOKkjA2yvGo_4","video_id":"gOKkjA2yvGo","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the kite-shaped kite in the video","source":"ActivityNet-QA","source_id":"v_GRGBMJG1Koc_8","video_id":"GRGBMJG1Koc","source_answer_type":4,"split_origin":"train"}
+{"query":"are the two martial arts demonstrations not wearing shoes","source":"ActivityNet-QA","source_id":"v_GTOP7XXi_vI_2","video_id":"GTOP7XXi_vI","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of a person wearing gray short sleeves","source":"ActivityNet-QA","source_id":"v_GVn7MSMHXxk_6","video_id":"GVn7MSMHXxk","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white coat doing","source":"ActivityNet-QA","source_id":"v_gY-TqRhcWY8_1","video_id":"gY-TqRhcWY8","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the right side of the person wearing a plaid shirt","source":"ActivityNet-QA","source_id":"v_GZiG-aSzIJI_4","video_id":"GZiG-aSzIJI","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_h-A3CAx_eyU_8","video_id":"h-A3CAx_eyU","source_answer_type":7,"split_origin":"train"}
+{"query":"is the person in purple playing in the room","source":"ActivityNet-QA","source_id":"v_h3GLEcwSvD4_2","video_id":"h3GLEcwSvD4","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the man in white","source":"ActivityNet-QA","source_id":"v_h61C_KfvG0Y_6","video_id":"h61C_KfvG0Y","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the little boy in the video doing","source":"ActivityNet-QA","source_id":"v_HB11MXjwvVo_1","video_id":"HB11MXjwvVo","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in blue","source":"ActivityNet-QA","source_id":"v_HddRC-twMLc_4","video_id":"HddRC-twMLc","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in purple","source":"ActivityNet-QA","source_id":"v_HfowLX1u38Y_8","video_id":"HfowLX1u38Y","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in a hat wearing white clothes","source":"ActivityNet-QA","source_id":"v_hgTgOjkcvpc_2","video_id":"hgTgOjkcvpc","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the location of a man in a white dress","source":"ActivityNet-QA","source_id":"v_hHpcr5tYWso_6","video_id":"hHpcr5tYWso","source_answer_type":6,"split_origin":"train"}
+{"query":"what's the man in the video with the black and white stripes on his sleeves doing","source":"ActivityNet-QA","source_id":"v_HJZj6z1dyT4_1","video_id":"HJZj6z1dyT4","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the right side of the tv in the video","source":"ActivityNet-QA","source_id":"v_HNIs8lFvKkA_4","video_id":"HNIs8lFvKkA","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in black clothes","source":"ActivityNet-QA","source_id":"v_hP8wUI0qdaQ_8","video_id":"hP8wUI0qdaQ","source_answer_type":8,"split_origin":"train"}
+{"query":"is the girl sports outside","source":"ActivityNet-QA","source_id":"v_HqGWA16ECWE_2","video_id":"HqGWA16ECWE","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in black stand in the middle","source":"ActivityNet-QA","source_id":"v_hRIXXCe0Hi0_6","video_id":"hRIXXCe0Hi0","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_Hujj6Q1Et3k_1","video_id":"Hujj6Q1Et3k","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the right of the person in black clothes","source":"ActivityNet-QA","source_id":"v_HVfr9FnEj-Q_4","video_id":"HVfr9FnEj-Q","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the identity of a person wearing a stripe","source":"ActivityNet-QA","source_id":"v_hXjxOvlNxQM_8","video_id":"hXjxOvlNxQM","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the black room indoors","source":"ActivityNet-QA","source_id":"v_i_Fs0Qrtu90_2","video_id":"i_Fs0Qrtu90","source_answer_type":3,"split_origin":"train"}
+{"query":"what are the careers of the two people in the middle of the field","source":"ActivityNet-QA","source_id":"v_I4wkBjpwAAU_6","video_id":"I4wkBjpwAAU","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black clothes doing in the video","source":"ActivityNet-QA","source_id":"v_i9Yxt2k2aWg_1","video_id":"i9Yxt2k2aWg","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_icGrJ2XBxa0_4","video_id":"icGrJ2XBxa0","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there on the surfboard","source":"ActivityNet-QA","source_id":"v_iDz8nKDpumY_8","video_id":"iDz8nKDpumY","source_answer_type":7,"split_origin":"train"}
+{"query":"do you use arm strength in the course of playing snooker","source":"ActivityNet-QA","source_id":"v_IfpcrV_cwHI_2","video_id":"IfpcrV_cwHI","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of the person in a tshirt","source":"ActivityNet-QA","source_id":"v_iHQ-Kg4Fms8_6","video_id":"iHQ-Kg4Fms8","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the man in blue doing","source":"ActivityNet-QA","source_id":"v_IkXuooaGnCc_1","video_id":"IkXuooaGnCc","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in purple clothes","source":"ActivityNet-QA","source_id":"v_iM8ZD2PwKDg_4","video_id":"iM8ZD2PwKDg","source_answer_type":1,"split_origin":"train"}
+{"query":"what kind of clothes does the person with glasses wear","source":"ActivityNet-QA","source_id":"v_InHt3sukfeg_8","video_id":"InHt3sukfeg","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person wearing a hat outdoors","source":"ActivityNet-QA","source_id":"v_iPc-u9aU_SQ_2","video_id":"iPc-u9aU_SQ","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the relationship between the 8th man and the 3rd man","source":"ActivityNet-QA","source_id":"v_iqe_HmjojQ8_6","video_id":"iqe_HmjojQ8","source_answer_type":8,"split_origin":"train"}
+{"query":"what did the black man do at the beginning","source":"ActivityNet-QA","source_id":"v_Is0_Qv6NLm0_1","video_id":"Is0_Qv6NLm0","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person with a red helmet","source":"ActivityNet-QA","source_id":"v_iUOCQ9sE2_A_4","video_id":"iUOCQ9sE2_A","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the animal that jumps on the sea","source":"ActivityNet-QA","source_id":"v_iVVatZsgnGo_8","video_id":"iVVatZsgnGo","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person in the center of the site outside","source":"ActivityNet-QA","source_id":"v_iyGve9RCjV4_2","video_id":"iyGve9RCjV4","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of the person in black clothes","source":"ActivityNet-QA","source_id":"v_j_Xr8nLEjLQ_6","video_id":"j_Xr8nLEjLQ","source_answer_type":8,"split_origin":"train"}
+{"query":"what's the man in black shoes doing","source":"ActivityNet-QA","source_id":"v_J4WbF-bJ1T8_1","video_id":"J4WbF-bJ1T8","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the people in black clothes","source":"ActivityNet-QA","source_id":"v_j73Ks4r5tbg_4","video_id":"j73Ks4r5tbg","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the hair of the person in swimming trunks","source":"ActivityNet-QA","source_id":"v_JA-B3KK9A-I_8","video_id":"JA-B3KK9A-I","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in green indoors","source":"ActivityNet-QA","source_id":"v_JbAvSsIaI8g_2","video_id":"JbAvSsIaI8g","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the dog","source":"ActivityNet-QA","source_id":"v_Jd3D2d-RwL0_6","video_id":"Jd3D2d-RwL0","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in black clothes doing","source":"ActivityNet-QA","source_id":"v_JH31FxBZ5Xw_1","video_id":"JH31FxBZ5Xw","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in gray clothes","source":"ActivityNet-QA","source_id":"v_jHyWtrhNTTk_4","video_id":"jHyWtrhNTTk","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the adult","source":"ActivityNet-QA","source_id":"v_JkcoGLKl_0A_8","video_id":"JkcoGLKl_0A","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person on the court indoors","source":"ActivityNet-QA","source_id":"v_JMIvoKPtxRA_2","video_id":"JMIvoKPtxRA","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the color of the springboard","source":"ActivityNet-QA","source_id":"v_JNr0oI927ng_6","video_id":"JNr0oI927ng","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the old man doing","source":"ActivityNet-QA","source_id":"v_Jp7KeCimrMI_1","video_id":"Jp7KeCimrMI","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the old person with glasses","source":"ActivityNet-QA","source_id":"v_JRg3W4xKvJI_4","video_id":"JRg3W4xKvJI","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the scarf of the person in white","source":"ActivityNet-QA","source_id":"v_JuC7EY32Spg_8","video_id":"JuC7EY32Spg","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in blue throwing darts in the room","source":"ActivityNet-QA","source_id":"v_jwd8ELi0au8_2","video_id":"jwd8ELi0au8","source_answer_type":3,"split_origin":"train"}
+{"query":"why is the person standing by the goal","source":"ActivityNet-QA","source_id":"v_JxBFSll-mDE_6","video_id":"JxBFSll-mDE","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black coat doing","source":"ActivityNet-QA","source_id":"v_jYA_3BMF2d4_1","video_id":"jYA_3BMF2d4","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the oven","source":"ActivityNet-QA","source_id":"v_k_gjsTv-jy8_4","video_id":"k_gjsTv-jy8","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the athlete","source":"ActivityNet-QA","source_id":"v_k2U1lOpLqdk_8","video_id":"k2U1lOpLqdk","source_answer_type":8,"split_origin":"train"}
+{"query":"does the person in pink slippers buy sunscreen indoors","source":"ActivityNet-QA","source_id":"v_K5X_ytiMuqc_2","video_id":"K5X_ytiMuqc","source_answer_type":3,"split_origin":"train"}
+{"query":"what color are the pants of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_k9VKFjPYT3o_6","video_id":"k9VKFjPYT3o","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in black coat doing","source":"ActivityNet-QA","source_id":"v_KcSo4p-hhBs_1","video_id":"KcSo4p-hhBs","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the right side of the person wearing a blue vest","source":"ActivityNet-QA","source_id":"v_KEU4Sj6x1p4_4","video_id":"KEU4Sj6x1p4","source_answer_type":1,"split_origin":"train"}
+{"query":"how many ships are there in the video","source":"ActivityNet-QA","source_id":"v_kgPvfYhmn54_8","video_id":"kgPvfYhmn54","source_answer_type":7,"split_origin":"train"}
+{"query":"is the hair of a white beard white","source":"ActivityNet-QA","source_id":"v_kk1Iqyox4c8_2","video_id":"kk1Iqyox4c8","source_answer_type":3,"split_origin":"train"}
+{"query":"what kind of trousers do the green haired blond men wear","source":"ActivityNet-QA","source_id":"v_kMHMdqkGRB4_6","video_id":"kMHMdqkGRB4","source_answer_type":5,"split_origin":"train"}
+{"query":"what is the little girl in white clothes doing","source":"ActivityNet-QA","source_id":"v_kpnGg2lOBLM_1","video_id":"kpnGg2lOBLM","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the right of the person in a  hat","source":"ActivityNet-QA","source_id":"v_KqOLTkf5ujs_4","video_id":"KqOLTkf5ujs","source_answer_type":1,"split_origin":"train"}
+{"query":"where does this woman apply the skin care","source":"ActivityNet-QA","source_id":"v_Ksbk5rtqVd0_8","video_id":"Ksbk5rtqVd0","source_answer_type":8,"split_origin":"train"}
+{"query":"is the woman in the blue clothes in the room","source":"ActivityNet-QA","source_id":"v_kTSuw4T-_Nk_2","video_id":"kTSuw4T-_Nk","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the woman wearing on the white dress","source":"ActivityNet-QA","source_id":"v_Kwhp0DNop9I_6","video_id":"Kwhp0DNop9I","source_answer_type":5,"split_origin":"train"}
+{"query":"what is the person in yellow clothes doing","source":"ActivityNet-QA","source_id":"v_KylUHdDXuCg_1","video_id":"KylUHdDXuCg","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black shoes","source":"ActivityNet-QA","source_id":"v_kZMDKbfIis0_4","video_id":"kZMDKbfIis0","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in a striped shirt","source":"ActivityNet-QA","source_id":"v_L0K-WJuI1-I_8","video_id":"L0K-WJuI1-I","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person wearing a white hat playing games outside","source":"ActivityNet-QA","source_id":"v_l5xW6UZWwBs_2","video_id":"l5xW6UZWwBs","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are playing on the ground","source":"ActivityNet-QA","source_id":"v_L9MTwigRhmk_6","video_id":"L9MTwigRhmk","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person with black hair doing","source":"ActivityNet-QA","source_id":"v_ldjIg23Rofw_1","video_id":"ldjIg23Rofw","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the left side of the person wearing the apron","source":"ActivityNet-QA","source_id":"v_Lg-mJS-BZZo_4","video_id":"Lg-mJS-BZZo","source_answer_type":1,"split_origin":"train"}
+{"query":"what color box did the girl take out things that putting on her hair","source":"ActivityNet-QA","source_id":"v_lGwUq5vZGEk_8","video_id":"lGwUq5vZGEk","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in black wearing a hat","source":"ActivityNet-QA","source_id":"v_lIbRuIm9MxI_2","video_id":"lIbRuIm9MxI","source_answer_type":3,"split_origin":"train"}
+{"query":"why do they put wallpaper on the wall","source":"ActivityNet-QA","source_id":"v_llcbN-s26vs_6","video_id":"llcbN-s26vs","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in gray clothes doing","source":"ActivityNet-QA","source_id":"v_lnieKUxnxuY_1","video_id":"lnieKUxnxuY","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_LOINRpWGrlw_4","video_id":"LOINRpWGrlw","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in red clothes","source":"ActivityNet-QA","source_id":"v_lrM8LSnXmSw_8","video_id":"lrM8LSnXmSw","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in green indoors","source":"ActivityNet-QA","source_id":"v_lsIiSTG2pn4_2","video_id":"lsIiSTG2pn4","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man who put their feet on a chair wear gloves","source":"ActivityNet-QA","source_id":"v_lVMMPkvnid8_6","video_id":"lVMMPkvnid8","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person with a scarf doing","source":"ActivityNet-QA","source_id":"v_LxLvhGHwca8_1","video_id":"LxLvhGHwca8","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the athlete","source":"ActivityNet-QA","source_id":"v_M_hfBH8xEig_4","video_id":"M_hfBH8xEig","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the color of the shoes of a person wearing a gray suit","source":"ActivityNet-QA","source_id":"v_m1pNOYN-DoI_8","video_id":"m1pNOYN-DoI","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in black pants weightlifting indoors ","source":"ActivityNet-QA","source_id":"v_m5YvKrjGtPM_2","video_id":"m5YvKrjGtPM","source_answer_type":3,"split_origin":"train"}
+{"query":"which hand does the little boy in size 7 wear","source":"ActivityNet-QA","source_id":"v_m7wfcL6YSMY_6","video_id":"m7wfcL6YSMY","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the child in yellow clothes doing","source":"ActivityNet-QA","source_id":"v_MAZlsi4Bon8_1","video_id":"MAZlsi4Bon8","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in the video","source":"ActivityNet-QA","source_id":"v_mBHsAuDJmj4_4","video_id":"mBHsAuDJmj4","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_MEbEcvzdytY_8","video_id":"MEbEcvzdytY","source_answer_type":7,"split_origin":"train"}
+{"query":"is the athlete outdoors","source":"ActivityNet-QA","source_id":"v_MewROhYmQP0_2","video_id":"MewROhYmQP0","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in the video move the christmas tree","source":"ActivityNet-QA","source_id":"v_mG8h5rX3OnU_6","video_id":"mG8h5rX3OnU","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in gray clothes doing","source":"ActivityNet-QA","source_id":"v_mhHoL-9mY1E_1","video_id":"mhHoL-9mY1E","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the back of the woman in a white coat","source":"ActivityNet-QA","source_id":"v_MkL-tApJgXc_4","video_id":"MkL-tApJgXc","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the color of the weeder","source":"ActivityNet-QA","source_id":"v_MlkXsUDCoww_8","video_id":"MlkXsUDCoww","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in blue shorts outdoors","source":"ActivityNet-QA","source_id":"v_MO8Dfz2Lp3w_2","video_id":"MO8Dfz2Lp3w","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the video taken ","source":"ActivityNet-QA","source_id":"v_mrqSaH_FIcs_6","video_id":"mrqSaH_FIcs","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the person in green clothes doing","source":"ActivityNet-QA","source_id":"v_mvomkmq32vU_1","video_id":"mvomkmq32vU","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the right side of the boy wearing striped short-sleeved bib shorts in the water","source":"ActivityNet-QA","source_id":"v_MYzG-TsW8w8_4","video_id":"MYzG-TsW8w8","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in red clothes","source":"ActivityNet-QA","source_id":"v_n_hNYA5kWME_8","video_id":"n_hNYA5kWME","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the black coat outside","source":"ActivityNet-QA","source_id":"v_N0DA6RpIf5Y_2","video_id":"N0DA6RpIf5Y","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the man in purple weightlifting","source":"ActivityNet-QA","source_id":"v_N6HUPyM5m2o_6","video_id":"N6HUPyM5m2o","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the person in blue clothes doing","source":"ActivityNet-QA","source_id":"v_nARkYpOZWyg_1","video_id":"nARkYpOZWyg","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person in the video","source":"ActivityNet-QA","source_id":"v_nDbLtdY66dA_4","video_id":"nDbLtdY66dA","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the name of the toy","source":"ActivityNet-QA","source_id":"v_ngE2y5ExVqw_8","video_id":"ngE2y5ExVqw","source_answer_type":8,"split_origin":"train"}
+{"query":"does the person in the video have short hair","source":"ActivityNet-QA","source_id":"v_nHuu6aInr1w_2","video_id":"nHuu6aInr1w","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in white dress want to run","source":"ActivityNet-QA","source_id":"v_Nk4p-ah_PkA_6","video_id":"Nk4p-ah_PkA","source_answer_type":8,"split_origin":"train"}
+{"query":"what's a black man in green doing","source":"ActivityNet-QA","source_id":"v_nMK_jVy5ZuI_1","video_id":"nMK_jVy5ZuI","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the red-haired person","source":"ActivityNet-QA","source_id":"v_NnLjEbG31ZE_4","video_id":"NnLjEbG31ZE","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in white clothes","source":"ActivityNet-QA","source_id":"v_NpKBAtQ5M6I_8","video_id":"NpKBAtQ5M6I","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in blue outdoors","source":"ActivityNet-QA","source_id":"v_nSR-JSqGoWQ_2","video_id":"nSR-JSqGoWQ","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the hairstyle of the person in white clothes","source":"ActivityNet-QA","source_id":"v_nUghBtcrTPA_6","video_id":"nUghBtcrTPA","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black doing","source":"ActivityNet-QA","source_id":"v_nxDAt9SkPoA_1","video_id":"nxDAt9SkPoA","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in a red hat","source":"ActivityNet-QA","source_id":"v_nxyENrsY4mo_4","video_id":"nxyENrsY4mo","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in blue","source":"ActivityNet-QA","source_id":"v_o00AfbAIOlA_8","video_id":"o00AfbAIOlA","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in green indoors","source":"ActivityNet-QA","source_id":"v_o6lTgyb_AkM_2","video_id":"o6lTgyb_AkM","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the shape of the cube in the video","source":"ActivityNet-QA","source_id":"v_ocvKEzb7OaE_6","video_id":"ocvKEzb7OaE","source_answer_type":8,"split_origin":"train"}
+{"query":"what's the guy in white towel doing","source":"ActivityNet-QA","source_id":"v_oFku30m99do_1","video_id":"oFku30m99do","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the right of the road","source":"ActivityNet-QA","source_id":"v_OIA7lPraPSM_4","video_id":"OIA7lPraPSM","source_answer_type":1,"split_origin":"train"}
+{"query":"how safe is this sport in the video","source":"ActivityNet-QA","source_id":"v_okC18bPTils_8","video_id":"okC18bPTils","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person wearing a white coat playing the piano in the room","source":"ActivityNet-QA","source_id":"v_omuYi2Vhgjo_2","video_id":"omuYi2Vhgjo","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in blue pants pick up floor","source":"ActivityNet-QA","source_id":"v_oP77DgsbhKQ_6","video_id":"oP77DgsbhKQ","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black pants doing","source":"ActivityNet-QA","source_id":"v_ORI5ZNZARw8_1","video_id":"ORI5ZNZARw8","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person with a hat in the video","source":"ActivityNet-QA","source_id":"v_ot4CuJqrN-Y_4","video_id":"ot4CuJqrN-Y","source_answer_type":1,"split_origin":"train"}
+{"query":"how many pools are there in the video","source":"ActivityNet-QA","source_id":"v_ouqYXdtEuCI_8","video_id":"ouqYXdtEuCI","source_answer_type":7,"split_origin":"train"}
+{"query":"does the person in the video have black hair","source":"ActivityNet-QA","source_id":"v_oXqzXQRqAhI_2","video_id":"oXqzXQRqAhI","source_answer_type":3,"split_origin":"train"}
+{"query":"which hand of the man in black wears a watch ","source":"ActivityNet-QA","source_id":"v_Oz4q98BhqKo_6","video_id":"Oz4q98BhqKo","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_p-lwebxSYyo_1","video_id":"p-lwebxSYyo","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the left of the person in the video","source":"ActivityNet-QA","source_id":"v_p0O-EsMFcL4_4","video_id":"p0O-EsMFcL4","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the person's clothes in the video","source":"ActivityNet-QA","source_id":"v_p2n_FtzA1gk_8","video_id":"p2n_FtzA1gk","source_answer_type":4,"split_origin":"train"}
+{"query":"is the lady wearing white clothes","source":"ActivityNet-QA","source_id":"v_p4qZGZenAoU_2","video_id":"p4qZGZenAoU","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in video want to fix their sails","source":"ActivityNet-QA","source_id":"v_P6z57_sYXm8_6","video_id":"P6z57_sYXm8","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_PAF5AIQNXhs_1","video_id":"PAF5AIQNXhs","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the left side of the toy dog","source":"ActivityNet-QA","source_id":"v_PbzmcZ_IORE_4","video_id":"PbzmcZ_IORE","source_answer_type":1,"split_origin":"train"}
+{"query":"is the person in blue wearing glasses","source":"ActivityNet-QA","source_id":"v_PD9e9MVHEyU_8","video_id":"PD9e9MVHEyU","source_answer_type":3,"split_origin":"train"}
+{"query":"is the person in the video wearing red clothes","source":"ActivityNet-QA","source_id":"v_PgS2F7NxNBg_2","video_id":"PgS2F7NxNBg","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the season in the video","source":"ActivityNet-QA","source_id":"v_pI-rY6fLM1Q_6","video_id":"pI-rY6fLM1Q","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_PjSOjB7qhcA_1","video_id":"PjSOjB7qhcA","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_pn1XDTlNMso_4","video_id":"pn1XDTlNMso","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the job of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_poI4vU4k1sY_8","video_id":"poI4vU4k1sY","source_answer_type":8,"split_origin":"train"}
+{"query":"is the goalkeeper a person","source":"ActivityNet-QA","source_id":"v_pS-BoCsMcpQ_2","video_id":"pS-BoCsMcpQ","source_answer_type":3,"split_origin":"train"}
+{"query":"is the sport in the video dangerous","source":"ActivityNet-QA","source_id":"v_ptlSMte8xz0_6","video_id":"ptlSMte8xz0","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_PV5Y3NeR5yQ_1","video_id":"PV5Y3NeR5yQ","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the person wearing orange clothes","source":"ActivityNet-QA","source_id":"v_pxb95-aSDYo_4","video_id":"pxb95-aSDYo","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in black clothes","source":"ActivityNet-QA","source_id":"v_PzERiygIpkg_8","video_id":"PzERiygIpkg","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the black jacket blowing someone else's hair","source":"ActivityNet-QA","source_id":"v_q-RNYziOHjE_2","video_id":"q-RNYziOHjE","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the style of the person wearing a dark blue dress","source":"ActivityNet-QA","source_id":"v_q23IYtwNOkE_6","video_id":"q23IYtwNOkE","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white shirt doing","source":"ActivityNet-QA","source_id":"v_Q6tYENILn40_1","video_id":"Q6tYENILn40","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in gray clothes","source":"ActivityNet-QA","source_id":"v_q8TBL7DBgXY_4","video_id":"q8TBL7DBgXY","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the hairstyle of the person in white clothes","source":"ActivityNet-QA","source_id":"v_QBlveXzAZsY_8","video_id":"QBlveXzAZsY","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person wearing a black coat playing cricket outside","source":"ActivityNet-QA","source_id":"v_QeIsJBPG8EM_2","video_id":"QeIsJBPG8EM","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the hair of the person in red coat","source":"ActivityNet-QA","source_id":"v_QGZN8aXpXHU_6","video_id":"QGZN8aXpXHU","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_qiw2I1oQIVQ_1","video_id":"qiw2I1oQIVQ","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the camel","source":"ActivityNet-QA","source_id":"v_QlQrJ5WsWzo_4","video_id":"QlQrJ5WsWzo","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are dancing in the video","source":"ActivityNet-QA","source_id":"v_QOlSCBRmfWY_8","video_id":"QOlSCBRmfWY","source_answer_type":7,"split_origin":"train"}
+{"query":"is it a dog in the slide on the slide","source":"ActivityNet-QA","source_id":"v_QR2BmWR5FGM_2","video_id":"QR2BmWR5FGM","source_answer_type":3,"split_origin":"train"}
+{"query":"what kind of clothes do the players wear","source":"ActivityNet-QA","source_id":"v_QsRW8dj-F7M_6","video_id":"QsRW8dj-F7M","source_answer_type":5,"split_origin":"train"}
+{"query":"what is the person in green dress doing","source":"ActivityNet-QA","source_id":"v_QU5R75IyQow_1","video_id":"QU5R75IyQow","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the person in the black coat","source":"ActivityNet-QA","source_id":"v_QwLiAkfSa9A_4","video_id":"QwLiAkfSa9A","source_answer_type":1,"split_origin":"train"}
+{"query":"is surfing dangerous","source":"ActivityNet-QA","source_id":"v_QYb2ektVZek_8","video_id":"QYb2ektVZek","source_answer_type":3,"split_origin":"train"}
+{"query":"is the man in the red helmet skateboarding outside","source":"ActivityNet-QA","source_id":"v_R_ffZ9kGeTI_2","video_id":"R_ffZ9kGeTI","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of the person in a white vest","source":"ActivityNet-QA","source_id":"v_r1dvt537JQU_6","video_id":"r1dvt537JQU","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in pink clothes doing","source":"ActivityNet-QA","source_id":"v_r4iurK3kOe8_1","video_id":"r4iurK3kOe8","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the player in blue pants","source":"ActivityNet-QA","source_id":"v_R7uL6BvULN8_4","video_id":"R7uL6BvULN8","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in white clothes","source":"ActivityNet-QA","source_id":"v_rA7qVOp47Qg_8","video_id":"rA7qVOp47Qg","source_answer_type":8,"split_origin":"train"}
+{"query":"doesn't the people in the red gymnasts wear a hat","source":"ActivityNet-QA","source_id":"v_rBnygEUFOvE_2","video_id":"rBnygEUFOvE","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the color of the clothes that people are sitting at the beginning of the video","source":"ActivityNet-QA","source_id":"v_RDCZQ0nWIPc_6","video_id":"RDCZQ0nWIPc","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person with blue hat doing","source":"ActivityNet-QA","source_id":"v_ResZdSbk9kE_1","video_id":"ResZdSbk9kE","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the right side of the river","source":"ActivityNet-QA","source_id":"v_RG0wtfLnNrE_4","video_id":"RG0wtfLnNrE","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the person in pink clothes","source":"ActivityNet-QA","source_id":"v_RI-l0tK8Ok0_8","video_id":"RI-l0tK8Ok0","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in the striped clothes indoors","source":"ActivityNet-QA","source_id":"v_RKUEXxnXrm8_2","video_id":"RKUEXxnXrm8","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the hat of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_rOeNl9qIoVI_6","video_id":"rOeNl9qIoVI","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the standing person doing","source":"ActivityNet-QA","source_id":"v_rR1R-x_UlOM_1","video_id":"rR1R-x_UlOM","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the underneath of the players in the game","source":"ActivityNet-QA","source_id":"v_rt1kYX3slRI_4","video_id":"rt1kYX3slRI","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the material of the bucket used by people wearing green swimsuits","source":"ActivityNet-QA","source_id":"v_rVcgTALWCRA_8","video_id":"rVcgTALWCRA","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person in blue indoors","source":"ActivityNet-QA","source_id":"v_RWjCwIOuzrc_2","video_id":"RWjCwIOuzrc","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the hairstyle of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_RxuL7k7-hYQ_6","video_id":"RxuL7k7-hYQ","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in red jackets doing at the end of the video","source":"ActivityNet-QA","source_id":"v_RZpbFG3j-Bo_1","video_id":"RZpbFG3j-Bo","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the audience","source":"ActivityNet-QA","source_id":"v_s07U8_fkUWU_4","video_id":"s07U8_fkUWU","source_answer_type":1,"split_origin":"train"}
+{"query":"how many solar ovens are there in the video","source":"ActivityNet-QA","source_id":"v_s789WxU8PFY_8","video_id":"s789WxU8PFY","source_answer_type":7,"split_origin":"train"}
+{"query":"is the pregnant woman outdoors","source":"ActivityNet-QA","source_id":"v_sbvk9FNaAH0_2","video_id":"sbvk9FNaAH0","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the hair of the person in white","source":"ActivityNet-QA","source_id":"v_sd2MhdKdQTo_6","video_id":"sd2MhdKdQTo","source_answer_type":4,"split_origin":"train"}
+{"query":"what's the person in a gray coat doing","source":"ActivityNet-QA","source_id":"v_sGTDKZuG1vE_1","video_id":"sGTDKZuG1vE","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the left of the car","source":"ActivityNet-QA","source_id":"v_SIeV0DPSpHQ_4","video_id":"SIeV0DPSpHQ","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the color of the sun block","source":"ActivityNet-QA","source_id":"v_SLfZUqfyfjs_8","video_id":"SLfZUqfyfjs","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in the water outdoors","source":"ActivityNet-QA","source_id":"v_SMpmoqIk3Ts_2","video_id":"SMpmoqIk3Ts","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the 12th player wave","source":"ActivityNet-QA","source_id":"v_snUWwTH8eQg_6","video_id":"snUWwTH8eQg","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in green clothes doing","source":"ActivityNet-QA","source_id":"v_SqfB4ohs2Ro_1","video_id":"SqfB4ohs2Ro","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the old person with glasses","source":"ActivityNet-QA","source_id":"v_sRMrtzg0nwU_4","video_id":"sRMrtzg0nwU","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the color of the car of a person wearing blue clothes","source":"ActivityNet-QA","source_id":"v_SsW-IeF0bzE_8","video_id":"SsW-IeF0bzE","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person with braid indoors","source":"ActivityNet-QA","source_id":"v_sVk-Br0zfkA_2","video_id":"sVk-Br0zfkA","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the clothes of the person with black hair","source":"ActivityNet-QA","source_id":"v_swId_MFHywI_6","video_id":"swId_MFHywI","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the dog doing","source":"ActivityNet-QA","source_id":"v_SxIJ6MjcgnY_1","video_id":"SxIJ6MjcgnY","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the left of the atelete","source":"ActivityNet-QA","source_id":"v_T_CvR3zm6K8_4","video_id":"T_CvR3zm6K8","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the color of the pants of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_T4g31MwZ2ds_8","video_id":"T4g31MwZ2ds","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person with the helmet outdoors","source":"ActivityNet-QA","source_id":"v_Ta70WnVT6Lc_2","video_id":"Ta70WnVT6Lc","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the athletes in blue throw down the javelin","source":"ActivityNet-QA","source_id":"v_tD-wp39rjnE_6","video_id":"tD-wp39rjnE","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black doing","source":"ActivityNet-QA","source_id":"v_tETVZtWqdDs_1","video_id":"tETVZtWqdDs","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_thgW2RT30qQ_4","video_id":"thgW2RT30qQ","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the hair of the person in the grey coat","source":"ActivityNet-QA","source_id":"v_tIAdhrfT70I_8","video_id":"tIAdhrfT70I","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in red outdoors","source":"ActivityNet-QA","source_id":"v_tkmoslnsmwY_2","video_id":"tkmoslnsmwY","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man with blonde hair run","source":"ActivityNet-QA","source_id":"v_Tm1ebIrDyz0_6","video_id":"Tm1ebIrDyz0","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black doing","source":"ActivityNet-QA","source_id":"v_tO1VJnsd8sg_1","video_id":"tO1VJnsd8sg","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the car","source":"ActivityNet-QA","source_id":"v_TQ22icNBoSI_4","video_id":"TQ22icNBoSI","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the relationship between people wearing green hats and blue hats","source":"ActivityNet-QA","source_id":"v_tRatWgaZ-a0_8","video_id":"tRatWgaZ-a0","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in pink indoors","source":"ActivityNet-QA","source_id":"v_TtQPtLPTqBA_2","video_id":"TtQPtLPTqBA","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_tVIY6uyH3aA_6","video_id":"tVIY6uyH3aA","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the woman in black clothes doing","source":"ActivityNet-QA","source_id":"v_tzsgg_o6xHo_1","video_id":"tzsgg_o6xHo","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the feet of the person in yellow clothes","source":"ActivityNet-QA","source_id":"v_u1upxlAgsqM_4","video_id":"u1upxlAgsqM","source_answer_type":1,"split_origin":"train"}
+{"query":"what color are the pants of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_U6KrVIJSeDo_8","video_id":"U6KrVIJSeDo","source_answer_type":4,"split_origin":"train"}
+{"query":"does the person in yellow clothes hang sunglasses","source":"ActivityNet-QA","source_id":"v_uA3dbKjT9rM_2","video_id":"uA3dbKjT9rM","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of the person carrying the american flag","source":"ActivityNet-QA","source_id":"v_UB2GzjNzo3M_6","video_id":"UB2GzjNzo3M","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white clothes doing","source":"ActivityNet-QA","source_id":"v_UciHec7xncc_1","video_id":"UciHec7xncc","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the jury","source":"ActivityNet-QA","source_id":"v_UeuZeIASSPw_4","video_id":"UeuZeIASSPw","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are playing football on the table","source":"ActivityNet-QA","source_id":"v_UGCn1zgYboQ_8","video_id":"UGCn1zgYboQ","source_answer_type":7,"split_origin":"train"}
+{"query":"is the person in the black coat indoors","source":"ActivityNet-QA","source_id":"v_UJiQEkByWcM_2","video_id":"UJiQEkByWcM","source_answer_type":3,"split_origin":"train"}
+{"query":"where does the person in black fence","source":"ActivityNet-QA","source_id":"v_uMAjCPUZfp0_6","video_id":"uMAjCPUZfp0","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the woman with blond hair doing","source":"ActivityNet-QA","source_id":"v_UOswYEzeJ-M_1","video_id":"UOswYEzeJ-M","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the red man","source":"ActivityNet-QA","source_id":"v_UPZm0tx77Vw_4","video_id":"UPZm0tx77Vw","source_answer_type":1,"split_origin":"train"}
+{"query":"how many eyes are there","source":"ActivityNet-QA","source_id":"v_Us795clHJmw_8","video_id":"Us795clHJmw","source_answer_type":7,"split_origin":"train"}
+{"query":"is it to run in the process of throwing cricket","source":"ActivityNet-QA","source_id":"v_uwxuvGci98g_2","video_id":"uwxuvGci98g","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the relationship of all the people in the video","source":"ActivityNet-QA","source_id":"v_uy9Z2i8AmyY_6","video_id":"uy9Z2i8AmyY","source_answer_type":8,"split_origin":"train"}
+{"query":"what are the people in roller skates doing","source":"ActivityNet-QA","source_id":"v_UZPSbNS1LU0_1","video_id":"UZPSbNS1LU0","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the feet of the man in white clothes","source":"ActivityNet-QA","source_id":"v_V1AqyQ3qaQY_4","video_id":"V1AqyQ3qaQY","source_answer_type":1,"split_origin":"train"}
+{"query":"how many men in yellow clothes are there in the video","source":"ActivityNet-QA","source_id":"v_V3uCGRAWG2M_8","video_id":"V3uCGRAWG2M","source_answer_type":7,"split_origin":"train"}
+{"query":"do you use paper in the process of dressing up a face cat","source":"ActivityNet-QA","source_id":"v_V9ktV85lA9E_2","video_id":"V9ktV85lA9E","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the person with a helmet","source":"ActivityNet-QA","source_id":"v_VBY8feOQgy4_6","video_id":"VBY8feOQgy4","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the woman in black shoes doing","source":"ActivityNet-QA","source_id":"v_VcthLhKIntA_1","video_id":"VcthLhKIntA","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person wearing a white hat","source":"ActivityNet-QA","source_id":"v_veKNTB-N9EQ_4","video_id":"veKNTB-N9EQ","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of a person wearing a black bikini","source":"ActivityNet-QA","source_id":"v_VFKUKX9ToNI_8","video_id":"VFKUKX9ToNI","source_answer_type":8,"split_origin":"train"}
+{"query":"does the person in video make manicure on dummy fingers","source":"ActivityNet-QA","source_id":"v_Vh8RINfopdk_2","video_id":"Vh8RINfopdk","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of the person in white clothes","source":"ActivityNet-QA","source_id":"v_Vjsd6Ec6eKA_6","video_id":"Vjsd6Ec6eKA","source_answer_type":8,"split_origin":"train"}
+{"query":"what's the person with a watch doing","source":"ActivityNet-QA","source_id":"v_vlIAZsrj6yk_1","video_id":"vlIAZsrj6yk","source_answer_type":0,"split_origin":"train"}
+{"query":"what is behind the people in black clothes","source":"ActivityNet-QA","source_id":"v_vOI3hJ45lag_4","video_id":"vOI3hJ45lag","source_answer_type":1,"split_origin":"train"}
+{"query":"how many blue hair people are there","source":"ActivityNet-QA","source_id":"v_Vpue9WHrcAk_8","video_id":"Vpue9WHrcAk","source_answer_type":7,"split_origin":"train"}
+{"query":"is the person in the striped clothes indoors","source":"ActivityNet-QA","source_id":"v_Vshvpb9eecg_2","video_id":"Vshvpb9eecg","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the gender of the person in green clothes","source":"ActivityNet-QA","source_id":"v_VuEy38XdUgA_6","video_id":"VuEy38XdUgA","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_VyD5Z0S9tXU_1","video_id":"VyD5Z0S9tXU","source_answer_type":0,"split_origin":"train"}
+{"query":"what is above the seat","source":"ActivityNet-QA","source_id":"v_w--HmpjK-s8_4","video_id":"w--HmpjK-s8","source_answer_type":1,"split_origin":"train"}
+{"query":"what kind of pants does the person in white clothes wear","source":"ActivityNet-QA","source_id":"v_W0RYvQUUNe0_8","video_id":"W0RYvQUUNe0","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person in black indoors","source":"ActivityNet-QA","source_id":"v_W4XaqnwD6gU_2","video_id":"W4XaqnwD6gU","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_w8rTULZCkzk_6","video_id":"w8rTULZCkzk","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person in yellow clothes doing in the video","source":"ActivityNet-QA","source_id":"v_WD40PRo1quM_1","video_id":"WD40PRo1quM","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the feet of the person in black","source":"ActivityNet-QA","source_id":"v_wEgt41AJaU4_4","video_id":"wEgt41AJaU4","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the no.3 player","source":"ActivityNet-QA","source_id":"v_whcxrkF2hws_8","video_id":"whcxrkF2hws","source_answer_type":8,"split_origin":"train"}
+{"query":"is the girl in red hair long hair","source":"ActivityNet-QA","source_id":"v_WjueR8K-nnI_2","video_id":"WjueR8K-nnI","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the place in the video","source":"ActivityNet-QA","source_id":"v_WL4iqWa_1Z0_6","video_id":"WL4iqWa_1Z0","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the person in black doing","source":"ActivityNet-QA","source_id":"v_wO9DGYTAX70_1","video_id":"wO9DGYTAX70","source_answer_type":0,"split_origin":"train"}
+{"query":"what is on the wall","source":"ActivityNet-QA","source_id":"v_Wq-eDa62BcI_4","video_id":"Wq-eDa62BcI","source_answer_type":1,"split_origin":"train"}
+{"query":"what type of hat is worn","source":"ActivityNet-QA","source_id":"v_wsc5GIgVwN8_8","video_id":"wsc5GIgVwN8","source_answer_type":5,"split_origin":"train"}
+{"query":"is the person wearing a suit playing table tennis in the room","source":"ActivityNet-QA","source_id":"v_WUOiJOqrHlI_2","video_id":"WUOiJOqrHlI","source_answer_type":3,"split_origin":"train"}
+{"query":"where is the person in black clothes","source":"ActivityNet-QA","source_id":"v_WVxP7f_OyEs_6","video_id":"WVxP7f_OyEs","source_answer_type":6,"split_origin":"train"}
+{"query":"what is the person in gray clothes doing","source":"ActivityNet-QA","source_id":"v_wyARf3xHOgs_1","video_id":"wyARf3xHOgs","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in black pants","source":"ActivityNet-QA","source_id":"v_x--RoqrwiLI_4","video_id":"x--RoqrwiLI","source_answer_type":1,"split_origin":"train"}
+{"query":"why does the man wearing black clothes put iron on their bread","source":"ActivityNet-QA","source_id":"v_X1bmeq4u6YE_8","video_id":"X1bmeq4u6YE","source_answer_type":8,"split_origin":"train"}
+{"query":"does the person in white clothes have short hair","source":"ActivityNet-QA","source_id":"v_x3cOxXOYbwA_2","video_id":"x3cOxXOYbwA","source_answer_type":3,"split_origin":"train"}
+{"query":"what kind of pants does the person in white clothes wear","source":"ActivityNet-QA","source_id":"v_x7PDVqDFw6c_6","video_id":"x7PDVqDFw6c","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in blue clothes doing","source":"ActivityNet-QA","source_id":"v_xBtOxEIETtk_1","video_id":"xBtOxEIETtk","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in gray clothes","source":"ActivityNet-QA","source_id":"v_XCXcwMyrqYM_4","video_id":"XCXcwMyrqYM","source_answer_type":1,"split_origin":"train"}
+{"query":"how many measuring cups are there","source":"ActivityNet-QA","source_id":"v_xfNYfCAlkM4_8","video_id":"xfNYfCAlkM4","source_answer_type":7,"split_origin":"train"}
+{"query":"is the person in blue pants trimming green plants outdoors","source":"ActivityNet-QA","source_id":"v_XgJ6iiK-gQo_2","video_id":"XgJ6iiK-gQo","source_answer_type":3,"split_origin":"train"}
+{"query":"why does the man in white coats roast the ground with fire","source":"ActivityNet-QA","source_id":"v_XI6sjZg9Yeg_6","video_id":"XI6sjZg9Yeg","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in yellow clothes doing","source":"ActivityNet-QA","source_id":"v_xkKjgwIPEuM_1","video_id":"xkKjgwIPEuM","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in a white coat","source":"ActivityNet-QA","source_id":"v_xLRUuV1z3QA_4","video_id":"xLRUuV1z3QA","source_answer_type":1,"split_origin":"train"}
+{"query":"how many people are wearing a hair belt","source":"ActivityNet-QA","source_id":"v_xMQcYD044z4_8","video_id":"xMQcYD044z4","source_answer_type":7,"split_origin":"train"}
+{"query":"does the person in green have short hair","source":"ActivityNet-QA","source_id":"v_XNzQVEmoJrY_2","video_id":"XNzQVEmoJrY","source_answer_type":3,"split_origin":"train"}
+{"query":"is the person in green a boy or a girl","source":"ActivityNet-QA","source_id":"v_XP5Oqr1giQ4_6","video_id":"XP5Oqr1giQ4","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the man in white coats doing","source":"ActivityNet-QA","source_id":"v_xq7Gr0FUwpo_1","video_id":"xq7Gr0FUwpo","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the house","source":"ActivityNet-QA","source_id":"v_XSfG1M-Ik_A_4","video_id":"XSfG1M-Ik_A","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of the contestant number 8","source":"ActivityNet-QA","source_id":"v_xWIKFgygROg_8","video_id":"xWIKFgygROg","source_answer_type":8,"split_origin":"train"}
+{"query":"does the person in white clothes have short hair","source":"ActivityNet-QA","source_id":"v_xYuqZ_RrCC0_2","video_id":"xYuqZ_RrCC0","source_answer_type":3,"split_origin":"train"}
+{"query":"what is the name of the game","source":"ActivityNet-QA","source_id":"v_y0VZOcxbjRM_6","video_id":"y0VZOcxbjRM","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in black clothes doing","source":"ActivityNet-QA","source_id":"v_Y6rHCVo28kM_1","video_id":"Y6rHCVo28kM","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_Y82dz6aTwJ0_4","video_id":"Y82dz6aTwJ0","source_answer_type":1,"split_origin":"train"}
+{"query":"what kind of pants do the people wear in black clothes","source":"ActivityNet-QA","source_id":"v_YaIuavIbk6A_8","video_id":"YaIuavIbk6A","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in black playing windsurfing outdoors","source":"ActivityNet-QA","source_id":"v_ycBFz2RdgoY_2","video_id":"ycBFz2RdgoY","source_answer_type":3,"split_origin":"train"}
+{"query":"why doesn't the man in the video stand","source":"ActivityNet-QA","source_id":"v_yDrTpm9c7MY_6","video_id":"yDrTpm9c7MY","source_answer_type":8,"split_origin":"train"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_ygmYkKbS-4U_1","video_id":"ygmYkKbS-4U","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the athlete","source":"ActivityNet-QA","source_id":"v_YIb8sArOPww_4","video_id":"YIb8sArOPww","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the apron","source":"ActivityNet-QA","source_id":"v_yKdvz5dgro4_8","video_id":"yKdvz5dgro4","source_answer_type":4,"split_origin":"train"}
+{"query":"does the person in the video have long hair","source":"ActivityNet-QA","source_id":"v_ynispYtdDq8_2","video_id":"ynispYtdDq8","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_YotaXgC6Ee8_6","video_id":"YotaXgC6Ee8","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person in red clothes doing","source":"ActivityNet-QA","source_id":"v_YQiTt8b6N60_1","video_id":"YQiTt8b6N60","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in green clothes","source":"ActivityNet-QA","source_id":"v_ytvIoI5uwFA_4","video_id":"ytvIoI5uwFA","source_answer_type":1,"split_origin":"train"}
+{"query":"what color are the pants of the person with the black vest","source":"ActivityNet-QA","source_id":"v_yVbzejdydrw_8","video_id":"yVbzejdydrw","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in the striped clothes indoors","source":"ActivityNet-QA","source_id":"v_Z_1Zoc6lINU_2","video_id":"Z_1Zoc6lINU","source_answer_type":3,"split_origin":"train"}
+{"query":"what color is the person's clothes in the video","source":"ActivityNet-QA","source_id":"v_z0vMpInrDqM_6","video_id":"z0vMpInrDqM","source_answer_type":4,"split_origin":"train"}
+{"query":"what is the person in green clothes doing","source":"ActivityNet-QA","source_id":"v_z4qaGiWt-bo_1","video_id":"z4qaGiWt-bo","source_answer_type":0,"split_origin":"train"}
+{"query":"what is the front of the person wearing white trousers","source":"ActivityNet-QA","source_id":"v_Z8xxgFpK-NM_4","video_id":"Z8xxgFpK-NM","source_answer_type":1,"split_origin":"train"}
+{"query":"what is the gender of a person wearing a gray shirt","source":"ActivityNet-QA","source_id":"v_zBtmE0BAjGE_8","video_id":"zBtmE0BAjGE","source_answer_type":8,"split_origin":"train"}
+{"query":"is the person in blue outdoors","source":"ActivityNet-QA","source_id":"v_ZEChBNpLCyU_2","video_id":"ZEChBNpLCyU","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_ZG4ApSk5iKw_6","video_id":"ZG4ApSk5iKw","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the person in black clothes doing","source":"ActivityNet-QA","source_id":"v_ZIFxB0gZ5tY_1","video_id":"ZIFxB0gZ5tY","source_answer_type":0,"split_origin":"train"}
+{"query":"what is under the person wearing a yellow checker coat","source":"ActivityNet-QA","source_id":"v_zJX_Oh4yVnc_4","video_id":"zJX_Oh4yVnc","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the hair of the no. 9 player","source":"ActivityNet-QA","source_id":"v_zLF5DSuDixg_8","video_id":"zLF5DSuDixg","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in black in the room playing the violin","source":"ActivityNet-QA","source_id":"v_zm8gZpwZkRE_2","video_id":"zm8gZpwZkRE","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_znoMrA2qCbA_6","video_id":"znoMrA2qCbA","source_answer_type":7,"split_origin":"train"}
+{"query":"what is the no.10 player doing","source":"ActivityNet-QA","source_id":"v_zp86ztwZEKk_1","video_id":"zp86ztwZEKk","source_answer_type":0,"split_origin":"train"}
+{"query":"what is in front of the person in white clothes","source":"ActivityNet-QA","source_id":"v_Zso0ZBs2y6E_4","video_id":"Zso0ZBs2y6E","source_answer_type":1,"split_origin":"train"}
+{"query":"what color is the hair of the person in gray coat","source":"ActivityNet-QA","source_id":"v_zU6SnkNIdrw_8","video_id":"zU6SnkNIdrw","source_answer_type":4,"split_origin":"train"}
+{"query":"is the person in the blue bikini playing outside","source":"ActivityNet-QA","source_id":"v_ZWHFbIjh0N8_2","video_id":"ZWHFbIjh0N8","source_answer_type":3,"split_origin":"train"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_zX9DZ_x9rJ4_6","video_id":"zX9DZ_x9rJ4","source_answer_type":7,"split_origin":"train"}
+{"query":"what are the people on one knee doing","source":"ActivityNet-QA","source_id":"v__1vYKA7mNLI_1","video_id":"_1vYKA7mNLI","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in a blue car male","source":"ActivityNet-QA","source_id":"v__crwKCjKRjg_2","video_id":"_crwKCjKRjg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in white clothes","source":"ActivityNet-QA","source_id":"v__MWyhJS4KbM_4","video_id":"_MWyhJS4KbM","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the person in black clothes holding in his hand","source":"ActivityNet-QA","source_id":"v__Wag6CT_0j8_6","video_id":"_Wag6CT_0j8","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the gender of the person in yellow clothes","source":"ActivityNet-QA","source_id":"v_-7wfTI8Qv1Q_8","video_id":"-7wfTI8Qv1Q","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the woman in a red sweater doing","source":"ActivityNet-QA","source_id":"v_-l16smV_uYg_1","video_id":"-l16smV_uYg","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the car washperson washing the car indoors","source":"ActivityNet-QA","source_id":"v_-OH1BDqao9w_2","video_id":"-OH1BDqao9w","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the under the foot of the man in black","source":"ActivityNet-QA","source_id":"v_-UWE4jXuLoo_4","video_id":"-UWE4jXuLoo","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the gender of the person in a black tshirt","source":"ActivityNet-QA","source_id":"v_-ZBsdK10Trs_6","video_id":"-ZBsdK10Trs","source_answer_type":8,"split_origin":"validation"}
+{"query":"how safe is this activity of skateboarding","source":"ActivityNet-QA","source_id":"v_06r6DtoTtSQ_8","video_id":"06r6DtoTtSQ","source_answer_type":8,"split_origin":"validation"}
+{"query":"what's the man doing in the middle of the stadium","source":"ActivityNet-QA","source_id":"v_0hdwFR5qWz4_1","video_id":"0hdwFR5qWz4","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in yellow outdoors","source":"ActivityNet-QA","source_id":"v_0vQs3ztG7vg_2","video_id":"0vQs3ztG7vg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in a plaid shirt","source":"ActivityNet-QA","source_id":"v_1AiQt87brik_4","video_id":"1AiQt87brik","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in the skirt applaud","source":"ActivityNet-QA","source_id":"v_1MBVaveQDd8_6","video_id":"1MBVaveQDd8","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color is the pants of the referee","source":"ActivityNet-QA","source_id":"v_1T66cuSjizE_8","video_id":"1T66cuSjizE","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in colorful pants doing","source":"ActivityNet-QA","source_id":"v_25Wxe9TQzY8_1","video_id":"25Wxe9TQzY8","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the player in the video indoors","source":"ActivityNet-QA","source_id":"v_2g9GrshWQrU_2","video_id":"2g9GrshWQrU","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in white clothes","source":"ActivityNet-QA","source_id":"v_2oc0OBWkYfg_4","video_id":"2oc0OBWkYfg","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is behind the workers in white","source":"ActivityNet-QA","source_id":"v_2VTEseqA5SA_6","video_id":"2VTEseqA5SA","source_answer_type":6,"split_origin":"validation"}
+{"query":"how many people are playing the piano in the video","source":"ActivityNet-QA","source_id":"v_3fyR5F18WKg_8","video_id":"3fyR5F18WKg","source_answer_type":7,"split_origin":"validation"}
+{"query":"what is the little girl doing","source":"ActivityNet-QA","source_id":"v_3L0MnbQkLWM_1","video_id":"3L0MnbQkLWM","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the girl does the hair indoors","source":"ActivityNet-QA","source_id":"v_41__Qick6tM_2","video_id":"41__Qick6tM","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the girl on the left in the red dress","source":"ActivityNet-QA","source_id":"v_4aBJ_L0u7Lo_4","video_id":"4aBJ_L0u7Lo","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the gender of the person in the video","source":"ActivityNet-QA","source_id":"v_4JnXF13ktSs_6","video_id":"4JnXF13ktSs","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color is the tire of the man in blue pants","source":"ActivityNet-QA","source_id":"v_4T8uFygBeNo_8","video_id":"4T8uFygBeNo","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_52PO939EtGw_1","video_id":"52PO939EtGw","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the guy with the goggles outdoors","source":"ActivityNet-QA","source_id":"v_5co1E0umtJQ_2","video_id":"5co1E0umtJQ","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the right side of soda powder","source":"ActivityNet-QA","source_id":"v_5MLEO5JWRYI_4","video_id":"5MLEO5JWRYI","source_answer_type":1,"split_origin":"validation"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_5T_P4x0q0VM_6","video_id":"5T_P4x0q0VM","source_answer_type":7,"split_origin":"validation"}
+{"query":"why do the children wear face protection","source":"ActivityNet-QA","source_id":"v_656VWQU5dgE_8","video_id":"656VWQU5dgE","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_6g80a1NnftU_1","video_id":"6g80a1NnftU","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person wearing a red coat","source":"ActivityNet-QA","source_id":"v_6Ni6csyQbzw_2","video_id":"6Ni6csyQbzw","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the under the lying person","source":"ActivityNet-QA","source_id":"v_6WQSZekz8vQ_4","video_id":"6WQSZekz8vQ","source_answer_type":1,"split_origin":"validation"}
+{"query":"what color is the hair of the person with short hair","source":"ActivityNet-QA","source_id":"v_7FPvAakfM9Y_6","video_id":"7FPvAakfM9Y","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the gender of the person at the beginning of the video","source":"ActivityNet-QA","source_id":"v_7mDiIJ9r4EU_8","video_id":"7mDiIJ9r4EU","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_7tlXgKBTD_0_1","video_id":"7tlXgKBTD_0","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person wearing a hat indoors","source":"ActivityNet-QA","source_id":"v_82cpSdoHdg4_2","video_id":"82cpSdoHdg4","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the standing person ","source":"ActivityNet-QA","source_id":"v_8cbHNUbu3Tk_4","video_id":"8cbHNUbu3Tk","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the person in the video run","source":"ActivityNet-QA","source_id":"v_8Kv7piYg9yc_6","video_id":"8Kv7piYg9yc","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the gender of the player","source":"ActivityNet-QA","source_id":"v_8r167TmBebg_8","video_id":"8r167TmBebg","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in gray clothes doing","source":"ActivityNet-QA","source_id":"v_9_zC7CdvYu4_1","video_id":"9_zC7CdvYu4","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person wearing a hat outdoors","source":"ActivityNet-QA","source_id":"v_97LW-ivu01A_2","video_id":"97LW-ivu01A","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the left side of the man in a white shirt","source":"ActivityNet-QA","source_id":"v_9hE6VRD3qXQ_4","video_id":"9hE6VRD3qXQ","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the person in the video aim at a target","source":"ActivityNet-QA","source_id":"v_A0XGYLim9IU_6","video_id":"A0XGYLim9IU","source_answer_type":8,"split_origin":"validation"}
+{"query":"what hairstyle is the person in the video","source":"ActivityNet-QA","source_id":"v_A3a6MNgab0c_8","video_id":"A3a6MNgab0c","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_Adjpq4A5WtI_1","video_id":"Adjpq4A5WtI","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the video wearing gloves ","source":"ActivityNet-QA","source_id":"v_aIXUWoP-L-E_2","video_id":"aIXUWoP-L-E","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_ANeDHelwzK0_4","video_id":"ANeDHelwzK0","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the last step of the people in video","source":"ActivityNet-QA","source_id":"v_AUFI2wx5Z48_6","video_id":"AUFI2wx5Z48","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color is the dog in the video","source":"ActivityNet-QA","source_id":"v_aYrhuTGO440_8","video_id":"aYrhuTGO440","source_answer_type":4,"split_origin":"validation"}
+{"query":"what are the children in video doing","source":"ActivityNet-QA","source_id":"v_bc-DycGxV9E_1","video_id":"bc-DycGxV9E","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the child indoors","source":"ActivityNet-QA","source_id":"v_bfBTnUiGVUo_2","video_id":"bfBTnUiGVUo","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the racecourse","source":"ActivityNet-QA","source_id":"v_BioBrxuKOsw_4","video_id":"BioBrxuKOsw","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the fallen man cover his nose","source":"ActivityNet-QA","source_id":"v_BMxtjh9E7BY_6","video_id":"BMxtjh9E7BY","source_answer_type":8,"split_origin":"validation"}
+{"query":"is it day or night in the video","source":"ActivityNet-QA","source_id":"v_BSKolF3MMe4_8","video_id":"BSKolF3MMe4","source_answer_type":8,"split_origin":"validation"}
+{"query":"what's the man in the long sleeves doing in the video","source":"ActivityNet-QA","source_id":"v_bY2dgTJFWko_1","video_id":"bY2dgTJFWko","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the athlete indoors","source":"ActivityNet-QA","source_id":"v_caPl3Aszru0_2","video_id":"caPl3Aszru0","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the white house wall","source":"ActivityNet-QA","source_id":"v_CGIrDfEP5lE_4","video_id":"CGIrDfEP5lE","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the face of a person wearing a white hat","source":"ActivityNet-QA","source_id":"v_clSku91LoQQ_6","video_id":"clSku91LoQQ","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the gender of the person in red clothes","source":"ActivityNet-QA","source_id":"v_CnrvRF_N7fU_8","video_id":"CnrvRF_N7fU","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_CSsilC4QbB4_1","video_id":"CSsilC4QbB4","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the cowboy hat outside","source":"ActivityNet-QA","source_id":"v_cVuHOF56B64_2","video_id":"cVuHOF56B64","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_CYPfbnL0bCI_4","video_id":"CYPfbnL0bCI","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the hairstyle of the woman in the video","source":"ActivityNet-QA","source_id":"v_D-0MV6LRvbs_6","video_id":"D-0MV6LRvbs","source_answer_type":8,"split_origin":"validation"}
+{"query":"are the two chinese people playing squash in the video","source":"ActivityNet-QA","source_id":"v_D7WhCBcddSA_8","video_id":"D7WhCBcddSA","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_DCjklOgbzGs_1","video_id":"DCjklOgbzGs","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in black playing indoors","source":"ActivityNet-QA","source_id":"v_DepG0r3JiV4_2","video_id":"DepG0r3JiV4","source_answer_type":3,"split_origin":"validation"}
+{"query":"what's under the person in the video","source":"ActivityNet-QA","source_id":"v_dGxJGvw_sUg_4","video_id":"dGxJGvw_sUg","source_answer_type":1,"split_origin":"validation"}
+{"query":"what kind of pants does the person in blue wear","source":"ActivityNet-QA","source_id":"v_dL-ybVv7Sgs_6","video_id":"dL-ybVv7Sgs","source_answer_type":5,"split_origin":"validation"}
+{"query":"what does the man in white hold","source":"ActivityNet-QA","source_id":"v_dOUCAVnJLko_8","video_id":"dOUCAVnJLko","source_answer_type":5,"split_origin":"validation"}
+{"query":"what's the guy with the glasses doing","source":"ActivityNet-QA","source_id":"v_DVXOr56dlKg_1","video_id":"DVXOr56dlKg","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the video shoveling the earth outside","source":"ActivityNet-QA","source_id":"v_Dzj5X11anrk_2","video_id":"Dzj5X11anrk","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_E2yPoqpNVdM_4","video_id":"E2yPoqpNVdM","source_answer_type":1,"split_origin":"validation"}
+{"query":"why do they want to jump rope","source":"ActivityNet-QA","source_id":"v_e9bdQGmyrKA_6","video_id":"e9bdQGmyrKA","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many horns are the men's clothes","source":"ActivityNet-QA","source_id":"v_EGLJPCJnG64_8","video_id":"EGLJPCJnG64","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_ekbZecn088U_1","video_id":"ekbZecn088U","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person wearing a hat indoors","source":"ActivityNet-QA","source_id":"v_EN63ldqfGsI_2","video_id":"EN63ldqfGsI","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in the video","source":"ActivityNet-QA","source_id":"v_ev-RTtbVjFI_4","video_id":"ev-RTtbVjFI","source_answer_type":1,"split_origin":"validation"}
+{"query":"why do they put things in the ball","source":"ActivityNet-QA","source_id":"v_EWWCQH6WbtQ_6","video_id":"EWWCQH6WbtQ","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the gender of the person in white clothes","source":"ActivityNet-QA","source_id":"v_EYIYohKR0Qo_8","video_id":"EYIYohKR0Qo","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_F67zl57FSXE_1","video_id":"F67zl57FSXE","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the person fencing indoors","source":"ActivityNet-QA","source_id":"v_Fdzw3niNDYY_2","video_id":"Fdzw3niNDYY","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the diligence of people in red","source":"ActivityNet-QA","source_id":"v_FGFPyp9nJug_4","video_id":"FGFPyp9nJug","source_answer_type":1,"split_origin":"validation"}
+{"query":"which hand is the person painted in the video first","source":"ActivityNet-QA","source_id":"v_fk_hkHmnmJo_6","video_id":"fk_hkHmnmJo","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color is the hair of the person in blue clothes","source":"ActivityNet-QA","source_id":"v_FNAt8Pew0HA_8","video_id":"FNAt8Pew0HA","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_FOm0uKw7dXc_1","video_id":"FOm0uKw7dXc","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in red clothes playing indoors","source":"ActivityNet-QA","source_id":"v_FtbrPGaINt0_2","video_id":"FtbrPGaINt0","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the person in the video","source":"ActivityNet-QA","source_id":"v_fZQS02Ypca4_4","video_id":"fZQS02Ypca4","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in green hats come to tears","source":"ActivityNet-QA","source_id":"v_G8OyFOhVGCI_6","video_id":"G8OyFOhVGCI","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many lines are there in the video","source":"ActivityNet-QA","source_id":"v_Gfsk28SzgXk_8","video_id":"Gfsk28SzgXk","source_answer_type":7,"split_origin":"validation"}
+{"query":"what is the person in blue pants doing","source":"ActivityNet-QA","source_id":"v_GIy6ZbAooOQ_1","video_id":"GIy6ZbAooOQ","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the video indoors","source":"ActivityNet-QA","source_id":"v_gmnwqOPcOo0_2","video_id":"gmnwqOPcOo0","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the front of the person with a white hat","source":"ActivityNet-QA","source_id":"v_gSwjTXkXK3Q_4","video_id":"gSwjTXkXK3Q","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the person in the video explain","source":"ActivityNet-QA","source_id":"v_gWz4P3Jnis8_6","video_id":"gWz4P3Jnis8","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the occupation of a coin toss","source":"ActivityNet-QA","source_id":"v_gyQ3NBwXhDU_8","video_id":"gyQ3NBwXhDU","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in red clothes doing in the video","source":"ActivityNet-QA","source_id":"v_h67ctuwV-Nw_1","video_id":"h67ctuwV-Nw","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the boat in the video green","source":"ActivityNet-QA","source_id":"v_hchuVbHYK_k_2","video_id":"hchuVbHYK_k","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in yellow clothes","source":"ActivityNet-QA","source_id":"v_HEw5wIWVpWE_4","video_id":"HEw5wIWVpWE","source_answer_type":1,"split_origin":"validation"}
+{"query":"how many children are there in the video","source":"ActivityNet-QA","source_id":"v_hi4aLY1ajTY_6","video_id":"hi4aLY1ajTY","source_answer_type":7,"split_origin":"validation"}
+{"query":"where is the place in the video","source":"ActivityNet-QA","source_id":"v_HM_rHjh-wqQ_8","video_id":"HM_rHjh-wqQ","source_answer_type":6,"split_origin":"validation"}
+{"query":"what is the person with a red hat doing in the video","source":"ActivityNet-QA","source_id":"v_HQP20PGfwYM_1","video_id":"HQP20PGfwYM","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in blue riding the horse outside","source":"ActivityNet-QA","source_id":"v_hsPepNAzu_Q_2","video_id":"hsPepNAzu_Q","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the right side of the person wearing light blue clothes","source":"ActivityNet-QA","source_id":"v_HZ0tf9Cp340_4","video_id":"HZ0tf9Cp340","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the relationship between the last three people wearing black clothes in the video","source":"ActivityNet-QA","source_id":"v_i_tMiGS11fs_6","video_id":"i_tMiGS11fs","source_answer_type":8,"split_origin":"validation"}
+{"query":"what tools does the man use to boil water in the video","source":"ActivityNet-QA","source_id":"v_i5-OVkjT0nM_8","video_id":"i5-OVkjT0nM","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the person in yellow clothes doing","source":"ActivityNet-QA","source_id":"v_ICl9CT-9fKY_1","video_id":"ICl9CT-9fKY","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the video indoors","source":"ActivityNet-QA","source_id":"v_IEtCboPbTXI_2","video_id":"IEtCboPbTXI","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the man wearing a vest","source":"ActivityNet-QA","source_id":"v_iId8WcbiKZI_4","video_id":"iId8WcbiKZI","source_answer_type":1,"split_origin":"validation"}
+{"query":"where is the woman in the red vest","source":"ActivityNet-QA","source_id":"v_IjULOynkK5I_6","video_id":"IjULOynkK5I","source_answer_type":6,"split_origin":"validation"}
+{"query":"what style is the hairdresser's clothes","source":"ActivityNet-QA","source_id":"v_IN4nGNF9gi8_8","video_id":"IN4nGNF9gi8","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the little boy doing","source":"ActivityNet-QA","source_id":"v_isGfZVCL4gE_1","video_id":"isGfZVCL4gE","source_answer_type":0,"split_origin":"validation"}
+{"query":"does fighting need arm strength","source":"ActivityNet-QA","source_id":"v_IU6LVYI0FZM_2","video_id":"IU6LVYI0FZM","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the woman in white","source":"ActivityNet-QA","source_id":"v_IxaoK4TbALQ_4","video_id":"IxaoK4TbALQ","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the color of the athlete's swimming trunks in the final advertisement of the video","source":"ActivityNet-QA","source_id":"v_j18sB8o2IQw_6","video_id":"j18sB8o2IQw","source_answer_type":4,"split_origin":"validation"}
+{"query":"what color are the pants of the person in red clothes","source":"ActivityNet-QA","source_id":"v_J4hnBPgwDlw_8","video_id":"J4hnBPgwDlw","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in striped clothes doing","source":"ActivityNet-QA","source_id":"v_j7Tk8I_DCtw_1","video_id":"j7Tk8I_DCtw","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the yellow dress male","source":"ActivityNet-QA","source_id":"v_Jd6dM5p91M4_2","video_id":"Jd6dM5p91M4","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is under the feet of the person in yellow clothes","source":"ActivityNet-QA","source_id":"v_JGuVc7z_YOQ_4","video_id":"JGuVc7z_YOQ","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the color of the standing person's clothes","source":"ActivityNet-QA","source_id":"v_JKZ-3N1fYL8_6","video_id":"JKZ-3N1fYL8","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the gender of the old person","source":"ActivityNet-QA","source_id":"v_JoQywfQ6B-8_8","video_id":"JoQywfQ6B-8","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in pink clothes doing","source":"ActivityNet-QA","source_id":"v_JTrwGfPJNzU_1","video_id":"JTrwGfPJNzU","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the person with the black eye mask shoot inside the house","source":"ActivityNet-QA","source_id":"v_k_7hLIwul48_2","video_id":"k_7hLIwul48","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the left side of the sponge pad","source":"ActivityNet-QA","source_id":"v_K8f4LNNiQy8_4","video_id":"K8f4LNNiQy8","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in blue hats go on board","source":"ActivityNet-QA","source_id":"v_kdfJW8YV378_6","video_id":"kdfJW8YV378","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many snow blows are there in the video","source":"ActivityNet-QA","source_id":"v_KgEHEyz3oKw_8","video_id":"KgEHEyz3oKw","source_answer_type":7,"split_origin":"validation"}
+{"query":"what are the men who are not wearing shirts","source":"ActivityNet-QA","source_id":"v_kmWf36zfL7o_1","video_id":"kmWf36zfL7o","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person with glasses indoors","source":"ActivityNet-QA","source_id":"v_kQ7ensWEW08_2","video_id":"kQ7ensWEW08","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is under the feet of the child","source":"ActivityNet-QA","source_id":"v_ku65ME0vW8s_4","video_id":"ku65ME0vW8s","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the old man wearing glasses holding in his hand","source":"ActivityNet-QA","source_id":"v_KxJpfKZbNiI_6","video_id":"KxJpfKZbNiI","source_answer_type":5,"split_origin":"validation"}
+{"query":"how many people in the video are wearing yellow clothes","source":"ActivityNet-QA","source_id":"v_KZyg_UYyL0s_8","video_id":"KZyg_UYyL0s","source_answer_type":7,"split_origin":"validation"}
+{"query":"what's the man in blue doing","source":"ActivityNet-QA","source_id":"v_L36MIRUpcrI_1","video_id":"L36MIRUpcrI","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the blue outdoors repairing the roof","source":"ActivityNet-QA","source_id":"v_LAicExwwM54_2","video_id":"LAicExwwM54","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the fireman","source":"ActivityNet-QA","source_id":"v_LcXB-fSLTKY_4","video_id":"LcXB-fSLTKY","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in blue wear magnesium powder","source":"ActivityNet-QA","source_id":"v_lfH_S2LTEXA_6","video_id":"lfH_S2LTEXA","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color are the clothes of the person in wheelchairs","source":"ActivityNet-QA","source_id":"v_LkUnT9fMIXc_8","video_id":"LkUnT9fMIXc","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the chef doing","source":"ActivityNet-QA","source_id":"v_LoBjzA2z2Ls_1","video_id":"LoBjzA2z2Ls","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in blue indoors","source":"ActivityNet-QA","source_id":"v_lSTqYESahrY_2","video_id":"lSTqYESahrY","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the player in blue clothes","source":"ActivityNet-QA","source_id":"v_lyJpgvmTOpo_4","video_id":"lyJpgvmTOpo","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the season in the video","source":"ActivityNet-QA","source_id":"v_M2wdIwZMNm8_6","video_id":"M2wdIwZMNm8","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the color of the person's hair in the video","source":"ActivityNet-QA","source_id":"v_MaJlWFemO68_8","video_id":"MaJlWFemO68","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_MHo5kioyrFM_1","video_id":"MHo5kioyrFM","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the athlete wearing short sleeves","source":"ActivityNet-QA","source_id":"v_mkK9iEzRrqQ_2","video_id":"mkK9iEzRrqQ","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person holding the sword","source":"ActivityNet-QA","source_id":"v_mO1T8zhIliY_4","video_id":"mO1T8zhIliY","source_answer_type":1,"split_origin":"validation"}
+{"query":"where is the video taken","source":"ActivityNet-QA","source_id":"v_MsalIjwP3no_6","video_id":"MsalIjwP3no","source_answer_type":6,"split_origin":"validation"}
+{"query":"how many girls are there in the video","source":"ActivityNet-QA","source_id":"v_mucFmOzqWW8_8","video_id":"mucFmOzqWW8","source_answer_type":7,"split_origin":"validation"}
+{"query":"what is the person on the sailing boat doing","source":"ActivityNet-QA","source_id":"v_MXDeLfF5rok_1","video_id":"MXDeLfF5rok","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person wearing a red hat wearing a hat","source":"ActivityNet-QA","source_id":"v_n_sfeihU3f8_2","video_id":"n_sfeihU3f8","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the people in black clothes","source":"ActivityNet-QA","source_id":"v_N5XBi-uPkAU_4","video_id":"N5XBi-uPkAU","source_answer_type":1,"split_origin":"validation"}
+{"query":"where is the video taken","source":"ActivityNet-QA","source_id":"v_ncgzVLi_hlI_6","video_id":"ncgzVLi_hlI","source_answer_type":6,"split_origin":"validation"}
+{"query":"what is the gender of the person in a hat","source":"ActivityNet-QA","source_id":"v_nezTU6Bq5hM_8","video_id":"nezTU6Bq5hM","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the man in the green hat doing","source":"ActivityNet-QA","source_id":"v_nibek2g971I_1","video_id":"nibek2g971I","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the person in white jump on the field","source":"ActivityNet-QA","source_id":"v_nLAm7USuYbA_2","video_id":"nLAm7USuYbA","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_nrvB8pcrY7o_4","video_id":"nrvB8pcrY7o","source_answer_type":1,"split_origin":"validation"}
+{"query":"what hairstyle is the person in green","source":"ActivityNet-QA","source_id":"v_NzrOOXRyDPM_6","video_id":"NzrOOXRyDPM","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_O2Y6rn4gFd4_8","video_id":"O2Y6rn4gFd4","source_answer_type":7,"split_origin":"validation"}
+{"query":"what is the person in red clothes doing in the video","source":"ActivityNet-QA","source_id":"v_Obj__zWaZqk_1","video_id":"Obj__zWaZqk","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in plaid clothes indoors","source":"ActivityNet-QA","source_id":"v_oDZlW0OgEgg_2","video_id":"oDZlW0OgEgg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_okSvWjK0okw_4","video_id":"okSvWjK0okw","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man who wear gray shirts pick up showers","source":"ActivityNet-QA","source_id":"v_oNrWO_VQQbk_6","video_id":"oNrWO_VQQbk","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many people are there with wallpaper in the video","source":"ActivityNet-QA","source_id":"v_OsrRpGbIpKA_8","video_id":"OsrRpGbIpKA","source_answer_type":7,"split_origin":"validation"}
+{"query":"what are the people on the court doing","source":"ActivityNet-QA","source_id":"v_P-04xkAdWSY_1","video_id":"P-04xkAdWSY","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in a white hat a boy","source":"ActivityNet-QA","source_id":"v_p5Ynl_rGoEU_2","video_id":"p5Ynl_rGoEU","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is on the left of the person in red clothes","source":"ActivityNet-QA","source_id":"v_pem8BpCspUM_4","video_id":"pem8BpCspUM","source_answer_type":1,"split_origin":"validation"}
+{"query":"what tools are used to split wood","source":"ActivityNet-QA","source_id":"v_PKYg6_rs3LQ_6","video_id":"PKYg6_rs3LQ","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the gender of the person in white clothes","source":"ActivityNet-QA","source_id":"v_pMmlJGSucss_8","video_id":"pMmlJGSucss","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in blue clothes doing","source":"ActivityNet-QA","source_id":"v_PRT0Z9HPF4U_1","video_id":"PRT0Z9HPF4U","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the video wearing black clothes","source":"ActivityNet-QA","source_id":"v_PwOMgya8qYI_2","video_id":"PwOMgya8qYI","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the right side of the woman wearing a hat","source":"ActivityNet-QA","source_id":"v_q1yuDuO01tg_4","video_id":"q1yuDuO01tg","source_answer_type":1,"split_origin":"validation"}
+{"query":"what the person in the video use to clean the leaves","source":"ActivityNet-QA","source_id":"v_Q78FBGHniCc_6","video_id":"Q78FBGHniCc","source_answer_type":5,"split_origin":"validation"}
+{"query":"is badminton a high degree of difficulty in this sport","source":"ActivityNet-QA","source_id":"v_QCeGGnd4QB0_8","video_id":"QCeGGnd4QB0","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_QHn9KyE-zZo_1","video_id":"QHn9KyE-zZo","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in red indoors","source":"ActivityNet-QA","source_id":"v_qkk2tK19sx8_2","video_id":"qkk2tK19sx8","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the exercise site","source":"ActivityNet-QA","source_id":"v_qNHfEf72V3g_4","video_id":"qNHfEf72V3g","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the gender of the person who plays the saxophone in the middle","source":"ActivityNet-QA","source_id":"v_qRPq2PEiyM0_6","video_id":"qRPq2PEiyM0","source_answer_type":8,"split_origin":"validation"}
+{"query":"is the person wearing the gray shorts playing tennis in the room","source":"ActivityNet-QA","source_id":"v_QUJXOFPJ_YI_8","video_id":"QUJXOFPJ_YI","source_answer_type":3,"split_origin":"validation"}
+{"query":"what's the person in a gray coat doing","source":"ActivityNet-QA","source_id":"v_qXi05KUFOSk_1","video_id":"qXi05KUFOSk","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in blue playing basketball in the room","source":"ActivityNet-QA","source_id":"v_R0B5bBr6t8w_2","video_id":"R0B5bBr6t8w","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_R7DhZaY3A08_4","video_id":"R7DhZaY3A08","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in grey clothes apply oil","source":"ActivityNet-QA","source_id":"v_rBJBnf4F9sA_6","video_id":"rBJBnf4F9sA","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color are the pants of the person in green clothes","source":"ActivityNet-QA","source_id":"v_RFgusQogDyQ_8","video_id":"RFgusQogDyQ","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in a life jacket doing","source":"ActivityNet-QA","source_id":"v_Rj_SwlpOhNk_1","video_id":"Rj_SwlpOhNk","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the video appear on the stage at the beginning","source":"ActivityNet-QA","source_id":"v_RnwidjJiDEE_2","video_id":"RnwidjJiDEE","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is on the right of the person in green clothes","source":"ActivityNet-QA","source_id":"v_rqmi-DjYp0U_4","video_id":"rqmi-DjYp0U","source_answer_type":1,"split_origin":"validation"}
+{"query":"what kind of hat does the person in blue wear","source":"ActivityNet-QA","source_id":"v_Rvx2EoMScKg_6","video_id":"Rvx2EoMScKg","source_answer_type":5,"split_origin":"validation"}
+{"query":"how many cooker are there in the video","source":"ActivityNet-QA","source_id":"v_S_1_ZSMxRfg_8","video_id":"S_1_ZSMxRfg","source_answer_type":7,"split_origin":"validation"}
+{"query":"what is the person in green coat doing","source":"ActivityNet-QA","source_id":"v_s2VpBgSWIPg_1","video_id":"s2VpBgSWIPg","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in white coat mopping indoors","source":"ActivityNet-QA","source_id":"v_sAAARH12tdc_2","video_id":"sAAARH12tdc","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the people in green clothes","source":"ActivityNet-QA","source_id":"v_scwBQj4GE7Y_4","video_id":"scwBQj4GE7Y","source_answer_type":1,"split_origin":"validation"}
+{"query":"why are the man wearing white clothes paralyzed in the ground","source":"ActivityNet-QA","source_id":"v_sGGnEgCnEt8_6","video_id":"sGGnEgCnEt8","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many glass bowls are there","source":"ActivityNet-QA","source_id":"v_SL7iKDqir6g_8","video_id":"SL7iKDqir6g","source_answer_type":7,"split_origin":"validation"}
+{"query":"what's the man in long sleeves doing","source":"ActivityNet-QA","source_id":"v_SnZnAVuMn4M_1","video_id":"SnZnAVuMn4M","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the athlete indoors","source":"ActivityNet-QA","source_id":"v_SrcZRhXkr2k_2","video_id":"SrcZRhXkr2k","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the team wearing red pants","source":"ActivityNet-QA","source_id":"v_SvDnZ47J37U_4","video_id":"SvDnZ47J37U","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in red lifejackets turn sails","source":"ActivityNet-QA","source_id":"v_sy-xNiKnfBU_6","video_id":"sy-xNiKnfBU","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color are the socks of the person in the wheelchair","source":"ActivityNet-QA","source_id":"v_t3dHI5TeY7I_8","video_id":"t3dHI5TeY7I","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in black doing","source":"ActivityNet-QA","source_id":"v_T9gKHEOvRKk_1","video_id":"T9gKHEOvRKk","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in black outdoors","source":"ActivityNet-QA","source_id":"v_TcrLMpMA1WM_2","video_id":"TcrLMpMA1WM","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in gray pants","source":"ActivityNet-QA","source_id":"v_THOLslLjRqs_4","video_id":"THOLslLjRqs","source_answer_type":1,"split_origin":"validation"}
+{"query":"where is the skiing taken place in the video","source":"ActivityNet-QA","source_id":"v_TMGG5x-UQ2s_6","video_id":"TMGG5x-UQ2s","source_answer_type":6,"split_origin":"validation"}
+{"query":"what is wearing on the person in white clothes","source":"ActivityNet-QA","source_id":"v_TscC5kgurqY_8","video_id":"TscC5kgurqY","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the person in the video doing","source":"ActivityNet-QA","source_id":"v_twJ2uE1GS2I_1","video_id":"twJ2uE1GS2I","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in black indoors","source":"ActivityNet-QA","source_id":"v_tyeLIzY0MJ4_2","video_id":"tyeLIzY0MJ4","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is under the man in blue","source":"ActivityNet-QA","source_id":"v_u-X4YO91V78_4","video_id":"u-X4YO91V78","source_answer_type":1,"split_origin":"validation"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_u9aFICSj7zw_6","video_id":"u9aFICSj7zw","source_answer_type":7,"split_origin":"validation"}
+{"query":"how many cars are there","source":"ActivityNet-QA","source_id":"v_UBQfURrVB_Y_8","video_id":"UBQfURrVB_Y","source_answer_type":7,"split_origin":"validation"}
+{"query":"what's the person in a gray coat doing","source":"ActivityNet-QA","source_id":"v_UfjR8ewF8xo_1","video_id":"UfjR8ewF8xo","source_answer_type":0,"split_origin":"validation"}
+{"query":"are people in wrestling pants indoors","source":"ActivityNet-QA","source_id":"v_UhgVO1QaP2s_2","video_id":"UhgVO1QaP2s","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the audience","source":"ActivityNet-QA","source_id":"v_UL_3QfD3ERM_4","video_id":"UL_3QfD3ERM","source_answer_type":1,"split_origin":"validation"}
+{"query":"what does the person with glasses wear on the head","source":"ActivityNet-QA","source_id":"v_uOUjBTlwoxg_6","video_id":"uOUjBTlwoxg","source_answer_type":5,"split_origin":"validation"}
+{"query":"what kind of pants are the people wearing the kneecap wear","source":"ActivityNet-QA","source_id":"v_uwLM5n-rYmA_8","video_id":"uwLM5n-rYmA","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the person with hat doing","source":"ActivityNet-QA","source_id":"v_V1IHwwpyFUE_1","video_id":"V1IHwwpyFUE","source_answer_type":0,"split_origin":"validation"}
+{"query":"do you use containers when using mixers","source":"ActivityNet-QA","source_id":"v_v6Ui5kgi2OI_2","video_id":"v6Ui5kgi2OI","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is under the feet of the man with a hat","source":"ActivityNet-QA","source_id":"v_vCeaFAiokrU_4","video_id":"vCeaFAiokrU","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in black take hold of the handle","source":"ActivityNet-QA","source_id":"v_Vg043D46E7Q_6","video_id":"Vg043D46E7Q","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many people in black are there in the video","source":"ActivityNet-QA","source_id":"v_vL8s-b4eJiU_8","video_id":"vL8s-b4eJiU","source_answer_type":7,"split_origin":"validation"}
+{"query":"what's the man with the no. 4 hat doing in the video","source":"ActivityNet-QA","source_id":"v_VrNHEv6aR38_1","video_id":"VrNHEv6aR38","source_answer_type":0,"split_origin":"validation"}
+{"query":"is a lady in a black vest wearing a pair of jeans","source":"ActivityNet-QA","source_id":"v_vutxJfF0Rlg_2","video_id":"vutxJfF0Rlg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is the left side of the person wearing the immersion suit","source":"ActivityNet-QA","source_id":"v_vy91mJTl7rQ_4","video_id":"vy91mJTl7rQ","source_answer_type":1,"split_origin":"validation"}
+{"query":"what kind of pants does the person in white clothes wear","source":"ActivityNet-QA","source_id":"v_W84TQm1l90U_6","video_id":"W84TQm1l90U","source_answer_type":5,"split_origin":"validation"}
+{"query":"what is the material of the pants of the person in black clothes","source":"ActivityNet-QA","source_id":"v_WFqr6QPsszQ_8","video_id":"WFqr6QPsszQ","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the man wearing blue socks in the video","source":"ActivityNet-QA","source_id":"v_wKThOOUV6lY_1","video_id":"wKThOOUV6lY","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person wearing purple clothes doing experiments indoors","source":"ActivityNet-QA","source_id":"v_WPM0vuERyfc_2","video_id":"WPM0vuERyfc","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is behind the goal","source":"ActivityNet-QA","source_id":"v_WtNvqSFTgxI_4","video_id":"WtNvqSFTgxI","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the gender of the person in black","source":"ActivityNet-QA","source_id":"v_wVHD_Y5J3qE_6","video_id":"wVHD_Y5J3qE","source_answer_type":8,"split_origin":"validation"}
+{"query":"what color are the shoes of girls in red","source":"ActivityNet-QA","source_id":"v_wZZ1W6D1nwA_8","video_id":"wZZ1W6D1nwA","source_answer_type":4,"split_origin":"validation"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_X6CpfuJLx0U_1","video_id":"X6CpfuJLx0U","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in the video indoors","source":"ActivityNet-QA","source_id":"v_xabaKyhx7cg_2","video_id":"xabaKyhx7cg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is on the right of the person in black clothes","source":"ActivityNet-QA","source_id":"v_XCJ2StGMgW4_4","video_id":"XCJ2StGMgW4","source_answer_type":1,"split_origin":"validation"}
+{"query":"why does the man in the video spread their skin","source":"ActivityNet-QA","source_id":"v_xf9iLflgRro_6","video_id":"xf9iLflgRro","source_answer_type":8,"split_origin":"validation"}
+{"query":"how many are there in the game","source":"ActivityNet-QA","source_id":"v_Xjw9vUwILOE_8","video_id":"Xjw9vUwILOE","source_answer_type":7,"split_origin":"validation"}
+{"query":"what happed in the video","source":"ActivityNet-QA","source_id":"v_xor90CAOc94_1","video_id":"xor90CAOc94","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in brown in the outdoor maintenance of the tree","source":"ActivityNet-QA","source_id":"v_Xt86M-mRxi8_2","video_id":"Xt86M-mRxi8","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is under the foot of the person wearing a green dress","source":"ActivityNet-QA","source_id":"v_XvM1rCVQWWY_4","video_id":"XvM1rCVQWWY","source_answer_type":1,"split_origin":"validation"}
+{"query":"how many people are there in the video","source":"ActivityNet-QA","source_id":"v_XYW6F_4qKJU_6","video_id":"XYW6F_4qKJU","source_answer_type":7,"split_origin":"validation"}
+{"query":"how many eyeglasses are bowling","source":"ActivityNet-QA","source_id":"v_y56qXoJh6U0_8","video_id":"y56qXoJh6U0","source_answer_type":7,"split_origin":"validation"}
+{"query":"what is the person in red pants doing","source":"ActivityNet-QA","source_id":"v_ybkcKusf-Kg_1","video_id":"ybkcKusf-Kg","source_answer_type":0,"split_origin":"validation"}
+{"query":"is the person in t-shirt indoors","source":"ActivityNet-QA","source_id":"v_yH0xeA_OvWg_2","video_id":"yH0xeA_OvWg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_Yk3pQ18So90_4","video_id":"Yk3pQ18So90","source_answer_type":1,"split_origin":"validation"}
+{"query":"what tool does the man wear a hoodie in the snow","source":"ActivityNet-QA","source_id":"v_YNo7-L8VQWw_6","video_id":"YNo7-L8VQWw","source_answer_type":5,"split_origin":"validation"}
+{"query":"how safe is this sport in the video","source":"ActivityNet-QA","source_id":"v_yt0K2HWC0WI_8","video_id":"yt0K2HWC0WI","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_ywWHBghVyJ4_1","video_id":"ywWHBghVyJ4","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the person in red have curly hair","source":"ActivityNet-QA","source_id":"v_Z2KHO87wHzg_2","video_id":"Z2KHO87wHzg","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the person in black clothes","source":"ActivityNet-QA","source_id":"v_Z4yZr5dIMec_4","video_id":"Z4yZr5dIMec","source_answer_type":1,"split_origin":"validation"}
+{"query":"what is the hairstyle of the person in gray clothes","source":"ActivityNet-QA","source_id":"v_zAr9k1-umvY_6","video_id":"zAr9k1-umvY","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the difficulty of braiding hair in a green dress","source":"ActivityNet-QA","source_id":"v_ZGK-w7-bkNw_8","video_id":"ZGK-w7-bkNw","source_answer_type":8,"split_origin":"validation"}
+{"query":"what is the person in white doing","source":"ActivityNet-QA","source_id":"v_ZjYttT9itfY_1","video_id":"ZjYttT9itfY","source_answer_type":0,"split_origin":"validation"}
+{"query":"does the person in white wear nails for cats indoors","source":"ActivityNet-QA","source_id":"v_Zn84iOuIkDs_2","video_id":"Zn84iOuIkDs","source_answer_type":3,"split_origin":"validation"}
+{"query":"what is in front of the no. 10 athlete","source":"ActivityNet-QA","source_id":"v_zQVUXbyCV1o_4","video_id":"zQVUXbyCV1o","source_answer_type":1,"split_origin":"validation"}
+{"query":"how many people are dancing in the video","source":"ActivityNet-QA","source_id":"v_ZUM89wyBcYY_6","video_id":"ZUM89wyBcYY","source_answer_type":7,"split_origin":"validation"}
+{"query":"what color is the hair of the person wearing  yellow sleeve","source":"ActivityNet-QA","source_id":"v_ZWudhOEyE_0_8","video_id":"ZWudhOEyE_0","source_answer_type":4,"split_origin":"validation"}

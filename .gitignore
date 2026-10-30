@@ -17,3 +17,10 @@ results/*
 !results/.gitkeep
 dist/
 build/
+
+# Generated third-party datasets and ML experiment outputs
+data/external/*_train_questions.jsonl
+data/external/*_validation_questions.jsonl
+results/*_predictions.jsonl
+results/*_comparison.json
+data/external/*_train_questions.jsonl\ndata/external/*_validation_questions.jsonl\ndata/processed/\n
