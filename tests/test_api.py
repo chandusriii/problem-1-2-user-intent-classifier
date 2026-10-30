@@ -1,11 +1,17 @@
+"""API integration tests exercise the real application startup lifecycle."""
+import os
+import tempfile
 import unittest
+from importlib import import_module
+from pathlib import Path
 from unittest.mock import patch
 
 from fastapi.testclient import TestClient
 
-from src import app as app_module
 from src.intent_classifier import VideoRAGIntentClassifier
 from src.train import EXPANDED_CORPUS
+
+app_module = import_module("src.app")
 
 
 def build_trained_model():
@@ -17,15 +23,23 @@ def build_trained_model():
 
 
 class ApiTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.temp_dir = tempfile.TemporaryDirectory()
+        cls.model_path = Path(cls.temp_dir.name) / "pipeline.pkl"
+        build_trained_model().save(cls.model_path)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.temp_dir.cleanup()
+
     def setUp(self):
+        self.environment = patch.dict(os.environ, {"INTENT_MODEL_PATH": str(self.model_path)})
+        self.environment.start()
+        self.addCleanup(self.environment.stop)
         self.client_context = TestClient(app_module.app)
         self.client = self.client_context.__enter__()
-        app_module.classifier = build_trained_model()
-        self.addCleanup(self.cleanup_client)
-
-    def cleanup_client(self):
-        app_module.classifier = None
-        self.client_context.__exit__(None, None, None)
+        self.addCleanup(self.client_context.__exit__, None, None, None)
 
     def test_health(self):
         response = self.client.get("/health")
@@ -60,6 +74,13 @@ class ApiTests(unittest.TestCase):
     def test_query_length_is_limited(self):
         response = self.client.post("/route", json={"query": "x" * 5001})
         self.assertEqual(response.status_code, 422)
+
+    def test_startup_fails_when_artifact_is_missing(self):
+        missing_path = str(self.model_path.with_name("missing.pkl"))
+        with patch.dict(os.environ, {"INTENT_MODEL_PATH": missing_path}):
+            with self.assertRaises(RuntimeError):
+                with TestClient(app_module.app):
+                    pass
 
 
 if __name__ == "__main__":
