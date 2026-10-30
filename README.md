@@ -65,8 +65,8 @@ FRAME / CLIP / WHOLE_VIDEO   L1 / L2 / L3
 ### Feature design
 
 - Word-level TF-IDF unigrams and bigrams, capped at 1,500 features.
-- Four dense query signals.
-- Sparse feature matrices are preserved through model fitting and inference.
+- Two binary structural signals: timestamp presence and temporal-language presence.
+- Sparse feature matrices are preserved through model fitting and inference; structural indicators are bounded to avoid overwhelming TF-IDF features.
 - Both heads use deterministic Logistic Regression configuration.
 
 ## Repository layout
@@ -189,9 +189,9 @@ python -m src.benchmark --labels path/to/reviewed_eval.jsonl \
   --output results/benchmark.json
 ```
 
-The evaluator reports accuracy, macro F1, per-class metrics and observed inference latency for both heads. A multi-route scope prediction is counted as correct when the reviewed gold scope appears among the candidate scopes.
+The evaluator reports scope top-1 accuracy and macro F1 separately from candidate recall and multi-route coverage. Reasoning-tier metrics are evaluated independently. Candidate recall is not conventional top-1 accuracy.
 
-Do not use training examples as held-out evaluation data. Publish dataset provenance, annotation rules, split strategy, package versions and runtime environment with any reported result.
+The bundled JSONL file illustrates the required schema; it is not an independently reviewed held-out benchmark. Do not use the training corpus or this illustrative sample as evidence of generalization. Publish dataset provenance, annotation rules, split strategy, package versions, artifact version and runtime environment with any reported result.
 
 ## Engineering safeguards
 
@@ -212,6 +212,8 @@ Next steps: collect a larger reviewed corpus, define annotation guidance, measur
 
 ## Documentation
 
+- [Evaluation protocol](docs/EVALUATION.md)
+- [Limitations](docs/LIMITATIONS.md)
 - [Classifier design](docs/INTENT_CLASSIFIER_DESIGN.md)
 - [Architecture summary](docs/ARCHITECTURE_SUMMARY.md)
 - [Source module guide](src/README.md)
