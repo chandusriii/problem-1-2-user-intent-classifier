@@ -46,31 +46,41 @@ jobs:
           rows = load_labelled_rows(Path("data/intent_eval.jsonl"))
           assert len(rows) >= 6
           model = VideoRAGIntentClassifier()
-          model.fit(
-              [row[0] for row in EXPANDED_CORPUS],
-              [row[1] for row in EXPANDED_CORPUS],
-              [row[2] for row in EXPANDED_CORPUS],
-          )
+          model.fit([row[0] for row in EXPANDED_CORPUS],
+                    [row[1] for row in EXPANDED_CORPUS],
+                    [row[2] for row in EXPANDED_CORPUS])
           report = evaluate(model, rows)
           assert "scope_top1" in report and "scope_candidate_recall" in report
           assert "reasoning_tier" in report and "multi_route_coverage" in report
           print("Evaluation schema and metric contracts are valid.")
           PY
-      - name: Smoke-test ActivityNet-QA preparation and grouped model comparison
+      - name: Smoke-test ActivityNet-QA sample and model definitions
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          from scripts.prepare_activitynet import map_labels
           from scripts.compare_models import load, build_models
-          sample = [json.loads(line) for line in Path("data/external/activitynet_qa_questions_sample.jsonl").read_text().splitlines() if line.strip()]
-          assert len(sample) >= 500
-          labels = [map_labels(row["query"]) for row in sample]
-          assert {scope for scope, _ in labels} <= {"FRAME", "CLIP", "WHOLE_VIDEO"}
-          assert {tier for _, tier in labels} <= {"L1_DIRECT", "L2_RETRIEVAL", "L3_GRAPH"}
+          sample = [json.loads(x) for x in Path("data/external/activitynet_qa_questions_sample.jsonl").read_text().splitlines() if x.strip()]
+          assert len(sample) == 750
+          rows = load(Path("data/processed/activitynet_qa_sample_proxy.jsonl"))
+          assert len(rows) == len(sample)
           assert len(build_models()) == 5
-          print(f"ActivityNet-QA sample smoke test passed: {len(sample)} questions; five model configurations.")
+          print("ActivityNet-QA proxy input contract passed.")
           PY
+      - name: Run weak-supervision model comparison (diagnostic only)
+        run: |
+          python scripts/compare_models.py \
+            --input data/processed/activitynet_qa_sample_proxy.jsonl \
+            --output results/activitynet_model_comparison_proxy.json
+      - name: Upload diagnostic benchmark artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: activitynet-qa-proxy-benchmark
+          path: |
+            results/activitynet_model_comparison_proxy.json
+            results/activitynet_model_comparison_proxy_predictions.jsonl
+          if-no-files-found: error
+          retention-days: 30
       - name: Build Docker image
         run: docker build --pull -t video-intent-router:ci .
       - name: Run container and test service
