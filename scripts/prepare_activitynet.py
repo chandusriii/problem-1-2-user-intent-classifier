@@ -4,11 +4,11 @@ import argparse, json, re
 from collections import Counter
 from pathlib import Path
 
-TIMESTAMP = re.compile(r"(?<!\\d)(?:\\d{1,2}:)?\\d{1,2}:\\d{2}(?:\\.\\d+)?(?!\\d)")
-TEMPORAL = re.compile(r"\\b(after|before|then|sequence|during|while|when|beginning|end|first|next|later|until|earlier|subsequently)\\b", re.I)
-WHOLE = re.compile(r"\\b(summarize|summary|overall|entire|whole video|full video|throughout|main topic|main theme|all events|across the video|in this video)\\b", re.I)
-CLIP = re.compile(r"\\b(say|said|speaker|speech|transcript|mention|talking|explain|happen|action|sequence|when|how many times|respond|reaction|before|after)\\b", re.I)
-FRAME = re.compile(r"\\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object|shirt|person|people|what is shown|what do you see|number of)\\b", re.I)
+TIMESTAMP = re.compile(r"(?<!\d)(?:\d{1,2}:)?\d{1,2}:\d{2}(?:\.\d+)?(?!\d)")
+TEMPORAL = re.compile(r"\b(after|before|then|sequence|during|while|when|beginning|end|first|next|later|until|earlier|subsequently)\b", re.I)
+WHOLE = re.compile(r"\b(summarize|summary|overall|entire|whole video|full video|throughout|main topic|main theme|all events|across the video|in this video)\b", re.I)
+CLIP = re.compile(r"\b(say|said|speaker|speech|transcript|mention|talking|explain|happen|action|sequence|when|how many times|respond|reaction|before|after)\b", re.I)
+FRAME = re.compile(r"\b(color|colour|hue|frame|image|visible|wearing|sign|logo|object|shirt|person|people|what is shown|what do you see|number of)\b", re.I)
 
 def map_labels(query: str):
     text = " ".join(query.lower().split())
@@ -48,7 +48,7 @@ def main():
                 "source": "ActivityNet-QA", "source_id": item.get("question_id"),
                 "video_id": item.get("video_name"), "label_method": "heuristic_v1_requires_human_review"})
         target = args.out / f"activitynet_qa_{split}_proxy.jsonl"
-        target.write_text("".join(json.dumps(row, ensure_ascii=False) + "\\n" for row in output_rows), encoding="utf-8")
+        target.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in output_rows), encoding="utf-8")
         summary = {"rows": len(output_rows), "scope_counts": dict(Counter(r["scope_proxy"] for r in output_rows)),
             "tier_counts": dict(Counter(r["tier_proxy"] for r in output_rows)),
             "unique_video_ids": len({r["video_id"] for r in output_rows}),
