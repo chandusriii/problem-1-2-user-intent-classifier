@@ -3,6 +3,8 @@ import unittest
 from pathlib import Path
 
 from src.intent_classifier import MODEL_FORMAT_VERSION, VideoRAGIntentClassifier
+from src.benchmark import evaluate, load_labelled_rows
+import json
 from src.train import EXPANDED_CORPUS
 
 
@@ -111,6 +113,33 @@ class TestIntentClassifier(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(RuntimeError):
                 VideoRAGIntentClassifier().save(Path(directory) / "model.pkl")
+
+
+class TestBenchmark(unittest.TestCase):
+    def test_label_loader_requires_all_fields_and_valid_labels(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "labels.jsonl"
+            path.write_text(json.dumps({"query": "one", "scope": "FRAME"}) + "\n", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "missing keys"):
+                load_labelled_rows(path)
+            path.write_text(json.dumps({"query": "one", "scope": "NOPE", "tier": "L1_DIRECT"}) + "\n", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "invalid scope"):
+                load_labelled_rows(path)
+
+    def test_metrics_do_not_count_second_candidate_as_top1(self):
+        class StubModel:
+            def predict_route(self, query):
+                return {
+                    "assigned_scopes": ["FRAME", "CLIP"],
+                    "reasoning_tier": "L2_RETRIEVAL",
+                }
+        report = evaluate(StubModel(), [
+            {"query": "A", "scope": "CLIP", "tier": "L2_RETRIEVAL"},
+            {"query": "B", "scope": "FRAME", "tier": "L2_RETRIEVAL"},
+        ])
+        self.assertEqual(report["scope_top1"]["accuracy"], 0.5)
+        self.assertEqual(report["scope_candidate_recall"], 1.0)
+        self.assertEqual(report["multi_route_coverage"], 1.0)
 
 
 if __name__ == "__main__":
