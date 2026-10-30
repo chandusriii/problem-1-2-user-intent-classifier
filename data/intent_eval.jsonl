@@ -1,7 +1,3 @@
-# Illustrative evaluation schema — NOT held-out benchmark data
-
-# These rows document the required JSONL schema and exercise parser/metric smoke tests.
-# Labels have not been independently adjudicated and the sample is not a generalization dataset.
 {"query":"What shade is the car at 00:15?","scope":"FRAME","tier":"L1_DIRECT"}
 {"query":"Read the title displayed at 00:42.","scope":"FRAME","tier":"L1_DIRECT"}
 {"query":"Which person is visible in the shot at 01:10?","scope":"FRAME","tier":"L1_DIRECT"}
